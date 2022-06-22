@@ -60,7 +60,7 @@
               </select>
             </div>
             <div class="search-header__field">
-              <input autocomplete="off" id="header-search-input" type="text" name="" placeholder="Поиск среди 2526 товаров в наличии" class="search-header__input">
+              <input autocomplete="off" id="header-search-input" type="text" name="name" placeholder="Поиск среди 2526 товаров в наличии" class="search-header__input">
             </div>
             <button class="btn search-header__submit"><span>Найти</span>
                   <svg class="icon icon-search ">
@@ -120,7 +120,8 @@
                     <use xlink:href="img/icons-svg/symbol/sprite.svg#cart"></use>
                   </svg>
             </div>
-            <div class="cart-header__value">4 000 руб.</div></a><a href="#" data-da="header__wrapper,991,2" class="header__vishes vishes-header full">
+            <div class="cart-header__value">4 000 руб.</div>
+            <div class="cart-header__empty">нет <br>товаров</div></a><a href="#" data-da="header__wrapper,991,2" class="header__vishes vishes-header full">
             <div class="vishes-header__icon">
                   <svg class="icon icon-heart-empty ">
                     <use xlink:href="img/icons-svg/symbol/sprite.svg#heart-empty"></use>
@@ -215,10 +216,10 @@
       </div>
     </header>
     <div class="wrapper">
-      <div class="breadcrumbs">
+      <ul class="breadcrumbs">
         <li class="breadcrumbs__item"> <a href="#" class="breadcrumbs__link">Главная</a></li>
         <li class="breadcrumbs__item"> <span class="breadcrumbs__link">Игры для Xbox One/X|S</span></li>
-      </div>
+      </ul>
     </div>
     <div class="page page-catalog">
       <div class="wrapper">
@@ -290,14 +291,14 @@
                   </div>
                 </div>
                 <ul class="acordeon-sublist catalog-filter-item__content">
-                  <div class="catalog-filter-item__inputs">
+                  <li class="catalog-filter-item__inputs">
                     <label class="catalog-filter-item__label"><span class="catalog-filter-item__label-val">от</span>
-                      <input autocomplete="off" type="text" name="" placeholder="379" class="catalog-filter-item__input">
+                      <input autocomplete="off" type="text" name="name" placeholder="379" class="catalog-filter-item__input">
                     </label>
                     <label class="catalog-filter-item__label"><span class="catalog-filter-item__label-val">до</span>
-                      <input autocomplete="off" type="text" name="" placeholder="6000" class="catalog-filter-item__input">
+                      <input autocomplete="off" type="text" name="name" placeholder="6000" class="catalog-filter-item__input">
                     </label>
-                  </div>
+                  </li>
                 </ul>
               </li>
               <li class="acordeon-item acordeon-item-with-sublist catalog-filter-item active">
@@ -310,24 +311,26 @@
                   </div>
                 </div>
                 <ul class="acordeon-sublist catalog-filter-item__content">
-                  <label class="check-label">
-                    <input type="checkbox" name="" checked="checked" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">В наличии</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Предзаказ</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Под заказ</span>
-                  </label>
+                  <li>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" checked="checked" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">В наличии</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Предзаказ</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Под заказ</span>
+                    </label>
+                  </li>
                 </ul>
               </li>
               <li class="acordeon-item acordeon-item-with-sublist catalog-filter-item active">
@@ -340,36 +343,38 @@
                   </div>
                 </div>
                 <ul class="acordeon-sublist catalog-filter-item__content">
-                  <label class="check-label">
-                    <input type="checkbox" name="" checked="checked" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Шутеры</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Гонки</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Экшены</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Приключения</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Ролевые</span>
-                  </label>
+                  <li>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" checked="checked" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Шутеры</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Гонки</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Экшены</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Приключения</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Ролевые</span>
+                    </label>
+                  </li>
                 </ul>
               </li>
               <li class="acordeon-item acordeon-item-with-sublist catalog-filter-item active">
@@ -382,41 +387,43 @@
                   </div>
                 </div>
                 <ul class="acordeon-sublist catalog-filter-item__content">
-                  <div class="catalog-filter-item__select">
-                    <div class="catalog-filter-item__caption">Год</div>
-                    <select data-searchdisable="true" class="fstdropdown-select">
-                      <option value="00" selected>Все</option>
-                      <option value="01">2022</option>
-                      <option value="02">2021</option>
-                      <option value="03">2020</option>
-                      <option value="04">2019</option>
-                      <option value="05">2018</option>
-                      <option value="06">2017</option>
-                      <option value="07">2016</option>
-                      <option value="08">2015</option>
-                      <option value="09">2014</option>
-                      <option value="010">2012</option>
-                      <option value="011">2010</option>
-                    </select>
-                  </div>
-                  <label class="check-label">
-                    <input type="checkbox" name="" checked="checked" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Все</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Этот месяц</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Прошлый месяц</span>
-                  </label>
+                  <li>
+                    <div class="catalog-filter-item__select">
+                      <div class="catalog-filter-item__caption">Год</div>
+                      <select data-searchdisable="true" class="fstdropdown-select">
+                        <option value="00" selected>Все</option>
+                        <option value="01">2022</option>
+                        <option value="02">2021</option>
+                        <option value="03">2020</option>
+                        <option value="04">2019</option>
+                        <option value="05">2018</option>
+                        <option value="06">2017</option>
+                        <option value="07">2016</option>
+                        <option value="08">2015</option>
+                        <option value="09">2014</option>
+                        <option value="010">2012</option>
+                        <option value="011">2010</option>
+                      </select>
+                    </div>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" checked="checked" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Все</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Этот месяц</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Прошлый месяц</span>
+                    </label>
+                  </li>
                 </ul>
               </li>
               <li class="acordeon-item acordeon-item-with-sublist catalog-filter-item active">
@@ -429,24 +436,26 @@
                   </div>
                 </div>
                 <ul class="acordeon-sublist catalog-filter-item__content">
-                  <label class="check-label">
-                    <input type="checkbox" name="" checked="checked" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Русский</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Русские субтитры</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="check-label__text">Английский</span>
-                  </label>
+                  <li>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" checked="checked" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Русский</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Русские субтитры</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="check-label__text">Английский</span>
+                    </label>
+                  </li>
                 </ul>
               </li>
               <li class="acordeon-item acordeon-item-with-sublist catalog-filter-item active">
@@ -459,19 +468,21 @@
                   </div>
                 </div>
                 <ul class="acordeon-sublist catalog-filter-item__content">
-                  <select data-searchdisable="true" class="fstdropdown-select">
-                    <option value="00" selected>Все</option>
-                    <option value="01">Activision</option>
-                    <option value="02">BANDAI NAMCO Entertainment</option>
-                    <option value="03">Blizzard Entertainment</option>
-                    <option value="04">CD PROJEKT RED</option>
-                    <option value="05">Deep Silver</option>
-                    <option value="06">FromSoftware Inc</option>
-                    <option value="07">FromSoftware, Inc</option>
-                    <option value="08">Rockstar Games</option>
-                    <option value="09">Ubisoft</option>
-                    <option value="010">Xbox Game Studios</option>
-                  </select>
+                  <li>
+                    <select data-searchdisable="true" class="fstdropdown-select">
+                      <option value="00" selected>Все</option>
+                      <option value="01">Activision</option>
+                      <option value="02">BANDAI NAMCO Entertainment</option>
+                      <option value="03">Blizzard Entertainment</option>
+                      <option value="04">CD PROJEKT RED</option>
+                      <option value="05">Deep Silver</option>
+                      <option value="06">FromSoftware Inc</option>
+                      <option value="07">FromSoftware, Inc</option>
+                      <option value="08">Rockstar Games</option>
+                      <option value="09">Ubisoft</option>
+                      <option value="010">Xbox Game Studios</option>
+                    </select>
+                  </li>
                 </ul>
               </li>
               <li class="acordeon-item acordeon-item-with-sublist catalog-filter-item active">
@@ -484,30 +495,32 @@
                   </div>
                 </div>
                 <ul class="acordeon-sublist catalog-filter-item__content">
-                  <label class="check-label">
-                    <input type="checkbox" name="" checked="checked" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="age">6+</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="age">12+</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="age">16+</span>
-                  </label>
-                  <label class="check-label">
-                    <input type="checkbox" name="" class="check-label__input"><span class="check-label__check">
-                          <svg class="icon icon-check ">
-                            <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
-                          </svg></span><span class="age">18+</span>
-                  </label>
+                  <li>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" checked="checked" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="age">6+</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="age">12+</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="age">16+</span>
+                    </label>
+                    <label class="check-label">
+                      <input type="checkbox" name="name" class="check-label__input"><span class="check-label__check">
+                            <svg class="icon icon-check ">
+                              <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                            </svg></span><span class="age">18+</span>
+                    </label>
+                  </li>
                 </ul>
               </li>
               <li class="acordeon-item catalog-filter-item">
@@ -712,7 +725,7 @@
           <div class="wrapper-flex">
             <div class="subscribe-footer__title">Хотите первым узнать про скидки и акции?</div>
             <form class="subscribe-footer__form">
-              <input autocomplete="off" type="text" name="" placeholder="Введите Ваш e-mail" class="subscribe-footer__input">
+              <input autocomplete="off" type="text" name="name" placeholder="Введите Ваш e-mail" class="subscribe-footer__input">
               <button class="btn btn-bg-green">Подписаться</button>
             </form>
           </div>
@@ -762,7 +775,7 @@
     
     <script src="js/libs/dynamic-adaptive/da.min.js"></script>
     <script src="js/libs/fstdropdown/fstdropdown.min.js"></script>
-    <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
+    <script src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     <script src="js/libs/counter/counter.js"></script>
     
     

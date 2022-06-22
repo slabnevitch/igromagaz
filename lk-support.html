@@ -60,7 +60,7 @@
               </select>
             </div>
             <div class="search-header__field">
-              <input autocomplete="off" id="header-search-input" type="text" name="" placeholder="Поиск среди 2526 товаров в наличии" class="search-header__input">
+              <input autocomplete="off" id="header-search-input" type="text" name="name" placeholder="Поиск среди 2526 товаров в наличии" class="search-header__input">
             </div>
             <button class="btn search-header__submit"><span>Найти</span>
                   <svg class="icon icon-search ">
@@ -120,7 +120,8 @@
                     <use xlink:href="img/icons-svg/symbol/sprite.svg#cart"></use>
                   </svg>
             </div>
-            <div class="cart-header__value">4 000 руб.</div></a><a href="#" data-da="header__wrapper,991,2" class="header__vishes vishes-header full">
+            <div class="cart-header__value">4 000 руб.</div>
+            <div class="cart-header__empty">нет <br>товаров</div></a><a href="#" data-da="header__wrapper,991,2" class="header__vishes vishes-header full">
             <div class="vishes-header__icon">
                   <svg class="icon icon-heart-empty ">
                     <use xlink:href="img/icons-svg/symbol/sprite.svg#heart-empty"></use>
@@ -215,11 +216,11 @@
       </div>
     </header>
     <div class="wrapper">
-      <div class="breadcrumbs">
+      <ul class="breadcrumbs">
         <li class="breadcrumbs__item"> <a href="#" class="breadcrumbs__link">Главная</a></li>
         <li class="breadcrumbs__item"> <a href="#" class="breadcrumbs__link">Личный кабинет</a></li>
         <li class="breadcrumbs__item"> <span class="breadcrumbs__link">Техподдержка</span></li>
-      </div>
+      </ul>
     </div>
     <div class="page page-lk page-lk-support">
       <div class="wrapper-smart">
@@ -316,29 +317,28 @@
           <div class="page-lk__content">
             <div class="lk-address-form">
               <form action="#" class="form">
-                <label class="form__label"><span class="form__field-name">Тема вопроса:</span>
+                <label class="form__label"><span class="form__field-name">Заголовок:</span>
                   <input autocomplete="off" type="text" name="name" class="form__input">
                 </label>
-                <label class="form__label"><span class="form__field-name">Текст обращения:</span>
-                  <textarea autocomplete="off" type="text" name="name" class="form__area"></textarea>
+                <label class="form__label"><span class="form__field-name">Сообщение:</span>
+                  <textarea autocomplete="off" name="name" class="form__area"></textarea>
                 </label>
                 <div class="form__files"><span class="form__field-name">Прикрепить файлы:</span>
                   <p>(Максимальный размер файла 1000 Кб)</p>
                   <div class="form__filesrow">
                     <label class="file-lable">
-                      <div type="file" name="" class="input file-lable__file"></div><span class="file-lable__button">Обзор</span>
+                      <input type="file" name="mame" class="file-lable__file"><span class="file-lable__button">Обзор</span>
                     </label>
                     <div class="link">Файл не выбран</div>
                   </div>
                   <div class="form__filesrow">
                     <label class="file-lable">
-                      <div type="file" name="" class="input file-lable__file"></div><span class="file-lable__button">Обзор</span>
+                      <input type="file" name="mame" class="file-lable__file"><span class="file-lable__button">Обзор</span>
                     </label>
                     <div class="link">Файл не выбран</div>
                   </div>
                 </div>
-                <label class="form__label"><span class="form__field-name">Критичность:</span>
-                  <div class="lk-personal-form__select">
+                <label class="form__label"><span class="form__field-name">Критичность:</span><span class="lk-personal-form__select">
                     <select data-searchdisable="true" class="fstdropdown-select">
                       <!-- - var months = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];// each item, ind in months
                       -->
@@ -347,20 +347,15 @@
                       <option value="0NaN">Средняя</option>
                       <option value="0NaN">Средняя</option>
                       <option value="0NaN">Средняя</option>
-                    </select>
-                  </div>
-                </label>
-                <label class="form__label"><span class="form__field-name">Категория:</span>
-                  <div class="lk-personal-form__select">
+                    </select></span></label>
+                <label class="form__label"><span class="form__field-name">Категория:</span><span class="lk-personal-form__select">
                     <select data-searchdisable="true" class="fstdropdown-select">
                       <option value="0NaN">Название категории</option>
                       <option value="0NaN">Название категории</option>
                       <option value="0NaN">Название категории</option>
                       <option value="0NaN">Название категории</option>
                       <option value="0NaN">Название категории</option>
-                    </select>
-                  </div>
-                </label>
+                    </select></span></label>
                 <button class="btn btn-bg-green">Отправить сообщение						</button>
               </form>
             </div>
@@ -374,7 +369,7 @@
           <div class="wrapper-flex">
             <div class="subscribe-footer__title">Хотите первым узнать про скидки и акции?</div>
             <form class="subscribe-footer__form">
-              <input autocomplete="off" type="text" name="" placeholder="Введите Ваш e-mail" class="subscribe-footer__input">
+              <input autocomplete="off" type="text" name="name" placeholder="Введите Ваш e-mail" class="subscribe-footer__input">
               <button class="btn btn-bg-green">Подписаться</button>
             </form>
           </div>
@@ -424,7 +419,7 @@
     
     <script src="js/libs/dynamic-adaptive/da.min.js"></script>
     <script src="js/libs/fstdropdown/fstdropdown.min.js"></script>
-    <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
+    <script src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     <script src="js/libs/counter/counter.js"></script>
     
     <script src="js/libs/datepicker/air-datepicker.js"></script>

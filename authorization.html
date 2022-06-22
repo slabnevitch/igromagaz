@@ -61,7 +61,7 @@
                 </select>
               </div>
               <div class="search-header__field">
-                <input autocomplete="off" id="header-search-input" type="text" name="" placeholder="Поиск среди 2526 товаров в наличии" class="search-header__input">
+                <input autocomplete="off" id="header-search-input" type="text" name="name" placeholder="Поиск среди 2526 товаров в наличии" class="search-header__input">
               </div>
               <button class="btn search-header__submit"><span>Найти</span>
                     <svg class="icon icon-search ">
@@ -121,7 +121,8 @@
                       <use xlink:href="img/icons-svg/symbol/sprite.svg#cart"></use>
                     </svg>
               </div>
-              <div class="cart-header__value">4 000 руб.</div></a><a href="#" data-da="header__wrapper,991,2" class="header__vishes vishes-header full">
+              <div class="cart-header__value">4 000 руб.</div>
+              <div class="cart-header__empty">нет <br>товаров</div></a><a href="#" data-da="header__wrapper,991,2" class="header__vishes vishes-header full">
               <div class="vishes-header__icon">
                     <svg class="icon icon-heart-empty ">
                       <use xlink:href="img/icons-svg/symbol/sprite.svg#heart-empty"></use>
@@ -218,10 +219,10 @@
       <main class="main-content">
         <div class="page page-authorization">
           <div class="wrapper">
-            <div class="breadcrumbs">
+            <ul class="breadcrumbs">
               <li class="breadcrumbs__item"> <a href="#" class="breadcrumbs__link">Главная</a></li>
               <li class="breadcrumbs__item"> <span class="breadcrumbs__link">Авторизация</span></li>
-            </div>
+            </ul>
           </div>
           <div class="wrapper">
             <div class="autorization__header">
@@ -242,14 +243,14 @@
                   <li class="socials__item"><a href="#" class="socials__link"><img src="img/socials/mailru.svg" alt="alt"></a></li>
                 </ul>
               </div>
-              <form action="" class="form autorization__enter enter-autorization">
+              <form action="#" class="form autorization__enter enter-autorization">
                 <div class="form__title">Войти на сайт:</div>
                 <div class="enter-autorization__cols">
                   <div class="enter-autorization__col">
-                    <input autocomplete="off" type="text" name="" placeholder="E-mail" class="form__input">
+                    <input autocomplete="off" type="text" name="name" placeholder="E-mail" class="form__input">
                   </div>
                   <div class="enter-autorization__col">
-                    <input autocomplete="off" type="text" name="" placeholder="Пароль" class="form__input"><a href="#" class="link autorization__forgot">Забыли пароль?</a>
+                    <input autocomplete="off" type="text" name="name" placeholder="Пароль" class="form__input"><a href="#" class="link autorization__forgot">Забыли пароль?</a>
                   </div>
                   <div class="enter-autorization__col">
                     <div class="enter-autorization__captcha">Captcha</div>
@@ -272,7 +273,7 @@
             <div class="wrapper-flex">
               <div class="subscribe-footer__title">Хотите первым узнать про скидки и акции?</div>
               <form class="subscribe-footer__form">
-                <input autocomplete="off" type="text" name="" placeholder="Введите Ваш e-mail" class="subscribe-footer__input">
+                <input autocomplete="off" type="text" name="name" placeholder="Введите Ваш e-mail" class="subscribe-footer__input">
                 <button class="btn btn-bg-green">Подписаться</button>
               </form>
             </div>
@@ -323,7 +324,7 @@
     
     <script src="js/libs/dynamic-adaptive/da.min.js"></script>
     <script src="js/libs/fstdropdown/fstdropdown.min.js"></script>
-    <script type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
+    <script src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     <script src="js/libs/counter/counter.js"></script>
     
     <script src="js/libs/owlCarousel/dist/owl.carousel.min.js"></script>
