@@ -432,8 +432,15 @@ jQuery(function() {
 				dots: false,
 			  infinite: false,
 			  asNavFor: '.product-info__tabs-list',
-			  adaptiveHeight: true,
-			  focusOnSelect: true
+			  focusOnSelect: true,
+			  responsive: [
+					{
+						breakpoint: 991,
+						settings: {
+			  				adaptiveHeight: true
+						}	
+					}
+				]
 			});
 		}
 		// END product-info tabs slider
