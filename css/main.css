@@ -7654,10 +7654,6 @@ blockquote {
 
 /*--------------------personal----------------------*/
 
-.page-lk-personal {
-  padding-bottom: 32px;
-}
-
 .lk-personal-form {
   padding: 36px 40px 34px;
   margin-bottom: 30px;
@@ -7940,6 +7936,10 @@ blockquote {
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+}
+
+.lk-address-items {
+  margin-bottom: 20px;
 }
 
 .lk-address-item__title {
@@ -8790,7 +8790,7 @@ blockquote {
     margin-bottom: 2px;
   }
 
-  .page-lk-support {
+  .page-lk {
     padding-bottom: 60px;
   }
 
