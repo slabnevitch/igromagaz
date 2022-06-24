@@ -9005,6 +9005,17 @@ blockquote {
     left: 0;
   }
 
+  .lk-search-form__row .form__label:first-child {
+    width: 100%;
+  }
+
+  .lk-search-form__row .form__label:nth-child(2),
+  .lk-search-form__row .form__label:nth-child(3) {
+    -webkit-flex-basis: -webkit-calc(50% - 20px);
+    -ms-flex-preferred-size: calc(50% - 20px);
+    flex-basis: calc(50% - 20px);
+  }
+
   .lk-bonus__score {
     -webkit-flex-basis: 323px;
     -ms-flex-preferred-size: 323px;
@@ -9590,17 +9601,6 @@ blockquote {
 
   .lk-grating {
     margin-top: 14px;
-  }
-
-  .lk-search-form__row .form__label:first-child {
-    width: 100%;
-  }
-
-  .lk-search-form__row .form__label:nth-child(2),
-  .lk-search-form__row .form__label:nth-child(3) {
-    -webkit-flex-basis: -webkit-calc(50% - 20px);
-    -ms-flex-preferred-size: calc(50% - 20px);
-    flex-basis: calc(50% - 20px);
   }
 
   .lk-table__col--name {

@@ -474,13 +474,6 @@ jQuery(function() {
 		        }
 		    };
 		    datePicker.init();
-		    // $('.for-datepicker').datepicker({
-		    //             autoClose: true,
-		    //             onShow: function(inst, animationCompleted){
-		    //             	console.log('jfdlfjldf')
-		    //             }
-		    //         });
-
 		}
 		// END datepicker
 
