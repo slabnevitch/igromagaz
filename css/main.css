@@ -6071,6 +6071,10 @@ blockquote {
   width: 100%;
 }
 
+.enter-autorization__captcha {
+  text-align: left;
+}
+
 /*--------------------END .autorization----------------------*/
 
 /*--------------------digital-delivery----------------------*/
@@ -6395,6 +6399,7 @@ blockquote {
 
 .password-request-page__captcha {
   margin-bottom: 25px;
+  text-align: left;
 }
 
 /*--------------------END authorization-page----------------------*/
@@ -7817,6 +7822,7 @@ blockquote {
 }
 
 .lk-bonus__active span {
+  display: inline-block;
   font-family: "ProximaNova-Bold", sans-serif;
 }
 
@@ -7885,7 +7891,6 @@ blockquote {
 
 .lk-address-item {
   padding: 27px 21px;
-  margin-bottom: 30px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -8783,6 +8788,10 @@ blockquote {
 
   .page-actions .catalog-filters__item .catalog-filters__key {
     margin-bottom: 2px;
+  }
+
+  .page-lk-support {
+    padding-bottom: 60px;
   }
 
   .support-history {
