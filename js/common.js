@@ -14,7 +14,6 @@ jQuery(function() {
 
 	jQuery(document).on('click', function(e) {
 		var $target = $(e.target);
-		console.log(e.target)
 
 		// catalog toggle
 		if($target.attr('id') === 'catalog-toggle' || $target.closest('#catalog-toggle').length > 0){
@@ -62,12 +61,10 @@ jQuery(function() {
 
 		// catalog cards view change
 		if($target.attr('id') === 'cards-to-tiles' || $target.closest('#cards-to-tiles').length > 0){
-			console.log('to tiles');
 			$target.closest('.page-catalog').find('.product-cards').removeClass('product-cards--list');
 			switcherSiblings($target.closest('#cards-to-tiles'));
 		}
 		if($target.attr('id') === 'cards-to-list' || $target.closest('#cards-to-list').length > 0){
-			console.log('to -list');
 			$target.closest('.page-catalog').find('.product-cards').addClass('product-cards--list');
 			switcherSiblings($target.closest('#cards-to-list'));
 		}
@@ -113,11 +110,29 @@ jQuery(function() {
 			return false;
 		}
 		// END add-to-card popup
+
+		// product-card avaliable
+			if($target.hasClass('product-card__buy')){
+				console.log('buy!')
+				var $card = $target.closest('.product-card');
+				console.log($card)
+				if($card.hasClass('product-card--not-available') || $card.hasClass('product-card--available')){
+					if(!$card.hasClass('product-card--clicked')){
+						e.preventDefault();
+						$card.addClass('product-card--clicked');
+
+						$target.text( $target.attr('data-aval-text'));
+						if($card.hasClass('product-card--not-available')){
+							$target.addClass('btn-brd');
+						}
+					}
+				}
+			}
+		// END product-card avaliable
 	
 	}); //$(documrnt).click()
 	
 	jQuery(document).ready(function() {
-		console.log('jQuery document ready');
 		
 		// header-search list toggle
 		$('#header-search-input').on('focus', function(e) {
@@ -142,7 +157,6 @@ jQuery(function() {
 		if($('.product-cards-slider').length > 0){
 			$('.product-cards-slider').each(function() {
 				var $slider = $(this); 
-				console.log($slider)
 				
 				$slider.slick({
 					slidesToScroll: 1,
@@ -154,9 +168,7 @@ jQuery(function() {
 						{
 							breakpoint: 601,
 							settings: {
-									slidesToShow: 1,
-									// centerMode: true,
-	        //      		centerPadding: '8%',
+									slidesToShow: 1
 							}	
 						},
 
@@ -212,41 +224,6 @@ jQuery(function() {
 
 	// video-slider
 	if($('.video__slider').length > 0){
-		// Object.assign(lazySizes.cfg, {
-		// 	preloadAfterLoad: false,
-		// 	loadMode: 1,
-		// 	expand: 10,
-		// 	expFactor: 1.7,
-		//   arrows: false,
-		//   // loadHidden: false,
-		// 	debug: true,
-		// });
-
-		// $('.video__slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-		//   var slideIndex = Number($('.video__slider').find('.slick-active').last().attr('data-slick-index')) + 1;
-		//   console.log(currentSlide, nextSlide);
-		//   var $nextSlide = $('.video__slider').find('.slick-slide[data-slick-index="'+slideIndex+'"]');
-		//   var $frame = $nextSlide.find('iframe');
-		  
-		//   if (!$frame.hasClass('lazyloaded') && currentSlide < nextSlide) {
-		//   	console.log('if condition!');
-		//     lazySizes.loader.unveil($frame.get(0));
-		//   }
-		// });
-		
-		// $('.video__slider').on('init', function(event, slick, currentSlide, nextSlide){
-		//   var $activeSlides = $('.video__slider').find('.slick-active');
-		//   var $frames = $activeSlides.find('iframe');
-		  
-		//   $frames.each(function(i,item) {
-		// 	  if (!$(this).hasClass('lazyloaded')) {
-		//   		console.log(item)
-
-		// 	    lazySizes.loader.unveil(item);
-		// 	  }
-
-		//   });
-		// });
 
 		$('.video__slider').slick({
 			slidesToScroll: 1,
@@ -283,8 +260,6 @@ jQuery(function() {
 			 			$videoTitle = $this.closest('.card-video').find('.card-video__title'),
 			 			stringArray = $this.attr('data-src').split('/'),
 			 			filename = stringArray[stringArray.length - 1];
-
-		 			// console.log($this.closest('.card-video').find('.card-video_title'))
 
 	 			if($this.attr('title') === 'YouTube video player'){
 	 				$iframeParent.attr('href', 'http://www.youtube.com/watch?v=' + filename);
@@ -337,13 +312,6 @@ jQuery(function() {
 		}
 		// end Accordeon-----------------------------------
 
-
-		// $('#select').on('change', function() {
-		// 	console.log('slected!')
-		// 	console.log($(this).val())
-		// })
-
-
 		// product-card sluders
 		if($('.page-card__slider').length > 0 && $('.page-card__slider-nav').length > 0){
 			$('.page-card__slider').slick({
@@ -365,51 +333,7 @@ jQuery(function() {
 			  // centerMode: true,
 			  focusOnSelect: true
 			});
-			 // var sync1 = $('.page-card__slider'),
-    //     sync2 = $('.page-card__slider-nav'),
-    //     duration = 300,
-    //     thumbs = $('.page-card__slide').length - 1;
-
-    //     sync1.owlCarousel({
-    //         items: 1,
-    //         // margin: 1,
-    //         nav: true,
-    //         navText: ['<svg class="icon icon-arrow-next"><use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-prev"></use></svg>', '<svg class="icon icon-arrow-next"><use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-next"></use></svg>'],
-    //         dots: false,
-    //         video: true,
-    //         lazyLoad: true,
-    //         onChanged: function (e) {
-    //             var itemIndex = e.item.index;
-    //             setTimeout(function () {
-    //                 var sync2item = sync2.find('.owl-item').eq(itemIndex);
-    //                 $('.owl-item_hl').removeClass('owl-item_hl');
-    //                 sync2item.addClass('owl-item_hl');
-    //                 if (!sync2item.hasClass('active')) {
-    //                     sync2.trigger('to.owl.carousel', [itemIndex - thumbs + 1, duration, true]);
-    //                 }
-    //             }, 1);
-    //         }
-    //     });
-
-    //     sync2
-    //     .owlCarousel({
-    //         items: thumbs,
-    //         margin: 0,
-    //         // nav: true,
-    //         // margin: '14px',
-    //         dots: false,
-    //         navText: [
-    //         '<svg class="icon icon-arrow-next"><use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-prev"></use></svg>',
-    //         '<svg class="icon icon-arrow-next"><use xlink:href="img/icons-svg/symbol/sprite.svg#arrow-next"></use></svg>'
-    //         ]
-    //     })
-    //     .on('click', '.owl-item', function (e) {
-    //         var i = $(this).index();
-    //         sync1.trigger('to.owl.carousel', [i, duration, true]);
-    //         if (!$(this).hasClass('active')) {
-    //             sync2.trigger('to.owl.carousel', [i, duration, true]);
-    //         }
-    //     });
+			 
 		}
 		// END product-card sluders
 
@@ -485,13 +409,10 @@ jQuery(function() {
 				dataType: 'html',
 				context: $('.page-cart'),
 				success: function(data){
-					console.log('success!')
-					console.log(data)
 					$(this).find('.autorization').remove();
 					$(this).find('.digital-delivery').append($(data).html());
 				},
 				error: function (jqXHR, exception) {
-					console.log('eror!')
 				}
 			}); 
 		});
@@ -499,11 +420,4 @@ jQuery(function() {
 	}); //END jquery document ready
 	
 });
-
-// $(window).on('load', function() {
-
-// 	$(".loader_inner").fadeOut();
-// 	$(".loader").delay(400).fadeOut("slow");
-
-// });
 
