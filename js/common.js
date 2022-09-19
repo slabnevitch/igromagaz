@@ -110,6 +110,29 @@ jQuery(function() {
 			return false;
 		}
 		// END add-to-card popup
+		
+		// popups
+			if($('.popup-link').length > 0){
+				$('.popup-link').magnificPopup({
+						type: 'inline',
+						preloader: false,
+						focus: '#name',
+
+						// When elemened is focused, some mobile browsers in some cases zoom in
+						// It looks not nice, so we disable it:
+						callbacks: {
+							beforeOpen: function() {
+								if($(window).width() < 700) {
+									this.st.focus = false;
+								} else {
+									this.st.focus = '#name';
+								}
+							}
+						}
+					});
+				}
+
+			// 	END popups
 
 		// product-card avaliable
 			if($target.hasClass('product-card__buy')){
@@ -129,6 +152,17 @@ jQuery(function() {
 				}
 			}
 		// END product-card avaliable
+		console.log($target)
+		// lk-menu toggle
+		if($target.hasClass('menu-cab__button') || $target.closest('.menu-cab__button').length > 0){
+			console.log('cab!')
+			$target.closest('.menu-cab').find('.menu-cab__dropdown').fadeToggle();
+			$target.closest('.menu-cab').toggleClass('open');
+		}else{
+			$('.menu-cab').removeClass('open');
+			$('.menu-cab__dropdown').fadeOut();
+		}
+		// END lk-menu toggle
 	
 	}); //$(documrnt).click()
 	
