@@ -6115,8 +6115,11 @@ blockquote {
 /*--------------------new popups----------------------*/
 
 .popup-order {
-  padding: 0;
   max-width: 800px;
+}
+
+.popup-order.popup {
+  padding: 0;
 }
 
 .popup-order__header {
