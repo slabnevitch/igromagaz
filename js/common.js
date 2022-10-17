@@ -135,24 +135,23 @@ jQuery(function() {
 			// 	END popups
 
 		// product-card avaliable
-			if($target.hasClass('product-card__buy')){
-				console.log('buy!')
-				var $card = $target.closest('.product-card');
-				console.log($card)
-				if($card.hasClass('product-card--not-available') || $card.hasClass('product-card--available')){
-					if(!$card.hasClass('product-card--clicked')){
-						e.preventDefault();
-						$card.addClass('product-card--clicked');
+			// if($target.hasClass('product-card__buy')){
+			// 	console.log('buy!')
+			// 	var $card = $target.closest('.product-card');
+			// 	console.log($card)
+			// 	if($card.hasClass('product-card--not-available') || $card.hasClass('product-card--available')){
+			// 		if(!$card.hasClass('product-card--clicked')){
+			// 			e.preventDefault();
+			// 			$card.addClass('product-card--clicked');
 
-						$target.text( $target.attr('data-aval-text'));
-						if($card.hasClass('product-card--not-available')){
-							$target.addClass('btn-brd');
-						}
-					}
-				}
-			}
+			// 			$target.text( $target.attr('data-aval-text'));
+			// 			if($card.hasClass('product-card--not-available')){
+			// 				$target.addClass('btn-brd');
+			// 			}
+			// 		}
+			// 	}
+			// }
 		// END product-card avaliable
-		console.log($target)
 		// lk-menu toggle
 		if($target.hasClass('menu-cab__button') || $target.closest('.menu-cab__button').length > 0){
 			console.log('cab!')
