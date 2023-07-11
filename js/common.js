@@ -450,6 +450,27 @@ jQuery(function() {
 			}); 
 		});
 		
+		// adding fileNames to custom fileniputs
+		var fileInputs = document.querySelectorAll('.file-lable__file');
+		Array.prototype.forEach.call(fileInputs, function (input) {
+
+			var label = input.closest('.file-lable'),
+			labelVal = label.nextElementSibling.innerText;
+
+			input.addEventListener('change', function (e) {
+				var countFiles = '';
+
+				if (this.files && this.files.length >= 1)
+					countFiles = this.files.length;
+
+				if (countFiles)
+					label.nextElementSibling.innerText = this.files[0].name;
+				else
+					label.nextElementSibling.innerText = labelVal;
+			});
+		});
+		// END adding fileNames to custom fileniputs
+
 	}); //END jquery document ready
 	
 });

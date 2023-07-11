@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Контакты</title>
+    <title>Пополнение внутреннего счета</title>
     <meta name="description" content="">
     <link rel="icon" href="img/favicon.png">
     <meta name="viewport" content="width=device-width">
@@ -218,177 +218,57 @@
     <div class="wrapper">
       <ul class="breadcrumbs">
         <li class="breadcrumbs__item"> <a href="#" class="breadcrumbs__link">Главная</a></li>
-        <li class="breadcrumbs__item"> <span class="breadcrumbs__link">Игры для Xbox One/X|S</span></li>
+        <li class="breadcrumbs__item"> <span class="breadcrumbs__link">Личный кабинет</span></li>
       </ul>
     </div>
     <div class="page page-content">
-      <section class="contacts">
+      <section class="refill">
         <div class="wrapper">
-          <h1>Контакты</h1>
-        </div>
-        <div class="contacts__content">
-          <div class="wrapper-smart">
-            <div class="wrapper-flex">
-              <div class="contacts__schedule schedule-contacts">
-                <div class="schedule-contacts__row">
-                  <div class="schedule-contacts__icon"><img src="img/contacts-pages/clock.svg" alt="alt"></div>
-                  <div class="schedule-contacts__text"><span class="schedule-contacts__key">Работа магазина:</span><span class="schedule-contacts__val">круглосуточно</span></div>
+          <h1>Пополнение внутреннего счета</h1>
+          <div class="refill__content">
+            <form action="#" class="form">
+              <div class="refill__entering entering-refill">
+                <div class="refill__heading">Занесение на внутренний счет:</div>
+                <div class="refill__input">
+                  <input autocomplete="off" type="text" name="name" value="50" class="form__input">
                 </div>
-                <div class="schedule-contacts__row">
-                  <div class="schedule-contacts__icon"><img src="img/contacts-pages/clock.svg" alt="alt"></div>
-                  <div class="schedule-contacts__text"><span class="schedule-contacts__key">Работа офиса:</span><span class="schedule-contacts__val">Пн-Пт с 12-00 до 19-00,<br> Сб, Вс выходной</span></div>
-                </div>
-                <div class="schedule-contacts__row">
-                  <div class="schedule-contacts__icon"><img src="img/contacts-pages/clock.svg" alt="alt"></div>
-                  <div class="schedule-contacts__text"><span class="schedule-contacts__key">Работа техподдержки:</span><span class="schedule-contacts__val">Пн-Пт с 11-00 до 18-00,<br> Сб с 13-00 до 17-00, Вс выходной</span></div>
-                </div>
-                <div class="schedule-contacts__row">
-                  <div class="schedule-contacts__icon"><img src="img/contacts-pages/clock.svg" alt="alt"></div>
-                  <div class="schedule-contacts__text"><span class="schedule-contacts__key">Работа консультантов:</span><span class="schedule-contacts__val">жедневно с 10-00 до 22-00</span></div>
+                <div class="refill__wallet">руб.</div>
+              </div>
+              <div class="entering__methods entering-methods">
+                <div class="refill__heading">Выберите способ оплаты:</div>
+                <div class="refill__methods">
+                  <label class="refill__method method-refill">
+                    <input autocomplete="off" type="radio" name="refill" checked class="refill__variant">
+                    <div class="method-refill__content"><img src="img/logo.svg" alt="alt" class="method-refill__logo"><span class="method-refill__label">С вашего счета в магазине</span></div>
+                  </label>
+                  <label class="refill__method method-refill">
+                    <input autocomplete="off" type="radio" name="refill" class="refill__variant">
+                    <div class="method-refill__content"><img src="img/logo_game-money.png" alt="alt" class="method-refill__logo"><span class="method-refill__label">GameMoney (карты)</span></div>
+                  </label>
                 </div>
               </div>
-              <div class="contacts__requisites requisites-contacts">
-                <div class="requisites-contacts">
-                  <div class="requisites-contacts__title">Реквизиты организации</div>
-                  <div class="requisites-contacts__content">
-                    <p>Perfumedor S.L.</p>
-                    <p>CIF B76783620</p>
-                    <p>Испания</p>
-                  </div>
-                  <p>E-mail: info@igromagaz.ru</p>
+              <div class="refill__confirmation confirmation-refill">
+                <div class="refill__heading">Подтверждение:</div>
+                <div class="confirmation-refill__summ">
+                  <div class="confirmation-refill__key">Сума пополнения:</div>
+                  <div class="confirmation-refill__val">50 руб.</div>
+                </div>
+                <label class="check-label">
+                  <input type="checkbox" name="name" checked class="check-label__input"><span class="check-label__check">
+                        <svg class="icon icon-check ">
+                          <use xlink:href="img/icons-svg/symbol/sprite.svg#check"></use>
+                        </svg></span><span class="check-label__text">Согласен(на) с <a href="#" class="link-blue">Условиями покупки</a></span>
+                </label>
+                <div class="confirmation-refill__note">Ознакомлен с описание товара, уведомлен, что товар предназначен для активации в регионе: Россия, Украина, Беларусь, Казахстан, Азербайджан, Киргистан, Молдова, Таджикистан, Туркменистан, Узбекистан. В описании каждого товара могут быть внесены дополнительные региональные ограничения.</div>
+                <div class="refill__total total-refill">
+                  <div class="total-refill__key">Всего к оплате:</div>
+                  <div class="total-refill__val">50 руб.</div>
                 </div>
               </div>
-              <div class="schedule-contacts__ques">По всем вопросам обращайтесь к консультантам или в техподдержку через обращение.
-                <p>При обращении обязательно указывайте номер заказа.</p>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
-      <div class="payment-methods">
-        <div class="payment-methods__top">
-          <div class="wrapper">
-            <div class="payment-methods__title">Способы оплаты</div>
-            <div class="payment-methods__capt">Покупать в интернет-магазине "ИгроМагаз" быстро, удобно и безопасно!</div>
-            <ol class="payment-methods__list">
-              <li>Выберите и добавьте в корзину понравившийся товар.</li>
-              <li>Оплатите его удобным и безопасным способом.</li>
-              <li>Получите цифровой товар сразу после оплаты на ваш электронный адрес или закажите доставку физических товаров «Почтой России» или курьерской службой.</li>
-            </ol>
-            <div class="payment-methods__options">
-              <div class="payment-methods__option option-payment-methods">
-                <div class="option-payment-methods__icon"><img src="img/contacts-pages/methods/shopping-cart.svg" alt="alt"></div>
-                <div class="option-payment-methods__name">Положи в корзину</div>
-              </div>
-              <div class="payment-methods__option option-payment-methods">
-                <div class="option-payment-methods__icon"><img src="img/contacts-pages/methods/wallet.svg" alt="alt"></div>
-                <div class="option-payment-methods__name">Оплати удобным <br>тебе способом</div>
-              </div>
-              <div class="payment-methods__option option-payment-methods">
-                <div class="option-payment-methods__icon"><img src="img/contacts-pages/methods/box.svg" alt="alt"></div>
-                <div class="option-payment-methods__name">Получи заказ сразу <br>после оплаты</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="payment-methods__bottom">
-          <div class="wrapper">
-            <div class="payment-options">
-              <div class="payment-options__title">В нашем магазине "Игромагаз" доступны следующие способы оплаты:</div>
-            </div>
-          </div>
-          <div class="wrapper-smart">
-            <div class="wrapper-flex">
-              <div class="payment-option">
-                <div class="payment-option__icon"><img src="img/contacts-pages/methods/credit-card.svg" alt="alt">
-                </div>
-                <div class="payment-option__content">
-                  <div class="payment-option__title">Банковские карты</div>
-                  <div class="payment-option__text">Вы можете оплатить товар следующими картами: Visa, Mastercard, Maestro, «Мир». Как только вы введете данные карты, товар будет оплачен. Это безопасно. Мы не получаем доступ к вашим данным, они сразу передаются в банк.</div>
-                </div>
-              </div>
-              <div class="payment-option payment-option--linked">
-                <div class="payment-option__icon"><img src="img/contacts-pages/methods/visa.svg" alt="alt">
-                </div>
-                <div class="payment-option__content">
-                  <div class="payment-option__title">Visa</div>
-                  <div class="payment-option__text">Максимум 250 000 руб. за один раз и 500 000 руб. в месяц.</div><a href="#" class="link-blue">Как заплатить</a>
-                </div>
-              </div>
-              <div class="payment-option payment-option--linked">
-                <div class="payment-option__icon"><img src="img/contacts-pages/methods/mastercard.svg" alt="alt">
-                </div>
-                <div class="payment-option__content">
-                  <div class="payment-option__title">MasterCard</div>
-                  <div class="payment-option__text">Максимум 250 000 руб. за один раз и 500 000 руб. в месяц.</div><a href="#" class="link-blue">Как заплатить</a>
-                </div>
-              </div>
-              <div class="payment-option payment-option--linked">
-                <div class="payment-option__icon"><img src="img/contacts-pages/methods/maestro.svg" alt="alt">
-                </div>
-                <div class="payment-option__content">
-                  <div class="payment-option__title">Maestro</div>
-                  <div class="payment-option__text">Максимум 250 000 руб. за один раз и 500 000 руб. в месяц.</div><a href="#" class="link-blue">Как заплатить</a>
-                </div>
-              </div>
-              <div class="payment-option">
-                <div class="payment-option__icon"><img src="img/contacts-pages/methods/e-money.svg" alt="alt">
-                </div>
-                <div class="payment-option__content">
-                  <div class="payment-option__title">Электронные деньги</div>
-                  <div class="payment-option__text">Принимаем платежи с электронных кошельков Webmoney, Qiwi и Яндекс.Деньги.</div>
-                </div>
-              </div>
-              <div class="payment-option">
-                <div class="payment-option__icon">
-                  <picture>
-                    <source srcset="img/contacts-pages/methods/qiwi-pink.svg" media="(max-width: 991px)"><img src="img/contacts-pages/methods/qiwi.svg" alt="alt">
-                  </picture>
-                </div>
-                <div class="payment-option__content">
-                  <div class="payment-option__title">QIWI</div>
-                  <div class="payment-option__text">5 000 руб. за один раз.</div>
-                </div>
-              </div>
-              <div class="payment-option">
-                <div class="payment-option__icon"><img src="img/contacts-pages/methods/user.svg" alt="alt">
-                </div>
-                <div class="payment-option__content">
-                  <div class="payment-option__title">Личный счет в магазине</div>
-                  <div class="payment-option__text">Сразу после регистрации на нашем сайте вы получите доступ к личному кабинету. К нему привязан счет, который можно пополнить любым доступным способом. После этого средства со счета можно использовать для оплаты товаров.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="wrapper">
-            <h1>Пример</h1>
-            <p>Купите этот комплект, чтобы получить Grand Theft Auto V и стартовый набор «Преступная организация».</p>
-            <p>Стартовый набор «Преступная организация» – самый быстрый способ для новых игроков построить собственную криминальную империю в Grand Theft Auto Online. </p>
-            <p>Вы получите доступ к самым интересным и популярным материалам GTA Online, в том числе к объектам недвижимости, предприятиям, оружию, транспортным средствам и другим товарам общей стоимостью более чем на 10 000 000 GTA $.</p>
-            <p>Запускайте бизнес-проекты из своего офиса в западном здании Maze Bank, создавайте мощное оружие в подземном бункере в Палето или гоняйте по улицам на самой разной технике, в том числе суперкарах, мотоциклах, Dune FAV с оружием и т. д.</p>
-            <p>Кроме того, вы получите 1 000 000 долларов GTA и мощное оружие. Все это поможет вам стать самым главным в Лос-Сантосе и округе Блэйн.</p>
-            <p>Стартовый набор «Преступная организация» с доступом к Grand Theft Auto Online дает вам имущество стоимостью более 10 000 000 GTA $:</p>
-            <h2>Недвижимость:</h2>
-            <ul>
-              <li>Западный офис в башне Maze Bank</li>
-              <li>Бункер в лесу Палето для торговли оружием</li>
-              <li>Печатная мастерская по производству фальшивых банкнот в пустыне Сенора</li>
-              <li>Клабхаус в Грейт-Чапаррал</li>
-              <li>Квартира по адресу Сан-Витас-стрит, д. 1561</li>
-              <li>Гараж на 10 машин по адресу Эксепшионалист-вэй, 1337</li>
-            </ul>
-            <ol>
-              <li>Западный офис в башне Maze Bank</li>
-              <li>Бункер в лесу Палето для торговли оружием</li>
-              <li>Печатная мастерская по производству фальшивых банкнот в пустыне Сенора</li>
-              <li>Клабхаус в Грейт-Чапаррал</li>
-              <li>Квартира по адресу Сан-Витас-стрит, д. 1561</li>
-              <li>Гараж на 10 машин по адресу Эксепшионалист-вэй, 1337</li>
-            </ol>
-            <blockquote>Запускайте бизнес-проекты из своего офиса в западном здании Maze Bank, создавайте мощное оружие в подземном бункере в Палето или гоняйте по улицам на самой разной технике, в том числе суперкарах, мотоциклах, Dune FAV с оружием и т. д. Кроме того, вы получите 1 000 000 долларов GTA и мощное оружие. Все это поможет вам стать самым главным в Лос-Сантосе и округе Блэйн.</blockquote>
-          </div>
-        </div>
-      </div>
     </div>
     <footer class="footer">
       <div class="footer__subscribe subscribe-footer">
