@@ -11391,6 +11391,11 @@ blockquote {
     line-height: 29px;
   }
 
+  .refill__entering .refill__heading {
+    width: 100%;
+    margin-bottom: 29px;
+  }
+
   .footer__copyright p span {
     display: block;
   }
