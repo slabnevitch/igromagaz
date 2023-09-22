@@ -3081,6 +3081,14 @@ blockquote {
     color: #fff;
   }
 }
+@media only screen and (min-width: 991px) {
+  .account-header__item--exit {
+    display: none;
+  }
+}
+.account-header__item--exit .icon {
+  color: #fff;
+}
 
 .account-header__icon .icon {
   color: #4AB8E6;
@@ -3945,6 +3953,7 @@ blockquote {
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
+    padding-bottom: 21px;
   }
 }
 
@@ -3973,20 +3982,27 @@ blockquote {
   }
 }
 .menu-cab__button--link {
+  height: auto;
+  margin-right: 39px;
   width: auto;
-  padding: 0 0 0 5px;
+  padding: 0;
   text-decoration: none;
   color: #fff;
-}
-@media only screen and (min-width: 991px) {
-  .menu-cab__button--link {
-    display: none;
-  }
 }
 @media only screen and (max-width: 991px) {
   .menu-cab__button--link {
     display: -ms-flexbox;
     display: flex;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .menu-cab__button--link {
+    margin-right: 20px;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .menu-cab__button--link {
+    display: none;
   }
 }
 .menu-cab__button .icon-account {
