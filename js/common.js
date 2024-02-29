@@ -385,6 +385,7 @@ jQuery(function() {
 			$('.product-info__tabs-content').slick({
 			  slidesToShow: 1,
 			  slidesToScroll: 1,
+			  // initialSlide: 4,
 			  arrows:false,
 				dots: false,
 			  infinite: false,
