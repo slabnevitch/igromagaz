@@ -1,0 +1,107 @@
+/*--------------------bonus----------------------*/
+.lk-bonus {
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+
+	@include max-screen($md){
+		margin-bottom: 33px;
+	} 
+	@include max-screen($sm){
+		flex-wrap: wrap;
+	}  
+}
+.lk-bonus__score-wrap {
+	display: inline-flex;
+	align-items: center;
+	margin-bottom: 19px;
+
+	@include max-screen($sm){
+		display: flex;
+		justify-content: center;
+	}  
+}
+.lk-bonus__score {
+	padding: 19px 20px 21px 20px;
+	flex: 0 0 423px;
+	margin-right: 35px;
+	background: #F2F6F9;
+	border-radius: 20px;
+	text-align: center;
+
+	@include max-screen(1100px){
+		flex-basis: 323px;
+	} 
+	@include max-screen($md){
+		flex-basis: 423px;
+	}
+	@include max-screen($sm){
+		flex-basis: 100%;
+		margin-right: 0;
+		margin-bottom: 27px;
+	}
+	@include max-screen($xs){
+		text-align: left;
+	}
+
+	.lk-fund__icon {
+		margin-right: 18px;
+
+		@include max-screen($xs){
+			margin-right: 13px;
+		}  
+		.icon {
+			font-size: 22.5px;
+		}
+	}
+
+	.btn {
+		width: 207px;
+
+		@include max-screen($xs){
+			width: 100%;
+		}  
+	}
+}
+.icon-bonus {}
+.lk-bonus__active {
+	span{
+		display: inline-block;
+		font-family: $bold;
+
+		@include max-screen($xss){
+			display: block;
+		}  
+	}
+}
+.btn-bg-green {}
+.lk-bonus__options {
+	flex: 1 1 auto;
+}
+.lk-bonus__option {
+	&:not(:last-child){
+		margin-bottom: 18px;
+	}
+}
+.lk-bonus__link {
+	margin-bottom: 7px;
+	font-family: $bold;
+	font-size: 18px;
+line-height: 22px;
+}
+.link-blue {}
+.lk-bonus__date {
+	margin-left: 5px;
+}
+
+.lk-table__bonus-desktop{
+	@include max-screen($sm){
+		display: none;
+	}  
+}
+.lk-table__bonus-mobile{
+	@include min-screen($sm){
+		display: none;
+	}  
+}
+/*--------------------END bonus----------------------*/ 

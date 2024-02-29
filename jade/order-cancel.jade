@@ -1,0 +1,149 @@
+extends _misc/main
+
+block title
+	| Оплата не поступила
+
+block content
+	.page-order-status
+		.wrapper
+			ul.breadcrumbs
+				li.breadcrumbs__item 
+					a(href="#").breadcrumbs__link Главная
+				li.breadcrumbs__item 
+					a(href="#").breadcrumbs__link Личный кабинет
+				li.breadcrumbs__item 
+					a(href="#").breadcrumbs__link Заказы Оплата
+				li.breadcrumbs__item 
+					span.breadcrumbs__link Оплата
+
+		.page.page-content
+			section.order-status.order-status--cancel
+				.wrapper
+					.order-status__top
+						.order-status__icon.order-status__icon--error
+							+icon('close')
+						h1 Оплата не поступила
+						p.order-status__top-message По каким-то причинам оплата по счету не поступила на счет ИГРОMAGAZ.
+						h3 Возможные причины
+				
+				.wrapper-smart
+					.wrapper-flex.cancel-reasons
+						- var reasons = [{name: 'Процедура оплаты не была завершена', text:'У вас перезагрузился компьютер, случилось землетрясение, начался конец света и т.д. Но раз теперь все прошло, можно повторить процедуру оплаты.'}, {name: 'Было недостаточно средств на счете', text:'На Вашем счете не хватило денежных средств для оплаты заказа. В этом случае пополните свой счет и повторите процедуру оплаты.'}, {name:'Отложили оплату', text: 'Вы решили отложить покупку на потом. Ну что ж, дело житейское, мы вас ждем с нетерпением в ближайшем будущем!'}, {name: 'Деньги в процессе перечисления', text: 'В некоторых случаях оплата поступает на наш счет не сразу, так как скорость поступления денег зависит от работы платежных систем. Просто подождите минут 10-15'}, {name: 'Техническая ошибка', text: 'Если деньги с Вашего счета «ушли», а к нам так и «не пришли», то напишите в нашу <a href="">техподдержку</a> и укажите подробности заказа. Обязательно разберемся!'}, {name: 'Добавили новый товар', text: 'Вы в последний момент решили не оплачивать товар, чтобы добавить в заказ что-либо еще интересненькое.'}];
+						
+						each item, i in reasons
+							.cancel-reason
+								.cancel-reason__header
+									.cancel-reason__num= "0"+(i+1)
+									.cancel-reason__title= item.name
+								.cancel-reason__text!= item.text
+		
+			.wrapper
+				p Нами успешно продано более 600 000 товаров. Мы уверены, что проблема будет решена в самое ближайшее время!
+	//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

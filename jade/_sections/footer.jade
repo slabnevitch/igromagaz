@@ -1,0 +1,35 @@
+footer.footer
+	.footer__subscribe.subscribe-footer
+		.wrapper-smart
+			.wrapper-flex
+				.subscribe-footer__title Хотите первым узнать про скидки и акции?
+				form.subscribe-footer__form
+					input(autocomplete="off" type="text" name="name" class="subscribe-footer__input" placeholder="Введите Ваш e-mail")
+
+					button.btn.btn-bg-green Подписаться
+	.footer__top
+		.wrapper-smart
+			.wrapper-flex
+				ul.socials
+					- var soc = ['twitter', 'youtube', 'vkontakte', 'mask-group'];
+						each item in soc
+							li.socials__item
+								a(href="#").socials__link
+									img(src="img/socials/" + item + ".svg" alt="alt")
+
+				+menu('footer-menu', ['Оплата','Регистрация','Доставка','Гарантии','Техподдержка','О нас','Контакты'])
+
+	.footer__bottom
+		.wrapper-smart
+			.wrapper-flex
+				.footer__copyright
+					a(href="#") Политика конфиденциальности
+					p © 2007-2022 «Игромагаз» #[span гипермаркет для геймеров №1]
+
+				.footer__payments
+					ul.payments-list
+						- var systs = ['visa', 'mastercard', 'mir', 'qiwi'];
+							each sys in systs
+								li.payments-list__item
+									a(href="#").payments-list__link
+										img(src="img/payment-systems/" + sys + ".svg" alt="alt")

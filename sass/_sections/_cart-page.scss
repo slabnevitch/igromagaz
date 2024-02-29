@@ -1,0 +1,135 @@
+/*--------------------cart-page----------------------*/
+.page-cart {
+	.block-header {
+		@include max-screen($sm){
+			margin-bottom: 25px;
+		}
+	}
+
+}
+.wrapper {}
+.block-header__text {}
+.link {}
+.page-cart__top {
+	margin-bottom: 57px;
+
+	@include max-screen($md){
+		margin-bottom: 36px;
+	}
+	.wrapper-flex {
+		align-items: flex-start;
+	}
+
+}
+.wrapper-smart {}
+.page-cart__content {
+	@include col();
+	width: calc(100% - 308px - 30px);
+	@include size-md(12);
+
+	@include max-screen($md){
+		margin-bottom: 33px;
+	}  
+
+	.product-line {
+		&:not(:last-child){
+			margin-bottom: 20px;
+		}
+		@include max-screen($sm){
+			flex-wrap: wrap;
+			@include clearfix;
+			display: block;
+			padding-top: 31px;
+		}
+		.product-img {
+			@include max-screen($sm){
+				max-width: 97px;
+				height: 63px;
+				// position: absolute;
+				float: left;
+				margin-bottom: 12px;
+			}  
+		}
+
+		.product-line__info {
+			@include max-screen($sm){
+				// flex-basis: 100%;
+				// display: flex;
+				// flex-wrap: wrap;
+				margin-right: 0;
+			}
+		}
+		.product-title {
+			@include max-screen($sm){
+				padding-left: 97px + 17px;
+			}
+		}
+		.product-line__opts{
+			@include max-screen($sm){
+				overflow: hidden;
+				
+			}
+		}
+		.product-availability {
+			@include max-screen($sm){
+				clear: both;
+			}
+		}
+
+
+	}
+}
+.product-delive {}
+.product-line__counter {}
+.counter {}
+.counter__button {}
+.counter-minus {}
+.icon {}
+.icon-minus {}
+.counter__count {}
+.counter-plus {}
+.icon-plus {}
+.product-line__price {}
+.product-price {}
+.sale-label {}
+.product-price__old {}
+.product-price__fail {}
+.product-line__close {}
+.icon-close {}
+.page-cart__bar {
+	@include col();
+	width: calc(308px - 30px);
+	@include size-md(12);
+	flex-shrink: 0;
+	padding: 38px 20px 36px 20px;
+	background-color: $gray;
+	border-radius: 20px;
+	text-align: center;
+
+	@include max-screen($md){
+		padding-left: 49px;
+		padding-right: 49px;
+	}  
+
+	p{
+		margin-top: 0;
+		margin-bottom: 5px;
+	}	
+	.product-price__standart {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 12px;
+		@include dots-family-null;
+		max-width: none;
+	}
+	.form__input {
+		margin-bottom: 10px;
+	}
+	.product-bonus {
+		margin-bottom: 24px;
+	}
+	.btn {
+		width: 100%;
+	}
+}
+/*--------------------END cart-page----------------------*/ 

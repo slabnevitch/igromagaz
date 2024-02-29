@@ -1,0 +1,407 @@
+extends _misc/main
+
+block title
+	| Каталог
+
+block content
+	.wrapper
+		ul.breadcrumbs
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Главная
+			li.breadcrumbs__item 
+				span.breadcrumbs__link Игры для Xbox One/X|S
+
+	.page.page-catalog
+
+		.wrapper
+			.page-catalog__result.results-page-catalog
+				.results-page-catalog__left
+					img(src="img/big-magnifier.svg" alt="alt")
+				
+				.results-page-catalog__content
+					.results-page-catalog__title Результаты поиска
+					.results-page-catalog__result по вашему запросу найдено 10 результатов
+					.results-page-catalog__result.results-page-catalog__result--error по вашему запросу найдено 10 результатов
+					.results-page-catalog__searched
+						.results-page-catalog__searched-row
+							a(href="#").link-blue Игры ПК: ключи активации
+							span 10
+						.results-page-catalog__searched-row
+							a(href="#").link-blue Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+							span 5
+
+			
+			.page-catalog__top
+				h1 Игры для Xbox One/X|S
+				.catalog-filters
+					.catalog-filters__item
+						- var opts = ['По индексу сортировки (возрастание)', 'от А-Я,по названию', 'от Я-А,по цене', 'сначала недорогие','по цене', 'сначала дорогие','по дате выхода', 'сначала новые','по дата выхода', 'сначала старые','по популярности', 'по убыванию','по популярности', 'по возрастанию','по дате добавления', 'сначала новые','по дате добавления', 'сначала старые','по % скидке', 'скидка больше','по % скидке', 'скидка меньше'];               
+						select#select(data-searchdisable="true" class="fstdropdown-select")
+							each item, i in opts
+								if(i==0)
+									option(value="0" + i selected)= item
+								else
+									option(value="0" + i)= item
+					
+					.catalog-filters__item.catalog-filters__item--count
+						- var counts = ['9', '15', '30', '45'];
+						.catalog-filters__key Товаров на странице:
+						select(data-searchdisable="true" class="fstdropdown-select")
+							each item, i in counts
+								option(value="0" + i)= item
+					
+					.catalog-filters__views
+						button#cards-to-tiles.catalog-filters__view.active
+							+icon('catalog-tiles')
+						button#cards-to-list.catalog-filters__view
+							+icon('catatalog-list')
+
+		
+		.wrapper-smart
+			.wrapper-flex.page-catalog__content
+				.page-catalog__filters
+					
+					button.btn.btn-bg-accent.page-catalog__toggle Показать фильтры
+					
+					ul.acordeon-list.page-catalog__filters-list
+						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
+							.acordeon-link.catalog-filter-item__header
+								.catalog-filter-item__name Цена
+								.catalog-filter-item__arrow
+									+icon('arrow-down')
+							
+							ul.acordeon-sublist.catalog-filter-item__content
+								li.catalog-filter-item__inputs
+									label.catalog-filter-item__label
+										span.catalog-filter-item__label-val от
+										input(autocomplete="off" type="text" name="name" class="catalog-filter-item__input" placeholder="379")
+
+									label.catalog-filter-item__label
+										span.catalog-filter-item__label-val до
+										input(autocomplete="off" type="text" name="name" class="catalog-filter-item__input" placeholder="6000")
+
+						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
+							.acordeon-link.catalog-filter-item__header
+								.catalog-filter-item__name Наличие
+								.catalog-filter-item__arrow
+									+icon('arrow-down')
+							
+							ul.acordeon-sublist.catalog-filter-item__content
+								- var checks1 = ['В наличии','Предзаказ','Под заказ'];
+								li
+									each check, i in checks1
+										label.check-label
+											input( type="checkbox" name="name" class="check-label__input" checked=i==0 ? "checked" : false)
+											span.check-label__check
+												+icon('check')
+											span.check-label__text= check
+
+						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
+							.acordeon-link.catalog-filter-item__header
+								.catalog-filter-item__name Жанры
+								.catalog-filter-item__arrow
+									+icon('arrow-down')
+							
+							ul.acordeon-sublist.catalog-filter-item__content
+								- var checks2 = ['Шутеры' ,'Гонки','Экшены','Приключения','Ролевые'];
+								li
+									each check, i in checks2
+										label.check-label
+											input( type="checkbox" name="name" class="check-label__input" checked=i==0 ? "checked" : false)
+											span.check-label__check
+												+icon('check')
+											span.check-label__text= check
+
+						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
+							.acordeon-link.catalog-filter-item__header
+								.catalog-filter-item__name Дата выхода
+								.catalog-filter-item__arrow
+									+icon('arrow-down')
+							
+							ul.acordeon-sublist.catalog-filter-item__content
+								li
+
+									- var years = ['Все','2022','2021','2020','2019','2018','2017','2016','2015','2014','2012','2010'];
+
+									.catalog-filter-item__select
+										.catalog-filter-item__caption Год
+										select(data-searchdisable="true" class="fstdropdown-select")
+											each item, i in years
+												if(i==0)
+													option(value="0" + i selected)= item
+												else
+													option(value="0" + i)= item
+								
+									- var checks3 = ['Все' ,'Этот месяц','Прошлый месяц'];
+										each check, i in checks3
+											label.check-label
+												input( type="checkbox" name="name" class="check-label__input" checked=i==0 ? "checked" : false)
+												span.check-label__check
+													+icon('check')
+												span.check-label__text= check
+
+						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
+							.acordeon-link.catalog-filter-item__header
+								.catalog-filter-item__name Язык
+								.catalog-filter-item__arrow
+									+icon('arrow-down')
+							
+							ul.acordeon-sublist.catalog-filter-item__content
+								- var checks4 = ['Русский' ,'Русские субтитры','Английский'];
+								li
+									each check, i in checks4
+										label.check-label
+											input( type="checkbox" name="name" class="check-label__input" checked=i==0 ? "checked" : false)
+											span.check-label__check
+												+icon('check')
+											span.check-label__text= check
+
+						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
+								.acordeon-link.catalog-filter-item__header
+									.catalog-filter-item__name Издатель
+									.catalog-filter-item__arrow
+										+icon('arrow-down')
+								
+								ul.acordeon-sublist.catalog-filter-item__content
+									li
+										- var dilers = ['Все','Activision','BANDAI NAMCO Entertainment','Blizzard Entertainment','CD PROJEKT RED','Deep Silver','FromSoftware Inc','FromSoftware, Inc','Rockstar Games','Ubisoft','Xbox Game Studios'];
+										
+										select(data-searchdisable="true" class="fstdropdown-select")
+											each item, i in dilers
+												if(i==0)
+													option(value="0" + i selected)= item
+												else
+													option(value="0" + i)= item
+
+						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
+							.acordeon-link.catalog-filter-item__header
+								.catalog-filter-item__name Возрастное ограничение
+								.catalog-filter-item__arrow
+									+icon('arrow-down')
+							
+							ul.acordeon-sublist.catalog-filter-item__content
+								- var checks5 = ['6+' ,'12+','16+', '18+'];
+								li
+									each check, i in checks5
+										label.check-label
+											input( type="checkbox" name="name" class="check-label__input" checked=i==0 ? "checked" : false)
+											span.check-label__check
+												+icon('check')
+											span.age= check
+
+						li.acordeon-item.catalog-filter-item
+							.acordeon-link.catalog-filter-item__header
+								a(href="#").link Очистить всё
+
+					button.btn.btn-bg-accent.page-catalog__toggle Показать фильтры
+								
+				.page-catalog__cards
+					.product-cards.wrapper-flex
+						- for (var i=0; i < 9; i++)
+							if !i%2 > 0
+								div(class="product-card")
+									.product-card__header
+										.product-like
+											+icon('heart-full')
+										.sale-label -15%
+
+									a(href="#").product-img
+										img(src="img/prod-card-img.jpg" alt="alt")
+								
+									.product-card__content
+										.product-availability В наличии
+										
+										a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+										
+										.product-card__bottom
+											.product-price
+												.product-price__old
+													.product-price__fail 2749 руб.
+												.product-price__standart.product-price__standart--sale 2549 руб.
+
+											a(href="#").product-card__buy.btn.btn-bg-green Купить
+							
+
+							else if i==2	
+								div(class="product-card liked")
+									.product-card__header
+										.product-like
+											+icon('heart-full')
+										.sale-label -15%
+
+									a(href="#").product-img
+										img(src="img/prod-card-img.jpg" alt="alt")
+								
+									.product-card__content
+										.product-availability В наличии
+										
+										a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+										
+										.product-card__bottom
+											.product-price
+												.product-price__old
+													.product-price__fail 2749 руб.
+												.product-price__standart.product-price__standart--sale 2549 руб.
+
+											a(href="#").product-card__buy.btn.btn-bg-green Купить
+							else 	
+								.product-card
+									.product-card__header
+										.product-like
+											+icon('heart-full')
+
+									a(href="#").product-img
+										img(src="img/prod-card-img.jpg" alt="alt")
+								
+									.product-card__content
+										.product-availability В наличии
+										
+										a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+										
+										.product-card__bottom
+											.product-price
+												.product-price__standart 2549 руб.
+
+											a(href="#").product-card__buy.btn.btn-bg-green Купить
+
+					.show-more
+						a(href="#").btn.btn-brd.btn-brd-accent Показать еще
+
+					.pagination
+						a(href="#").pagination__prev
+							+icon('pagination-prev')
+						ul.pagination-list
+							li.pagination-list__item
+								a(href="#").pagination-list__link 1
+							li.pagination-list__item
+								a(href="#").pagination-list__link 2
+							li.pagination-list__item.active
+								a(href="#").pagination-list__link 3
+							li.pagination-list__item
+								a(href="#").pagination-list__link 4
+							li.pagination-list__item
+								a(href="#").pagination-list__link ...
+							li.pagination-list__item
+								a(href="#").pagination-list__link 7
+						
+						a(href="#").pagination__next
+							+icon('pagination-next')
+
+					.page-catalog__article
+						h2 Ключи для Steam
+
+						p Нет такого геймера, который не знает, что такое Steam. Эта платформа объединяет огромное количество игроков по всему миру в единую сеть, позволяя вести битвы не только с компьютерными противниками, но и с живыми людьми. Играть со Steam просто! Купи лицензионный ключ, активируй его в системе, скачай дистрибутив и приступай к игре.
+						
+						p Наш магазин занимается продажей ключей для Steam. Получая код от официальных дилеров и издателей, мы делаем минимальную наценку. Присоединяйтесь к нам, одному из первых в рунете интернет-магазину для геймеров, и получите 100 % гарантию качества, быструю доставку, бонусы, акции и скидки.
+	//- include _sections/main-slider
+	
+	
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

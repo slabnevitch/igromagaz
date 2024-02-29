@@ -1,0 +1,13 @@
+.page-card__screen
+	.page-card__slider.owl-carousel.owl-theme
+		- for (var i=0; i < 5; i++)
+			.page-card__slide._fit
+				img._fit-img(src="img/product-card-page/slider-big.jpg" alt="alt")
+			
+		// .page-card__slide._fit
+		// 	a(class="owl-video" href="http://www.youtube.com/watch?v=vlVSJ0AvZe0" style="display: none;")
+
+	.page-card__slider-nav.owl-carousel
+		- for (var i=0; i < 5; i++)
+			.page-card__slide-nav._fit
+				img._fit-img(src="img/product-card-page/slider-navs/" + (i+1) + ".jpg" alt="alt")

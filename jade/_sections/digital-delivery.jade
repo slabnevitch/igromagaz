@@ -1,0 +1,44 @@
+section.digital-delivery
+	.wrapper
+		.autorization__header
+			.autorization__title Доставка цифрового товара
+			p Цифровой товар будет доставлен на указанный e-mail:
+			.digital-delivery__mail natalya.noyabrskaya@gmail.com
+		
+		form.form(action="#").digital-delivery__form
+			.form__row
+				input(autocomplete="off" type="text" name="name" class="form__input" placeholder="natalya.noyabrskaya@gmail.com")
+				button.btn.btn-bg-green Редактировать
+
+			.digital-delivery__payment
+				.form__title Выберите способ оплаты:
+				.digital-delivery__methods
+					- var pays = ['Банковские карты РФ', 'Оплата с QIWI Кошелька', 'С вашего счета в магазине'];
+						each item, i in pays
+							label.digital-delivery__method
+								input.digital-delivery__radio(type="radio" name="method" checked=i==1 ? "checked" : false)
+								span.digital-delivery__method-block
+									span.digital-delivery__img
+										img(src="img/cart-page/pay/" + (i+1) + ".svg" alt="alt")
+									span.digital-delivery__name= item
+
+			.digital-delivery__rules
+				.digital-delivery__confirm
+					label.check-label
+						input( type="checkbox" name="name" class="check-label__input")
+						span.check-label__check
+							+icon('check')
+						span.check-label__text Согласен(на) с #[a(href="#").link-blue Условиями покупки]
+				.digital-delivery__rules-text Ознакомлен с описание товара, уведомлен, что товар предназначен для активации в регионе: Россия, Украина, Беларусь, Казахстан, Азербайджан, Киргистан, Молдова, Таджикистан, Туркменистан, Узбекистан. В описании каждого товара могут быть внесены дополнительные региональные ограничения.
+			
+			.digital-delivery__total.total-digital-delivery
+				.total-digital-delivery__price
+					.total-digital-delivery__key Всего к оплате:
+					.total-digital-delivery__summ 4 638руб.
+				
+				.total-digital-delivery__info
+					.total-digital-delivery__discount Ваша скидка:	1 019 руб.
+					.total-digital-delivery__bonus Бонусы: 39
+				
+				.total-digital-delivery__pay
+					button.btn.btn-bg-green Оплатить заказ

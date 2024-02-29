@@ -1,0 +1,190 @@
+extends _misc/main
+
+block title
+	| Личный кабинет | Личные данные
+
+block content
+	- var current = 2;
+	.wrapper
+		ul.breadcrumbs
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Главная
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Личный кабинет
+			li.breadcrumbs__item 
+				span.breadcrumbs__link Личные данные
+
+	.page.page-lk.page-lk-personal
+		.wrapper-smart
+			.wrapper-flex.page-lk__wrap
+				include _blocks/lk-sidebar
+				
+				.page-lk__content
+					.lk-min-header(data-da="page-lk__wrap,991,first")
+						h1 Личные данные
+						a(href="#").link-blue Изменить пароль
+	
+					.lk-personal-form
+						form.form(action="#")
+							.lk-personal-form__row
+								.lk-personal-form__col
+									label.form__label
+										span.form__field-name E-mail:
+										input(autocomplete="off" type="text" name="name" class="form__input" value="natalya.noyabrskaya@gmail.com")
+								.lk-personal-form__col
+									p На этот e-mail будут доставляться цифровые ключи и поступать сведения о заказах
+
+							.lk-personal-form__row
+								.lk-personal-form__col
+									label.form__label
+										span.form__field-name Контактное лицо:
+										input(autocomplete="off" type="text" name="name" class="form__input" value="Петрова Наталья Александрова")
+								
+							.lk-personal-form__row
+								.lk-personal-form__col
+									label.form__label
+										span.form__field-name Мобильный телефон:
+										input(autocomplete="off" type="text" name="name" class="form__input" value="+7 (567) 456-56-56")
+
+								.lk-personal-form__col
+									p Требуется для доставки физических товаров
+								
+							.lk-personal-form__row
+								.lk-personal-form__col.lk-personal-form__col--birthday
+									span.form__field-name День рождения:
+									input(autocomplete="off" type="text" name="name" class="form__input" placeholder="День")
+
+									.lk-personal-form__select
+										select(data-searchdisable="true" class="fstdropdown-select")
+											- var months = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
+												each item, ind in months
+													option(value="0" + (ind+1))= item
+																					
+								.lk-personal-form__col
+									p В день рождения мы #[a(href="#").link-blue дарим бонусы]
+
+							.lk-search-form__bottom
+								button.btn.btn-bg-green Сохранить изменения
+								a(href="#").link Вернуть параметры по умолчанию
+					
+					.autorization__services
+						.form__title Социальные профили
+						p Привяжите учетные записи в социальных сетях и используйте для авторизации.
+						ul.socials
+							- var soc = ['facebook', 'twitter', 'vkontakte', 'odnoklassniki', 'google-plus', 'mask-group', 'yandex', 'mailru'];
+								each item in soc
+									li.socials__item
+										a(href="#").socials__link
+											img(src="img/socials/" + item + ".svg" alt="alt")
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+	
+	//- script(src="js/libs/datepicker/air-datepicker.js")
+	//- script(src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

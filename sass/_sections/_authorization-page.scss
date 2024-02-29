@@ -1,0 +1,192 @@
+/*--------------------authorization-page----------------------*/
+.page-authorization{
+	padding-top: 21px;
+	padding-bottom: 53px;
+	text-align: center;
+
+	@include max-screen($md){
+		padding-bottom: 43px;
+	}  
+
+	.breadcrumbs{
+		margin-top: 0;
+		margin-bottom: 30px;
+		justify-content: center;
+
+		@include max-screen($md){
+			margin-bottom: 15px;
+		}  
+	}
+
+	.autorization__header{
+		margin-bottom: 39px;
+
+		@include max-screen($md){
+			margin-bottom: 20px;
+		}  
+	}
+	h1{
+		font-family: $bold;
+		font-size: 32px;
+		line-height: 39px;
+		@include max-screen($xs){
+			font-size: 24px;
+			line-height: 29px;
+		}
+	}
+
+	.autorization__forms{
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.autorization__services{
+		padding: 0;
+		margin-bottom: 48px;
+		background-color: transparent;
+
+		@include max-screen($md){
+			margin-bottom: 32px;
+		}  
+		.socials{
+			justify-content: center;
+		}
+
+	}
+	.autorization__enter{
+		@include min-screen($sm){
+			padding-left: 40px;
+			padding-right: 40px;
+		}  
+	}
+	.enter-autorization__cols{
+		@include min-screen($sm){
+			margin-left: -15px;
+			margin-right: -15px;
+		}  
+	}
+	.enter-autorization__col{
+		@include min-screen($sm){
+			flex-basis: calc(100%/2 - 30px);
+			margin-left: 15px;
+			margin-right: 15px;
+		}  
+	}
+}
+.page-registration{
+	.autorization__enter{
+			padding-bottom: 38px;
+
+			@include max-screen($md){
+				padding-bottom: 27px;
+			}  
+
+			.form__label{
+					margin-bottom: 16px;
+					@include max-screen($sm){
+						margin-bottom: 13px;
+					} 
+			}
+			.form__input{
+				@include max-screen($sm){
+					margin-bottom: 0;
+				}  
+			}
+
+		.check-label{
+			margin-top: 9px;
+
+			@include max-screen($sm){
+				margin-top: 0;
+				margin-bottom: 26px;
+			}  
+
+			a{
+				color: $text;
+				text-decoration: underline;
+			}
+		}
+	}
+	.password-requirements{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: left;
+
+		@include max-screen($sm){
+			padding-top: 6px;
+		}  
+	}
+	.password-requirements__list{
+		@include max-screen($sm){
+			margin-bottom: 26px;
+		}  
+	}
+	.enter-autorization__col-buttons{
+		justify-content: flex-end;
+
+		.btn-bg-green{
+			flex-basis: 227px;
+			margin-right: 0;
+
+			@include max-screen($sm){
+				flex-basis: 100%;
+			}  
+		}
+	}
+}
+	.password-requirements__title{
+		margin-bottom: 7px;
+		font-family: $bold;
+	}
+	.password-requirements__list{
+		@extend .custom-list;
+		font-size: 14px;
+
+		@include max-screen($sm){
+			padding-left: 5px;
+		}  
+	}
+.password-request-page{
+	.autorization__header p{
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.form{
+		max-width: 395px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include max-screen($md){
+			padding: 20px 20px 23px 20px;
+			border-radius: 20px;
+			background-color: $gray;
+		}  
+
+		.form__input{
+			background-color: $gray;
+
+			@include max-screen($md){
+				background-color: #fff;
+			}  
+		}
+		.btn-bg-green{
+			width: 148px;
+
+			@include max-screen($sm){
+				width: 100%;
+			}  
+		}
+	}
+	.form .password-request-page__change {
+		width: auto;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+.password-request-page__captcha{
+	margin-bottom: 25px;
+	text-align: left;
+}
+
+/*--------------------END authorization-page----------------------*/ 

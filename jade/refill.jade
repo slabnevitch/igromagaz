@@ -1,0 +1,171 @@
+extends _misc/main
+
+block title
+	| Пополнение внутреннего счета
+
+block content
+	.wrapper
+		ul.breadcrumbs
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Главная
+			li.breadcrumbs__item 
+				span.breadcrumbs__link Личный кабинет
+
+	.page.page-content
+		section.refill
+			.wrapper
+				h1 Пополнение внутреннего счета
+			
+				.refill__content
+					form(action="#" class="form")
+						.refill__entering.entering-refill
+							.refill__heading Занесение на внутренний счет:
+							.refill__input
+								input(autocomplete="off" type="text" name="name" class="form__input" value="50")
+							.refill__wallet руб.
+						
+						.entering__methods.entering-methods
+							.refill__heading Выберите способ оплаты:
+							.refill__methods
+								label.refill__method.method-refill
+									input(autocomplete="off" type="radio" name="refill" class="refill__variant" checked)
+									.method-refill__content
+										img.method-refill__logo(src="img/logo.svg" alt="alt")
+										span.method-refill__label С вашего счета в магазине
+
+								label.refill__method.method-refill
+									input(autocomplete="off" type="radio" name="refill" class="refill__variant" )
+									.method-refill__content
+										img.method-refill__logo(src="img/logo_game-money.png" alt="alt")
+										span.method-refill__label GameMoney (карты)
+
+						.refill__confirmation.confirmation-refill
+							.refill__heading Подтверждение:
+							.confirmation-refill__summ
+								.confirmation-refill__key Сума пополнения:
+								.confirmation-refill__val 50 руб.
+							
+							label.check-label
+								input( type="checkbox" name="name" class="check-label__input" checked)
+								span.check-label__check
+									+icon('check')
+								span.check-label__text Согласен(на) с #[a(href="#").link-blue Условиями покупки]
+
+							.confirmation-refill__note Ознакомлен с описание товара, уведомлен, что товар предназначен для активации в регионе: Россия, Украина, Беларусь, Казахстан, Азербайджан, Киргистан, Молдова, Таджикистан, Туркменистан, Узбекистан. В описании каждого товара могут быть внесены дополнительные региональные ограничения.
+
+							.refill__total.total-refill
+								.total-refill__key Всего к оплате:
+								.total-refill__val 50 руб.
+
+
+
+
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

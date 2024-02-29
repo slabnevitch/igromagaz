@@ -1,0 +1,288 @@
+extends _misc/main-cart-empty
+
+
+block title
+	| Личный кабинет
+
+block header
+	header.header
+		.header__top
+			.wrapper
+				.header__wrapper
+					.header__menu
+						+menu('menu-header', ['Бонусная программа','Техподдержка','Блог','Отзывы'])
+					.header__account.account-header(data-da="header__menu-wrapper,991,first")
+						a(href="#").account-header__item
+							.account-header__icon
+								+icon('account')
+							.account-header__label Войти
+
+						a(href="#").account-header__item
+							.account-header__icon
+								+icon('key')
+							.account-header__label Регистрация
+
+						.account-header__close#main-menu-closer
+							+icon('close')
+		
+		.header__middle
+			.wrapper
+				a(href="#").header__logo
+					img.header__logo-img(src="img/logo.svg" alt="alt")
+				
+				form(action=":").header__search.search-header
+					.search-header__select
+						select(data-searchdisable="true" class="fstdropdown-select")
+							option(value="all") Все разделы
+							option(value="01") Игры ПК: ключи активации
+							option(value="02") Карты пополнения счета
+							option(value="03") Антивирусы
+							option(value="04") Коллекционные издания
+							option(value="05") Игры для Xbox 360
+							option(value="06") Игры для PlayStation 3
+							option(value="07") Игровые приставки
+							option(value="08") Игровые аксессуары
+
+					.search-header__field
+						input(autocomplete="off" id="header-search-input" type="text" name="name" class="search-header__input" placeholder="Поиск среди 2526 товаров в наличии")
+					
+					button.btn.search-header__submit
+						span Найти
+						+icon('search')
+
+					.header__search-results
+						- for (var i=0; i < 3; i++)
+							.product-line
+								a(href="#").product-img
+									img(src="img/prod-card-img.jpg" alt="alt")
+								.product-line__info
+									a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+									.product-availability В наличии
+									.product-delive Доставка цифрового ключа на e-mail
+
+								.product-line__price
+									.product-price
+										.sale-label -15%
+										.product-price__old
+											.product-price__fail 2749 руб.
+										.product-price__standart 2549 руб.
+								
+
+				a(href="#").header__cart.cart-header(data-da="header__wrapper,991,1")
+					.cart-header__icon
+						+icon('cart')
+					.cart-header__value 4 000 руб.
+					.cart-header__empty нет 
+						br
+						| товаров
+
+				a(href="#").header__vishes.vishes-header.full(data-da="header__wrapper,991,2")
+					.vishes-header__icon
+						+icon('heart-empty')
+					.vishes-header__value 12
+
+				button.toggle-mnu#main-menu-opener
+					span
+
+		.header__bottom
+			.wrapper
+				.catalog-toggler#catalog-toggle
+					+icon('dots-burger')
+					.catalog-toggler__label Каталог товаров
+					.catalog-toggler__arrow
+						+icon('arrow-down')
+				
+				.header__menu-wrapper
+					+menu('main-menu', ['Оплата','Регистрация','Доставка','Гарантии','Техподдержка','О нас','Контакты'])
+
+			.header__catalog.catalog-header
+				.wrapper-smart
+					.wrapper-flex
+						.catalog-header__column
+							ul.catalog-header__list
+								li.catalog-header__item
+									a(href="#").catalog-header__link Игры на ПК: ключи активации
+									ul.catalog-header__sublist
+										- var sublist1 = ['Steam','Uplay','Battle.net','Rockstar','Origin','GOG.com','Другое'];
+											each item in sublist1
+												li.catalog-header__subitem
+													a(href="#").catalog-header__sublink= item
+						.catalog-header__column
+							ul.catalog-header__list
+								li.catalog-header__item
+									a(href="#").catalog-header__link Карты пополнения счета
+									ul.catalog-header__sublist
+										- var sublist2 = ['Xbox Live', 'PlayStation Network', 'iTunes Store', 'EA Play (EA Access)', 'Steam Wallet'];
+											each item in sublist2
+												li.catalog-header__subitem
+													a(href="#").catalog-header__sublink= item
+								
+							ul.catalog-header__list
+								li.catalog-header__item
+									a(href="#").catalog-header__link Игры для PlayStation 4
+						
+						.catalog-header__column
+							ul.catalog-header__list
+								li.catalog-header__item
+									a(href="#").catalog-header__link Коллекционные издания
+
+							ul.catalog-header__list
+								li.catalog-header__item
+									a(href="#").catalog-header__link Игровые аксессуары
+									ul.catalog-header__sublist
+										- var sublist3 = ['Stem-аксессуары','PC аксессуары','Другие аксессуары'];
+											each item in sublist3
+												li.catalog-header__subitem
+													a(href="#").catalog-header__sublink= item
+
+							ul.catalog-header__list
+								li.catalog-header__item
+									a(href="#").catalog-header__link Консоли Xbox One
+						
+						.catalog-header__column
+							.catalog-header__img
+								img(src="img/catalog-x-box.png" alt="alt")
+	
+block content
+	- var current = -1;
+	.wrapper
+		ul.breadcrumbs
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Главная
+			li.breadcrumbs__item 
+				span.breadcrumbs__link Личный кабинет
+
+	.page.page-lk.page-lk-main
+		.wrapper-smart
+			.wrapper-flex.page-lk__wrap
+				include _blocks/lk-sidebar
+				.page-lk__content
+					.lk-header(data-da="page-lk__wrap,991,first")
+						h1 Личный кабинет
+						.lk-grating Мы рады вам, Пользователь!
+						p Меню слева поможет управлять вашим Личным кабинетом, отслеживать #[a(href="#").link-blue статус заказа, состояние бонусного счета, настраивать подписку] на интересующие вас товары.
+	
+					.lk-overall
+						- var overs = [{one: 'ID:', two: '334523'}, {one: 'Статус:', two: 'Уважаемый покупатель'}, {one: 'e-mail:', two: 'natalya.noyabrskaya@gmail.com'}, {one: 'Адрес доставки:', two: 'ул. Нигородского 67, кв. 56'},  {one: 'Контактное лицо:', two: 'Петрова Наталья Александрова'}];
+								each item, ind in overs
+									.lk-overall__row
+										.lk-overall__col= item.one
+										.lk-overall__col= item.two
+										if ind!==0
+											.lk-overall__col
+												a(href="#").link-blue
+													if ind == 1 
+														Подробнее
+													else 
+														Изменить
+
+				
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	// script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

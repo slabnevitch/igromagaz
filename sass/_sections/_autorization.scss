@@ -1,0 +1,193 @@
+/*--------------------.autorization----------------------*/
+.autorization {
+	
+}
+.wrapper {}
+.autorization__header {
+	margin-bottom: 29px;
+
+	@include max-screen($md){
+		margin-bottom: 22px;
+	}
+
+	p{
+		margin-top: 8px;
+		margin-bottom: 0;
+	}
+}
+.autorization__title{
+	font-family: $bold;
+	font-size: 32px;
+	line-height: 39px;
+	@include max-screen($xs){
+		font-size: 24px;
+		line-height: 29px;
+	}
+}
+.autorization__services {
+	padding: 33px 42px 30px 42px;
+	background-color: $gray;
+	margin-bottom: 30px;	
+	border-radius: 20px;
+
+	@include max-screen($sm){
+		padding: 23px 20px 17px 20px;
+	}
+
+	.socials__item{
+		margin-bottom: 5px;
+		&:not(:last-child){
+			@include max-screen($sm){
+				margin-right: 11px;
+			}
+		}
+			
+	}
+	.socials__link{
+		width: 49.5px;
+		height: 49.5px;	
+
+		@include max-screen($sm){
+			width: 27px;
+			height: 27px;	
+		}
+	}
+}
+.autorization__forms{
+	max-width: 892px;
+}
+.autorization__enter {
+	padding: 33px 42px 30px 31px;
+	background-color: $gray;
+	border-radius: 20px;
+
+	// &:not(:last-child){
+		margin-bottom: 30px;
+	// }
+
+	@include max-screen($sm){
+		padding: 31px 20px 27px 20px;
+	}
+}
+.enter-autorization {}
+.enter-autorization__cols{
+	display: flex;
+	flex-wrap:wrap;
+	margin: 0 -11.5px;
+}
+.enter-autorization__col {
+	flex: 0 0 calc(100%/2 - 23px);
+	margin: 0 11.5px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+
+	@include max-screen($sm){
+		flex-basis: calc(100% - 23px);
+	}
+
+	.autorization__forgot {
+		// display: inline-block;
+		align-self: flex-end;
+		margin-top: 8px;
+
+		@include max-screen($sm){
+			position: absolute;
+			top: 15px;
+			right: 10px;
+			margin-top: 0;
+		}
+
+	}
+	.form__input {
+
+		@include max-screen($sm){
+			margin-bottom: 13px;
+		}
+	}
+	& >
+	.enter-autorization__captcha {
+		margin-top: 37px;
+
+		@include max-screen($sm){
+			margin-top: 0;
+		}  
+	}
+}
+.enter-autorization__col-buttons {
+	display: flex;
+	margin-top: 36px;
+
+	@include max-screen($sm){
+		margin-top: 25px;
+	}
+
+	@include max-screen(350px){
+		display: block;
+	}
+
+	.btn-bg-green {
+		flex: 0 0 119px;
+		margin-right: 19px;
+
+		@include max-screen($xss){
+			flex-basis: 96px;
+			margin-right: 15px;
+		}  
+
+		@include max-screen(350px){
+			width: 100%;
+			margin-bottom: 15px;
+		}
+	}
+	.btn-brd {
+		flex: 0 1 227px;
+		@include max-screen($xss){
+			flex: 1 1 auto;
+		} 
+		@include max-screen(350px){
+			width: 100%;
+		}
+	}
+}
+.btn-brd-green {}
+.enter-autorization__row {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 642px;
+	width: 100%;
+
+	@include max-screen($xs){
+		flex-direction: column;
+	}
+
+	.form__label{
+		flex: 1 1 auto;
+
+		@include max-screen($xs){
+			margin-bottom: 18px;
+		}
+	}
+	.btn {
+		flex: 0 0 227px;
+		margin-left: 20px;
+
+		@include max-screen($xs){
+			flex-basis: auto;
+			margin-left: 0;
+			order: 2;
+		}
+	}
+	.enter-autorization__captcha{
+		width: 100%;
+
+		@include max-screen($xs){
+			margin-bottom: 23px;
+		}
+	}
+}
+.enter-autorization__captcha{
+	text-align: left;
+}
+/*--------------------END .autorization----------------------*/ 

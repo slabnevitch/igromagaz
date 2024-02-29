@@ -1,0 +1,21 @@
+.news
+	.wrapper
+		.block-header
+			.block-header__text
+				.sect-title Новости
+				a(href="#").link-blue Смотреть все
+
+			.block-header__nav
+				.slider-prev
+					+icon('arrow-prev')
+				.slider-next
+					+icon('arrow-next')
+	.wrapper
+		.news__slider
+			- var news = [{date: '05.04.2022', title: 'Акция от издателя Team 17 — скидки до 78%!'}, {date: '24.12.2021', title: 'Новогодние скидки от SEGA: скидки до 89%!'}, {date: '24.12.2021', title: 'Оформи предзаказ и сделай подарок близкому!'}];
+
+			- for (var i=0; i < 3; i++)
+				each item in news
+					.news__item
+						.news__date= item.date
+						a(href="#").news__title= item.title

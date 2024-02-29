@@ -1,0 +1,183 @@
+extends _misc/main
+
+block title
+	| Информация о проекте
+
+block content
+	.wrapper
+		ul.breadcrumbs
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Главная
+			li.breadcrumbs__item 
+				span.breadcrumbs__link Информация о проекте
+
+	.page.page-content.page-about-project
+		.wrapper
+			h1 Информация о проекте
+
+			h2 ИгроМагаз – первый среди равных
+			
+			p Давным-давно, более 12 лет назад, было крайне сложно найти нужную игру, игровую приставку или игровые аксессуары, да и вообще все, что связано с играми. Для этого требовались многодневные пляски с бубнами, приходилось рыскать по множеству сайтов или тратить немало времени и сил на беготню по 1 001 магазину. Устав от несовершенства этого бренного мира, мы создали «ИгроМагаз». С тех пор все, что нужно геймеру, находится в одном месте и доступно 24 часа 7 дней в неделю 365 дней в году. Покупать игры стало просто и быстро!
+			
+			p Нужен ключ активации игры или карта пополнения счета с мгновенной доставкой? Пожалуйста! А может ты хочешь коллекционное издание любимой игры или новинки из мира видеоигр? Обеспечим! Захотелось новую консоль? Обращайся к нам! Решил побаловать свою приставку новыми аксессуарами – теперь вы знаете, где их искать! Контроллеры, рули, наушники – да вообще все, что может понадобиться, и даже немножко больше.
+			
+			h4 В этом и заключалась наша идея. И мы ее реализовали на все 100 %.
+
+		section.for-players
+			.wrapper
+				h2 От нас – геймерам
+			.wrapper-smart
+				.wrapper-flex.for-players__items
+					- var items = ['Цифровые товары в широком ассортименте с моментальной доставкой', 'Лицензионные игры', 'Гарантия качества на любые группы товаров', 'Множество удобных и безопасных способов оплаты', 'Многочисленные акции и бонусы для клиентов', 'Общение в социальных сетях с единомышленниками', 'Для недоверчивых – тестовая покупка за 1 рубль' ,'Новинки игровой индустрии'];
+
+					each item, i in items
+						.for-players__item.item-for-players
+							.item-for-players__icon
+								img(src="img/about-project-icons/" + (i+1) +".svg" alt="alt")
+							.item-for-players__mame= item
+			.wrapper
+				h2 Поддержка и помощь
+				
+				p Если возникли вопросы, трудности с оформлением заказа или что-то еще – смело пишите нам. Мы работаем круглосуточно. И даже если в азарте вы заказали совсем не тот ключ, который хотели изначально, мы постараемся исправить ситуацию.
+				
+				h2 Новости, статьи и обзоры
+				
+				p Знание – сила! Хотите всегда быть в курсе событий игровой индустрии? Заглядывайте в наш блог, где собраны гигабайты полезной информации и самые свежие обзоры последних новинок, а также актуальные новости.
+				
+				h2 Гарантия надежности
+				
+				p Только качество, только хардкор! Лучшие из лучших издателей и официальных дилеров, проверенные годами сотрудничества, поставляют нам лицензионные товары от Activision, Blizzard, Microsoft, Ubisoft, Sega, «Новый Диск», «СофтКлаб», Sony, «Бука» и многих других.
+				
+				h2 Быстро выбирай, просто плати
+				
+				p Выбрать товар стало как никогда просто. Удобные фильтры, сортировка по жанрам, ценам, разработчикам и другим параметрам. Выбрали? Оплачивайте любым удобным способом – их у нас более чем достаточно:
+
+			.wrapper-smart
+				.wrapper-flex.for-players__items.for-players__items--payment
+					- var items2 = ['Банковские карты Visa, MasterCard, Maestro и «Мир»', 'Электронные кошельки Webmoney, Qiwi и «Яндекс.Деньги»', 'Личный счет клиента в нашем магазине'];
+
+					- for (var i=9; i < 12; i++)
+						.for-players__item.item-for-players
+							.item-for-players__icon
+								img(src="img/about-project-icons/" + i +".svg" alt="alt")
+							.item-for-players__mame= items2[i-9]
+
+			.wrapper
+				h2 Купил, скачал, установил и в бой!
+				p Прошли те печальные времена, когда доставку игры нужно было ждать неделями. Большая часть наших товаров представлена в виде ключей. Оплачиваете покупку, и практически мгновенно этот долгожданный набор букв и цифр попадет к вам на электронную почту! Останется только скачать игру, установить ее и можно сразу отправляться в увлекательное приключение!
+				p А вот физические товары, вроде коллекционных изданий, консолей, аксессуаров, контроллеров и прочего, мы готовы отправить вам курьером. Желающим сэкономить предлагаем воспользоваться «Почтой России». Выйдет дешевле, но придется подождать. Доставка осуществляется по всей России и СНГ.
+				h2 Мы в социальных сетях
+				p В ногу со временем идти без социальных сетей невозможно нынче. О вас заботясь, создали мы «Вконтакте», Twitter, Steam и Facebook группы, и даже в YouTube канал. К нам присоединяйтесь вы и да прибудет с вами сила общения! Новости последние, новинок обсуждение и разговоры с подобными себе вам предлагаем мы.
+				p Регистрируйся в нашем магазине, и тебе гарантирован великолепный сервис, бонусы, скидки, акции и море интересной информации по играм!
+
+
+
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

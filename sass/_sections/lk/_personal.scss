@@ -1,0 +1,154 @@
+/*--------------------personal----------------------*/
+.page-lk-personal{
+	@include max-screen($md){
+		
+		padding-bottom: 26px;
+	}  
+}
+.lk-personal-form {
+	padding: 36px 40px 34px;
+	margin-bottom: 30px;
+	background: #F2F6F9;
+	border-radius: 20px;
+
+	@include max-screen($sm){
+		padding: 16px 20px 27px 20px;
+	}  
+
+	.lk-search-form__bottom {
+		@extend .lk-search-form__bottom;
+		margin-top: 6px;
+
+		.btn-bg-green{
+			width: 237px;
+
+			@include max-screen($xs){
+				width: 100%;
+			}  
+		}
+	}
+}
+.form {}
+.lk-personal-form__row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: -13px;
+	margin-right: -13px;
+
+	@include max-screen($sm){
+		margin-bottom: 24px;
+	}  
+	
+	&:nth-child(2){
+		.lk-personal-form__col {
+		
+			width: calc(100% - 26px);
+		}
+	}
+
+	// &:last-of-type{
+	// 	.lk-personal-form__col {
+	// 			margin-bottom: 23px;
+	// 	}
+	// }
+}
+.lk-personal-form__col {
+	width: calc(50% - 26px);
+	margin-left: 13px;
+	margin-right: 13px;
+	margin-bottom: 3px;
+
+	@include max-screen($sm){
+			width: calc(100% - 26px);
+
+	}
+	&:not(:last-child){
+		@include max-screen($sm){
+			
+			margin-bottom: 0;
+		}
+	}
+
+	.form__label{
+		@include max-screen($sm){
+			margin-bottom: 0;
+		}  
+	}
+
+	p{
+		font-size: 14px;
+		line-height: 17px;
+
+		color: #99A2AC;
+			@include max-screen($sm){
+				margin-bottom: 0;
+			}  
+	}
+}
+.form__label {}
+.lk-personal-form__col--birthday {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 23px;
+
+	@include max-screen($sm){
+		margin-top: 8px;
+	}  
+
+	@include max-screen(360px){
+		display: block;
+	}  
+
+	.form__field-name {
+		width: 100%;
+	}
+	.form__input {
+		width: 113px;
+		flex-shrink: 0;
+		margin-right: 12px;
+
+		@include max-screen(360px){
+			width: 100%;
+		}  
+	}
+	// .fstdiv{
+	// 	width: auto;
+	// }
+}
+.lk-personal-form__select{
+		flex: 1 1 auto;
+		@include max-screen(360px){
+			margin-top: 8px;
+		}  
+		.fstdiv{
+			min-height: 50px;
+		}
+		.fstdropdown{
+			background-color: #fff;
+			border-radius: 7px;
+			border-width: 2px;
+			border-color: #E2EBEE;
+
+			& > .fstselected:after{
+				width: 11px;
+				height: 11px;
+			}
+			.fstselected{
+				text-transform: capitalize;
+			}
+
+			& > .fstlist{
+				width: 100%;
+				div{
+					text-transform: capitalize;
+				}
+			}
+		}
+}
+
+.btn {}
+.btn-bg-green {}
+.link {}
+
+/*--------------------END personal----------------------*/ 

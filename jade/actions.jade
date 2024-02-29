@@ -1,0 +1,183 @@
+extends _misc/main
+
+block title
+	| Акции
+
+block content
+	.wrapper
+		ul.breadcrumbs
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Главная
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Блог
+			li.breadcrumbs__item 
+				span.breadcrumbs__link Акции
+
+	.page.page-catalog.page-actions
+		.wrapper
+			.page-catalog__top
+				h1 Акции
+				.catalog-filters
+					.catalog-filters__item
+						.catalog-filters__key Сортировать:
+						- var opts = ['по дате публикации, сначала новые', 'от А-Я,по названию', 'от Я-А,по цене', 'сначала недорогие','по цене', 'сначала дорогие','по дате выхода', 'сначала новые','по дата выхода', 'сначала старые','по популярности', 'по убыванию','по популярности', 'по возрастанию','по дате добавления', 'сначала новые','по дате добавления', 'сначала старые','по % скидке', 'скидка больше','по % скидке', 'скидка меньше'];               
+						select#select(data-searchdisable="true" class="fstdropdown-select")
+							each item, i in opts
+								if(i==0)
+									option(value="0" + i selected)= item
+								else
+									option(value="0" + i)= item
+					
+			
+		.page-actions__content
+			.wrapper-smart
+				.wrapper-flex
+					- for (var i=0; i < 6; i++)
+						.action-card
+							a(href="#").action-card__img._fit
+								img._fit-img(src="img/actions-page/" + (i+1) + ".jpg" alt="alt")
+							.action-card__content
+								.action-card__date 05.04.2022
+								a(href="#").action-card__name Акция от издателя Team 17 — скидки до 78%!
+
+					- for (var i=0; i < 3; i++)
+						.action-card
+							.action-card__img._fit
+								img._fit-img(src="img/actions-page/" + (i+1) + ".jpg" alt="alt")
+							.action-card__content
+								.action-card__date 05.04.2022
+								.action-card__name Акция от издателя Team 17 — скидки до 78%!
+			.wrapper
+				.show-more
+					a(href="#").btn.btn-brd.btn-brd-accent Показать еще
+
+				.pagination
+					a(href="#").pagination__prev
+						+icon('pagination-prev')
+					ul.pagination-list
+						li.pagination-list__item
+							a(href="#").pagination-list__link 1
+						li.pagination-list__item
+							a(href="#").pagination-list__link 2
+						li.pagination-list__item.active
+							a(href="#").pagination-list__link 3
+						li.pagination-list__item
+							a(href="#").pagination-list__link 4
+						li.pagination-list__item
+							a(href="#").pagination-list__link ...
+						li.pagination-list__item
+							a(href="#").pagination-list__link 7
+					
+					a(href="#").pagination__next
+						+icon('pagination-next')
+	
+	
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

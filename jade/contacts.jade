@@ -1,0 +1,222 @@
+extends _misc/main
+
+block title
+	| Контакты
+
+block content
+	.wrapper
+		ul.breadcrumbs
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Главная
+			li.breadcrumbs__item 
+				span.breadcrumbs__link Игры для Xbox One/X|S
+
+	.page.page-content
+		section.contacts
+			.wrapper
+					h1 Контакты
+			.contacts__content
+				.wrapper-smart
+					.wrapper-flex
+						.contacts__schedule.schedule-contacts
+							- var rows = [{key:'Работа магазина:', val: 'круглосуточно'}, {key:'Работа офиса:', val: 'Пн-Пт с 12-00 до 19-00,<br> Сб, Вс выходной'}, {key:'Работа техподдержки:', val: 'Пн-Пт с 11-00 до 18-00,<br> Сб с 13-00 до 17-00, Вс выходной'}, {key:'Работа консультантов:', val: 'жедневно с 10-00 до 22-00'}];
+								each item in rows
+									.schedule-contacts__row
+										.schedule-contacts__icon
+											img(src="img/contacts-pages/clock.svg" alt="alt")
+										.schedule-contacts__text
+											span.schedule-contacts__key= item.key 
+											span.schedule-contacts__val: !{item.val}
+
+						
+						.contacts__requisites.requisites-contacts
+							.requisites-contacts
+								.requisites-contacts__title Реквизиты организации
+								.requisites-contacts__content
+									p Perfumedor S.L.
+									p CIF B76783620
+									p Испания
+									
+								p E-mail: info@igromagaz.ru
+						
+						.schedule-contacts__ques
+							| По всем вопросам обращайтесь к консультантам или в техподдержку через обращение.
+							p При обращении обязательно указывайте номер заказа.
+		
+		.payment-methods
+			.payment-methods__top
+				.wrapper
+					.payment-methods__title Способы оплаты
+					.payment-methods__capt Покупать в интернет-магазине "ИгроМагаз" быстро, удобно и безопасно!
+					
+					- var list = ['Выберите и добавьте в корзину понравившийся товар.','Оплатите его удобным и безопасным способом.','Получите цифровой товар сразу после оплаты на ваш электронный адрес или закажите доставку физических товаров «Почтой России» или курьерской службой.'];
+					
+					ol.payment-methods__list
+						each item in list
+							li= item
+	
+					.payment-methods__options
+						- var opts = [{name: 'Положи в корзину', icon: 'shopping-cart'}, {name: 'Оплати удобным <br>тебе способом', icon: 'wallet'}, {name: 'Получи заказ сразу <br>после оплаты', icon: 'box'}];
+							each item in opts
+								.payment-methods__option.option-payment-methods
+									.option-payment-methods__icon
+										img(src="img/contacts-pages/methods/" + item.icon + ".svg" alt="alt")
+									.option-payment-methods__name: !{item.name}
+			
+			.payment-methods__bottom
+				.wrapper
+					.payment-options
+						.payment-options__title В нашем магазине "Игромагаз" доступны следующие способы оплаты:
+				
+				//- .payment-options__list
+				.wrapper-smart
+					.wrapper-flex
+						- var listok = [{icon: 'credit-card', title: 'Банковские карты', text: 'Вы можете оплатить товар следующими картами: Visa, Mastercard, Maestro, «Мир». Как только вы введете данные карты, товар будет оплачен. Это безопасно. Мы не получаем доступ к вашим данным, они сразу передаются в банк.'}, {icon: 'visa', title: 'Visa', text: 'Максимум 250 000 руб. за один раз и 500 000 руб. в месяц.'}, {icon: 'mastercard', title: 'MasterCard', text: 'Максимум 250 000 руб. за один раз и 500 000 руб. в месяц.'}, {icon: 'maestro', title: 'Maestro', text: 'Максимум 250 000 руб. за один раз и 500 000 руб. в месяц.'}, {icon: 'e-money', title: 'Электронные деньги', text: 'Принимаем платежи с электронных кошельков Webmoney, Qiwi и Яндекс.Деньги.'}, {icon: 'qiwi', title: 'QIWI', text: '5 000 руб. за один раз.'}, {icon: 'user', title: 'Личный счет в магазине', text: 'Сразу после регистрации на нашем сайте вы получите доступ к личному кабинету. К нему привязан счет, который можно пополнить любым доступным способом. После этого средства со счета можно использовать для оплаты товаров.'}];
+							each item, i in listok
+								div(class= i>0 && i<4 ? "payment-option payment-option--linked": "payment-option")
+									.payment-option__icon
+										if i == 5
+											picture
+												source(srcset="img/contacts-pages/methods/qiwi-pink.svg" media="(max-width: 991px)")
+												img(src="img/contacts-pages/methods/qiwi.svg" alt="alt")
+										else
+											img(src="img/contacts-pages/methods/" + item.icon + ".svg" alt="alt")
+									
+									.payment-option__content
+										.payment-option__title= item.title
+										.payment-option__text= item.text
+										
+										if i>0 && i<4 
+											a(href="#").link-blue Как заплатить
+
+
+				.wrapper
+					h1 Пример
+					p Купите этот комплект, чтобы получить Grand Theft Auto V и стартовый набор «Преступная организация».
+					p Стартовый набор «Преступная организация» – самый быстрый способ для новых игроков построить собственную криминальную империю в Grand Theft Auto Online. 
+					p Вы получите доступ к самым интересным и популярным материалам GTA Online, в том числе к объектам недвижимости, предприятиям, оружию, транспортным средствам и другим товарам общей стоимостью более чем на 10 000 000 GTA $.
+					p Запускайте бизнес-проекты из своего офиса в западном здании Maze Bank, создавайте мощное оружие в подземном бункере в Палето или гоняйте по улицам на самой разной технике, в том числе суперкарах, мотоциклах, Dune FAV с оружием и т. д.
+					p Кроме того, вы получите 1 000 000 долларов GTA и мощное оружие. Все это поможет вам стать самым главным в Лос-Сантосе и округе Блэйн.
+					p Стартовый набор «Преступная организация» с доступом к Grand Theft Auto Online дает вам имущество стоимостью более 10 000 000 GTA $:
+
+					h2 Недвижимость:
+					- var realty = ['Западный офис в башне Maze Bank','Бункер в лесу Палето для торговли оружием','Печатная мастерская по производству фальшивых банкнот в пустыне Сенора','Клабхаус в Грейт-Чапаррал','Квартира по адресу Сан-Витас-стрит, д. 1561','Гараж на 10 машин по адресу Эксепшионалист-вэй, 1337'];
+						ul
+							each item in realty
+								li= item
+
+						ol
+							each item in realty
+								li= item
+
+					blockquote
+						| Запускайте бизнес-проекты из своего офиса в западном здании Maze Bank, создавайте мощное оружие в подземном бункере в Палето или гоняйте по улицам на самой разной технике, в том числе суперкарах, мотоциклах, Dune FAV с оружием и т. д. Кроме того, вы получите 1 000 000 долларов GTA и мощное оружие. Все это поможет вам стать самым главным в Лос-Сантосе и округе Блэйн.
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

@@ -1,0 +1,41 @@
+.autorization
+	.wrapper
+		.autorization__header
+			.autorization__title Авторизация
+			p Для оформления заказа, пожалуйста, авторизуйтесь или зарегистрируйтесь
+
+		.autorization__forms
+			.autorization__services
+				.form__title Быстрый вход через сервис:
+				ul.socials
+					- var soc = ['facebook', 'twitter', 'vkontakte', 'odnoklassniki', 'google-plus', 'mask-group', 'yandex', 'mailru'];
+						each item in soc
+							li.socials__item
+								a(href="#").socials__link
+									img(src="img/socials/" + item + ".svg" alt="alt")
+			form.form.autorization__enter.enter-autorization(action="#")
+				.form__title Войти на сайт:
+				.enter-autorization__cols
+					.enter-autorization__col
+						input(autocomplete="off" type="text" name="name" class="form__input" placeholder="E-mail")
+
+					.enter-autorization__col
+						input(autocomplete="off" type="text" name="name" class="form__input" placeholder="Пароль")
+						a(href="#").link.autorization__forgot Забыли пароль?
+
+					.enter-autorization__col
+						.enter-autorization__captcha Captcha
+
+					.enter-autorization__col
+
+						.enter-autorization__col-buttons
+							button#ajax-enter.btn.btn-bg-green Войти
+							button.btn.btn-brd.btn-brd-green Регистрация
+
+			form.form.autorization__enter.enter-autorization(action="#")
+				.form__title Быстрая регистрация:
+				.enter-autorization__row
+					label.form__label
+						input(autocomplete="off" type="text" name="name" class="form__input" placeholder="Укажите ваш e-mail")
+					button.btn.btn-bg-green Регистрация
+					.enter-autorization__captcha Captcha

@@ -1,0 +1,9 @@
+ul.lk-menu
+	- var nav = [{name: 'История заказов', ico: 'history'}, {name: 'Ключи и инструкции', ico: 'lk-key '}, {name: 'Личные данные', ico: 'account'}, {name: 'Бонусный счет', ico: 'gift'}, {name: 'Адреса доставки', ico: 'lorry'}, {name: 'Подписка', ico: 'lk-subscribe'}, {name: 'Вы смотрели', ico: 'lk-eye'}, {name: 'Список желаемого', ico: 'heart-lk'}, {name: 'Помощь', ico: 'information'}, {name: 'Техподдержка', ico: 'live-chat'}];
+
+		each item, index in nav
+			li(class=index === current ? "lk-menu__item active" : "lk-menu__item")
+				a(href="#").lk-menu__link
+					.lk-menu__icon
+						+icon(item.ico)
+					span.lk-menu__text= item.name

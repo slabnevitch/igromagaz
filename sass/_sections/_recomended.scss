@@ -1,0 +1,48 @@
+/*--------------------recomended----------------------*/
+.recomended{
+	padding-top: 36px;
+	padding-bottom: 31px;
+
+	@include max-screen($md){
+		padding-top: 26.2px;
+		padding-bottom: 9px;
+	} 
+
+	.block-header{
+		margin-bottom: 10px;
+	}
+	.block-header__text{
+		@include max-screen(375px){
+			display: flex;
+		}
+		@include max-screen(360px){
+			display: block;
+		}  
+	}
+}
+.recomended__cards{
+	.slick-track{
+		@include min-screen(601px){
+			width: 100% !important;
+			display: flex;
+			flex-wrap: wrap;
+			transform: none !important;
+			
+		}  
+	}
+	.slick-slide{
+		@include min-screen(601px){
+			margin-bottom: 15px;
+			width: calc(100%/2 - 30px) !important;
+		}
+		@include min-screen($md){
+			width: calc(100%/3 - 30px) !important;
+
+		}
+		@include min-screen($lg){
+			width: calc(100%/4 - 30px) !important;
+			
+		}  
+	}
+}
+/*--------------------END recomended----------------------*/ 

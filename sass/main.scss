@@ -1,0 +1,57 @@
+@import "_misc/_mixins";
+// @import "fonts";
+@import "fonts-auto";
+@import "_misc/_media-mixins";
+@import "libs";
+
+@import "_misc/_functions";
+@import "_misc/smart-grid";
+@import "_misc/_sprite-svg";
+
+@import "_misc/_vars";
+@import "_misc/_adjustment";
+@import "_misc/_ui";
+@import "_misc/_counter";
+
+@import "_sections/_header";
+@import "_sections/_main-slider";
+@import "_sections/_assortment";
+@import "_sections/_product-cards";
+@import "_sections/_hits";
+@import "_sections/_main-page-banner";
+@import "_sections/_recomended";
+@import "_sections/_news";
+@import "_sections/_video";
+@import "_sections/_about";
+@import "_sections/_catalog-page";
+@import "_sections/_product-card-page";
+@import "_misc/_popups";
+@import "_sections/_cart-page";
+@import "_sections/_autorization";
+@import "_sections/_digital-delivery";
+@import "_sections/_authorization-page";
+@import "_sections/_contacts";
+@import "_sections/_payment-methods";
+@import "_sections/_content-page";
+@import "_sections/_actions-page";
+@import "_sections/_action-page";
+
+@import "_sections/_lk-page";
+@import "_sections/lk/_history";
+@import "_sections/lk/_keys";
+@import "_sections/lk/_personal";
+@import "_sections/lk/_bonus";
+@import "_sections/lk/_password";
+@import "_sections/lk/_address";
+@import "_sections/lk/_help";
+@import "_sections/lk/_support";
+@import "_sections/lk/_keys-instr";
+@import "_sections/lk/_call-history";
+
+@import "_sections/order-status/order-status-page";
+@import "_sections/_about-project-page";
+@import "_sections/_refill";
+
+@import "_sections/_footer";
+
+// @import "_media";

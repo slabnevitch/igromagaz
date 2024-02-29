@@ -1,0 +1,291 @@
+/*--------------------payment-methods----------------------*/
+.payment-methods {
+	background-color: $gray;
+
+	@include max-screen($md){
+		background-color: transparent;
+	}  
+}
+.payment-methods__top {
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	@include max-screen($md){
+		padding-top: 10px;
+		padding-bottom: 40px;
+	}  
+
+}
+.payment-methods__list{
+		@include ol-custom();
+		margin-top: 22px;
+		margin-bottom: 33px;
+
+		@include max-screen($md){
+			margin-top: 19px;
+			margin-bottom: 25px;
+		}  
+
+		li{
+			padding-left: 25px;
+			line-height: 24px;
+
+			&:not(:last-child){
+				margin-bottom: 15px;
+			}
+			&:before{
+				position: absolute;
+				left: 0;
+				top: -2px;
+				font-family: $bold;
+				color: $accent;
+				font-size: 20px;
+				line-height: 147.8%;
+			}
+
+		}
+	}
+.wrapper {}
+.payment-methods__title {
+	margin-bottom: 25px;
+	font-family: $bold;
+	font-size: 32px;
+line-height: 39px;
+
+	@include max-screen($md){
+		margin-bottom: 19px;
+		font-size: 24px;
+line-height: 29px;
+	}  
+}
+.payment-methods__capt{
+	
+	font-size: 20px;
+	line-height: 24px;
+
+// 	@include max-screen(px){
+// 		font-size: 16px;
+// line-height: 19px;
+// 	}  
+}
+.payment-methods__options {
+	display: flex;
+
+	@include max-screen($md){
+		display: block;
+	}  
+}
+.payment-methods__option {
+	// width: calc(100%/3 - 30px);
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: 125px;
+	padding: 0px 15px 0 25px;
+	// overflow: hidden;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 13px rgba(30, 35, 66, 0.11);
+	border-radius: 20px 0 0 20px;
+
+	@include max-screen(1100px){
+		box-shadow: none;
+		border-radius: 0;
+		padding: 0 25px;
+
+	}  
+
+	@include max-screen($md){
+		height: auto;
+		padding: 0;
+	} 
+
+	
+	 &:not(:last-child){
+	 	@include max-screen($md){
+			margin-bottom: 18px;
+		} 
+	 } 
+
+	&:after{
+		content: '';
+		width: 72px;
+		height: 153px;
+		display: block;
+		position: absolute;
+		right: -71px;
+		top: -10px;
+		// background-color: #fff;
+		background-image: url($img + "contacts-pages/tail.png");
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: 100%;
+
+		@include max-screen(1100px){
+			display: none;
+		}  
+	}
+	&:first-child{
+		z-index: 3;
+		flex: 1 1 calc(390px - 54px);
+
+		@include max-screen(1100px){
+			flex-basis: calc(100%/3);
+		}  
+	}
+	&:last-child{
+		padding-left: 100px;
+
+		@include max-screen(1100px){
+			padding-left: 25px;
+		} 
+		@include max-screen($md){
+			padding: 0;	
+		}  
+	}
+	&:nth-child(2){
+		z-index: 2;
+		padding-left: 140px;
+
+		@include max-screen(1100px){
+			padding-left: 25px;
+		}  
+		@include max-screen($md){
+			padding: 0;	
+		}  
+	}
+
+	&:not(:first-child){
+		flex: 1 1 calc(480px - 54px);
+		left: -45px;
+
+		@include max-screen(1100px){
+			flex-basis: calc(100%/3);
+			left: 0;
+		}  
+	}
+
+}
+.option-payment-methods__icon {
+	width: 86px;
+	height: 86px;
+	flex-shrink: 0;
+	margin-right: 24px;
+	background-color: $gray;
+	position: relative;
+	border-radius: 50%;
+
+	@include max-screen($md){
+		width: 62px;
+		height: 62px;
+	}  
+
+	img{
+		@include absolute-center;
+		max-width: 90%;
+		max-height: 90%;
+
+		@include max-screen($md){
+			max-width: 45%;
+			max-height: 45%;
+		}  
+	}
+}
+.option-payment-methods__name {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	max-height: 100%;
+	overflow: hidden;
+	font-family: $bold;
+	font-size: 18px;
+line-height: 22px;
+}
+.payment-methods__bottom {
+	padding-bottom: 53px;
+
+	@include max-screen($md){
+		padding-bottom: 35px;
+	}  
+}
+.wrapper {}
+.payment-options {}
+.payment-options__title {
+	margin-bottom: 32px;
+	font-size: 24px;
+line-height: 29px;
+font-family: $bold;
+	@include max-screen($md){
+		margin-bottom: 24px;
+		font-size: 20px;
+		line-height: 24px;
+	}  
+}
+.payment-option {
+	@include col();
+	@include size(12);
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 53px;
+
+	@include max-screen($md){
+		margin-bottom: 27px;
+	} 
+
+	&:not(.payment-option--linked){
+		align-items: center;
+		@include max-screen($md){
+			align-items: flex-start;
+			
+		}  
+	}
+
+	&--linked{
+		@include size(4);
+		@include size-md(12);
+
+		.payment-option__title {
+			margin-bottom: 15px;
+		}
+		.payment-option__text {
+			margin-bottom: 10px;
+
+			@include max-screen($md){
+				// margin-bottom: 5px;
+			}  
+		}
+	}
+	@include max-screen($md){
+		margin-bottom: 27px;
+	}  
+
+	.link-blue{
+		font-size: 14px;
+		line-height: 17px;
+
+	}
+
+
+}
+.payment-option__icon {
+position: relative;
+flex-shrink: 0;
+	width: 74px;
+height: 74px;
+margin-right: 29px;
+border-radius: 50%;
+  
+	img{
+		@include absolute-center;
+	}
+}
+.payment-option__content {}
+.payment-option__title {
+	font-family: $bold;
+	margin-bottom: 7px;
+	font-size: 18px;
+line-height: 22px;
+}
+.payment-option__text {
+	font-size: 15px;
+line-height: 18px;
+}
+/*--------------------END payment-methods----------------------*/

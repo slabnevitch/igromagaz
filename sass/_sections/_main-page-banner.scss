@@ -1,0 +1,39 @@
+/*--------------------main-page-banner----------------------*/
+.main-page-banner{
+	margin-top: 32px;
+	margin-bottom: 36px;
+	// background-color: $accent;
+
+	@include max-screen($md){
+		margin-top: 13px;
+		margin-bottom: 26.5px;
+	}  
+}
+.main-page-banner__img{
+	max-height: 283px;
+		max-width: 1440px;
+	margin-left: auto;
+		margin-right:auto;
+	display: block;
+
+	@include max-screen($xs){
+		// padding-top: 51px;
+		// padding-bottom: 30px;
+		max-height: 345px;
+	}
+
+	img{
+		display: block;
+		max-width: 100%;
+		max-height: 100%;
+		margin-left: auto;
+		margin-right:auto;
+		// margin-left: 100px/1200 * 100%;
+
+		// @include max-screen($xs){
+		// 	margin-left: auto;
+		// 	margin-right: auto;
+		// }  
+	}
+}
+/*--------------------END main-page-banner----------------------*/ 

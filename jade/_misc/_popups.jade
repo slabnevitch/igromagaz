@@ -1,0 +1,87 @@
+.popup.popup-order#order-popup.mfp-hide
+	.popup-order__header
+		.popup__title Заказ №23535
+		.popup-order__status-info
+			.popup-order__status
+				.popup-order__status-key Статус:
+				.popup-order__status-val не оплачен
+
+			.popup-order__date Дата: 21.04.2022 13:45
+		
+	.popup-order__info.info-popup-order
+		.popup__subtitle Информация о заказе:
+		.info-popup-order__row Способ доставки: Моментальная доставка на e-mail
+		.info-popup-order__row Способ оплаты: Банкосвкие карты РФ
+		.info-popup-order__row E-mail: mail@mail.com
+
+	.popup-order__compound
+		.popup__subtitle Состав заказа:
+		
+		.popup-order__table.table-popup-order
+			.table-popup-order__header
+				.table-popup-order__item Код
+				.table-popup-order__item Товар
+				.table-popup-order__item Цена
+				.table-popup-order__item Кол-во
+				.table-popup-order__item Итоговая цена
+			- for (var i= 0; i < 3; i++)
+				.table-popup-order__line
+					.table-popup-order__item 1
+					.table-popup-order__item.table-popup-order__item--product
+						.product-img
+							img(src="img/prod-card-img.jpg" alt="alt")
+						a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+					.table-popup-order__item
+						.table-popup-order__label Цена
+						.product-price__standart 150 руб.
+					.table-popup-order__item
+						.table-popup-order__label Кол-во
+						| 1
+					.table-popup-order__item
+						.table-popup-order__label Итоговая цена
+						.product-price__standart 150 руб.
+	
+	.popup-order__total.total-popup-order
+		.total-popup-order__row
+			.total-popup-order__key Стоимость товаров:
+			.total-popup-order__val
+				.product-price__standart 150 руб.
+
+		.total-popup-order__row
+			.total-popup-order__key Итого:
+			.total-popup-order__val
+				.product-price__standart 150 руб.
+
+.popup.popup-bonus-refill#bonus-refill-popup.mfp-hide
+	.popup__title Пополнение счета бонусами
+	.popup__text Вы можете использовать бонусные баллы для поплнения Личного счета ИгроМагаза
+	.popup__subtitle Выберите нужное для обмена:
+
+	form.popup-form
+		- var checks = ['500 бонусов = 250 руб.', '250 бонусов = 100 руб.', '100 бонусов = 30 руб.'];
+		each check in checks
+			label.check-label
+				input( type="radio" name="name" class="check-label__input" checked=i==0 ? "checked" : false)
+				span.check-label__check.check-label__check--radio
+				span.check-label__text= check
+		button.btn.btn-bg-green Обменять бонусы
+
+.popup.popup-refill#refill-popup.mfp-hide
+	.popup__title Пополнение счета
+	.popup__text Зачисление средств происходит после проверки платежа администрацией магазина 
+	.popup__subtitle Выберите нужное для обмена:
+
+	form.popup-form
+		- var checks2 = ['50 руб.','100 руб.','200 руб.','500 руб.','1000 руб.'];
+		each check in checks2
+			label.check-label
+				input( type="radio" name="name" class="check-label__input" checked=i==0 ? "checked" : false)
+				span.check-label__check.check-label__check--radio
+				span.check-label__text= check
+			
+		label.check-label
+			input( type="radio" name="name" class="check-label__input" checked=i==0 ? "checked" : false)
+			span.check-label__check.check-label__check--radio
+			input(autocomplete="off" type="text" name="name" class="form__input")
+		
+		button.btn.btn-bg-green Пополнить счет

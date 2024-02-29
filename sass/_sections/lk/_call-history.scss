@@ -1,0 +1,119 @@
+/*--------------------call-history----------------------*/
+.page-lk-call-history{
+	.lk-header {
+		h1{
+			margin-bottom: 15px;
+		}
+		h2{
+			font-size: 18px;
+			line-height: 22px;
+			font-family: $reg;
+		}
+	}
+	.lk-address-form {
+		padding-top: 0;
+		border-radius: 0 0 20px 20px;
+	}
+
+}
+.help-calls {
+	padding: 30px 40px 20px 40px;
+	background-color: $gray;
+	border-radius: 20px 20px 0 0;
+
+	@include max-screen($sm){
+		padding: 20px;
+	}
+
+	.pagination {
+		@include min-screen($md){
+			justify-content: flex-start;
+			margin-top: 31px;
+			margin-bottom: 0;
+			
+		}
+	}
+}
+.help-calls__header {
+	margin-bottom: 13px;
+}
+.help-calls__history {
+	font-family: $semi;
+	font-size: 16px;
+	line-height: 147.8%;
+}
+.help-calls__user {
+	font-size: 14px;
+	line-height: 140.8%;	
+}
+.help-calls__info {
+	font-weight: 14px;
+}
+.info-help-calls {}
+.info-help-calls__title {
+	margin-bottom: 3px;
+		font-family: $semi;
+	font-size: 16px;
+	line-height: 147.8%;
+}
+.info-help-calls__item {
+	position: relative;
+	padding: 12px 20px;
+	border-radius: 7px;
+	background-color: #fff;
+
+	&:not(:last-child){
+		margin-bottom: 13px;
+	}
+}
+.info-help-calls__heading{
+	@include min-screen(350px){
+		display: flex;
+		
+	}  
+}
+.info-help-calls__text{
+	@include min-screen($xs){
+		padding-right: 45px;
+		
+	}
+}
+.info-help-calls__avatar{
+	position: absolute;
+	bottom: 21px;
+	right: 24px;
+	width: 34px;
+	height: 34px;
+
+
+	@include max-screen($xs){
+		top: 12px;
+		right: 11px;
+	}
+
+	img{
+		@include absolute-center;
+	}
+
+}
+.info-help-calls__role {
+	margin-right: 10px;
+	font-family: $bold;
+	line-height: 147.8%;
+}
+.info-help-calls__quote{
+	font-size: 14px;
+	line-height: 147.8%;
+	@include min-screen($xs){
+		margin-left: auto;
+
+	}
+}
+.info-help-calls__row {
+	font-size: 14px;
+	line-height: 147.8%;
+}
+.info-help-calls__row-link {
+	color: $text;
+}
+/*--------------------END call-history----------------------*/ 

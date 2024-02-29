@@ -1,0 +1,14 @@
+/*--------------------hits----------------------*/
+.hits {
+	padding-top: 35px;
+	// margin-bottom: 16px;
+
+	@include max-screen($md){
+		padding-top: 26.2px;
+	}  
+	.block-header{
+		margin-bottom: 10px;
+	}
+}
+
+/*--------------------END hits----------------------*/ 

@@ -1,0 +1,171 @@
+/*--------------------digital-delivery----------------------*/
+.digital-delivery {
+
+	padding-bottom: 69px;
+
+	@include max-screen($md){
+		padding-bottom: 62px;
+	}
+	.autorization__header {
+		margin-bottom: 19px;
+
+		@include max-screen($md){
+			margin-bottom: 12px;
+		}
+	}
+	.autorization__title {
+		@include max-screen($md){
+			margin-bottom: 18px;
+		}
+	}
+
+}
+.digital-delivery__mail {
+	margin-top: 5px;
+	font-family: $semi;
+	font-size: 20px;
+}
+.form {}
+.digital-delivery__form {
+	max-width: 892px;
+	.form__row {
+		max-width: 558px;
+		margin-bottom: 27px;
+		.form__input {
+			background-color: $gray;
+			@include placecolor($text);
+		}
+		// .btn{
+		// 	flex-basis: 120px;
+		// }
+
+	}
+}
+.digital-delivery__payment {
+	padding: 33px 42px 14px 42px;
+	margin-bottom: 28px;
+	background-color: $gray;
+	border-radius: 20px;
+
+	@include max-screen($sm){
+		padding: 20px 20px 11px 20px;
+	}
+}
+.digital-delivery__methods {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+.digital-delivery__method {
+	position: relative;
+	margin-bottom: 19px;
+	width: calc(100%/3 - 20px);
+	margin-left: 10px;
+	margin-right: 10px;
+
+	@include min-screen($md){
+		cursor: pointer;
+	}
+
+	@include max-screen($sm){
+		width: calc(100%/2 - 20px);
+	}
+
+	@include max-screen($xs){
+		width: calc(100% - 20px);
+	}
+
+}
+.digital-delivery__radio{
+	@include checkbox;
+
+	&:checked + .digital-delivery__method-block{
+		border-color: #5DC8F6;
+	}
+
+}
+.digital-delivery__method-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	padding: 26px 23px;
+	text-align: center;
+	background-color: #fff;
+	border: 2px solid transparent;
+	border-radius: 7px;
+}
+.digital-delivery__img {
+	display: block;
+	margin-bottom: 12px;
+	img{
+		max-width: 100%;
+		max-height: 41px;
+	}
+}
+.digital-delivery__name {
+display: block;
+}
+.digital-delivery__rules {
+	margin-bottom: 28px;
+
+	@include max-screen($md){
+		margin-bottom: 33px;
+	}
+}
+.digital-delivery__confirm {
+	margin-bottom: 10px;
+	.link-blue{
+		text-decoration: underline;
+	}
+}
+
+.digital-delivery__rules-text {
+	font-size: 13px;
+	line-height: 21px;
+}
+.digital-delivery__total {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.total-digital-delivery__price {
+	margin-right: 61px/892px * 100%;
+
+	@include max-screen($xs){
+		margin-right: 0;
+		width: 100%;
+		margin-bottom: 6px;
+	}
+}
+.total-digital-delivery__key {
+	margin-bottom: 5px;
+}
+.total-digital-delivery__summ {
+	font-family: $bold;
+	font-size: 32px;
+	line-height: 38.98px;
+}
+.total-digital-delivery__info {
+	font-size: 15px;
+line-height: 23px;
+
+color: #99A2AC;
+}
+.total-digital-delivery__discount {}
+.total-digital-delivery__bonus {}
+.total-digital-delivery__pay {
+	margin-left: auto;
+	flex: 0 0 194px;
+
+	@include max-screen($sm){
+		flex-basis: 100%;
+		margin-top: 18px;
+	}
+
+	.btn{
+		width: 100%;
+	}
+}
+/*--------------------END digital-delivery----------------------*/ 

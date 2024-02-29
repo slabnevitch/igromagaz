@@ -1,0 +1,21 @@
+.page-lk__sidebar
+	.lk-funds
+		.lk-fund
+			.lk-fund__icon
+				+icon('lk-wallet')
+			.lk-fund__content
+				.lk-fund__p Личных средств:
+				.lk-fund__summ 3 600 руб.
+				a(href="#").link-blue Пополнить счет
+
+		.lk-fund
+			.lk-fund__icon
+				+icon('bonus')
+			.lk-fund__content
+				.lk-fund__p У вас 
+					span.lk-fund__bonus 56 бонусов.
+				a(href="#").link-blue Обменять на рубли
+	
+	nav.lk-nav
+		include lk-nav
+				

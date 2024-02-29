@@ -1,0 +1,40 @@
+/*--------------------page-content----------------------*/
+.page-content{
+	h1{
+		@include max-screen($sm){
+			margin-bottom: 19px;
+			font-size: 24px;
+			line-height: 29px
+		}  
+	}
+	h2{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-size: 18px;
+		line-height: 24px;
+
+		@include max-screen($sm){
+			margin-top: 0;
+			margin-bottom: 0;
+		}  
+	}
+	p{
+		margin-top: 18px;
+		margin-bottom: 18px;
+		line-height: 21px;
+
+		@include max-screen($sm){
+			margin-top: 0px;
+			margin-bottom: 0px;
+			font-size: 15px;
+		}  
+	}
+	ul{
+		@extend .custom-list;
+		    padding-left: 30px;
+    margin-bottom: 20px;
+    font-size: 15px;
+line-height: 21px;
+	}
+}
+/*--------------------END page-content----------------------*/ 

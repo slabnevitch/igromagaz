@@ -1,0 +1,121 @@
+/*--------------------contacts----------------------*/
+.contacts {
+	h1{
+		margin-bottom: 30px;
+
+		@include max-screen($sm){
+			margin-bottom: 28px;
+			font-size: 24px;
+			line-height: 29px;
+		}  
+	}
+}
+.wrapper {}
+.contacts__content {
+	padding-bottom: 53px;
+
+	@include max-screen($md){
+		padding-bottom: 29px;
+	}  
+	.wrapper-flex {
+
+	}
+}
+.wrapper-smart {}
+.contacts__schedule {
+	@include col();
+	width: calc(100% - 308px - 30px);
+
+	@include max-screen($sm){
+		width: 100%;
+		margin-bottom: 28px;
+	}  
+}
+.schedule-contacts__row {
+	display: flex;
+	align-items: center;
+
+	&:not(:last-child){
+		margin-bottom: 18px;
+	
+	}
+}
+.schedule-contacts__icon {
+	width: 30px;
+	height: 30px;
+	position: relative;
+	flex-shrink: 0;
+	margin-right: 15px;
+
+	img{
+		@include absolute-center;
+	}
+}
+.schedule-contacts__text {
+}
+.schedule-contacts__key {
+	margin-right: 5px;
+	font-family: $bold;
+}
+.schedule-contacts__val {
+
+	br{
+		@include max-screen($sm){
+			display: none;
+		}  
+
+	}
+}
+.schedule-contacts__ques {
+	@include col();
+	@include size-sm(12);
+	margin-top: 17px;
+	font-size: 20px;
+	line-height: 24px;
+	font-family: $bold;
+
+	@include max-screen($md){
+		font-size: 17px;
+		line-height: 20px;
+	}  
+
+	@include max-screen($sm){
+		margin-top: 0;
+		margin-bottom: 21px;
+	}  
+
+	p{
+		margin-top: 5px;
+		font-family: $reg;
+		margin-bottom: 0;
+		font-size: 16px;
+		line-height: 19px;
+	}
+}
+.contacts__requisites {
+	@include col();
+	width: calc(308px - 30px);
+	padding: 34px 20px 38px 20px;
+	background: #F2F6F9;
+	border-radius: 20px;
+
+	@include max-screen($sm){
+		width: 100%;
+		order: 2;
+	}  
+
+	p{
+		margin: 0;
+	}
+}
+.requisites-contacts {}
+.requisites-contacts__title {
+	margin-bottom: 15px;
+	font-family: $bold;
+	font-size: 18px;
+line-height: 22px;
+}
+.requisites-contacts__content {
+	margin-bottom: 18px;
+}
+/*--------------------END contacts----------------------*/ 

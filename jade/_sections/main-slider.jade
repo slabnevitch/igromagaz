@@ -1,0 +1,7 @@
+.main-slider
+	.main-slider__carousel
+		- for (var i=0; i < 5; i++)
+			.main-slider__slide._fit
+				picture
+					source(srcset="img/main-page/main-slider-img-mob.jpg" media="(max-width: 576px)")
+					img._fit-img(src="img/main-page/main-slider-img.jpg" alt="alt")

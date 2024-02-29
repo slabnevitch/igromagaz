@@ -1,0 +1,73 @@
+.recomended.carouseled
+	.wrapper
+		.block-header
+			.block-header__text
+				.sect-title Рекомендуемые товары
+				a(href="#").link-blue Смотреть все
+
+	.wrapper
+		.recomended__cards.product-cards-slider
+			- for (var n=0; n < 2; n++)
+				- for (var i=0; i < 4; i++)
+					if !i%2 > 0
+						div(class="product-card")
+							.product-card__header
+								.product-like
+									+icon('heart-full')
+								.sale-label -15%
+
+							a(href="#").product-img
+								img(src="img/prod-card-img.jpg" alt="alt")
+						
+							.product-availability В наличии
+							
+							a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+							
+							.product-card__bottom
+								.product-price
+									.product-price__old
+										.product-price__fail 2749 руб.
+									.product-price__standart.product-price__standart--sale 2549 руб.
+
+								a(href="#").product-card__buy.btn.btn-bg-green Купить
+					
+
+					else if i==2	
+						div(class="product-card liked")
+							.product-card__header
+								.product-like
+									+icon('heart-full')
+								.sale-label -15%
+
+							a(href="#").product-img
+								img(src="img/prod-card-img.jpg" alt="alt")
+						
+							.product-availability В наличии
+							
+							a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+							
+							.product-card__bottom
+								.product-price
+									.product-price__old
+										.product-price__fail 2749 руб.
+									.product-price__standart.product-price__standart--sale 2549 руб.
+
+								a(href="#").product-card__buy.btn.btn-bg-green Купить
+					else 	
+						.product-card
+							.product-card__header
+								.product-like
+									+icon('heart-full')
+
+							a(href="#").product-img
+								img(src="img/prod-card-img.jpg" alt="alt")
+						
+							.product-availability В наличии
+							
+							a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+							
+							.product-card__bottom
+								.product-price
+									.product-price__standart 2549 руб.
+
+								a(href="#").product-card__buy.btn.btn-bg-green Купить

@@ -1,0 +1,124 @@
+/*--------------------action-page----------------------*/
+.page {}
+.page-action {}
+.page-action__content {
+	padding-bottom: 69px;
+
+	@include max-screen($md){
+		padding-bottom: 0;
+	}  
+}
+.wrapper-smart {}
+.wrapper-flex {}
+.page-action__main {
+	@include col();
+	width: calc(100% - 410px - 30px);
+	@include size-md(12);
+
+	@include max-screen($md){
+		margin-bottom: 8px;
+	}  
+}
+.page-action__header {
+	margin-bottom: 23px;
+
+	h1{
+		margin-bottom: 5px;
+
+		@include max-screen($sm){
+			margin-bottom: 9px;
+		}  
+	}
+}
+.page-action__date {
+	color: #99A2AC;
+}
+.page-action__img {
+	padding-bottom: prc(337, 790);
+	margin-bottom: 37px;
+	overflow: hidden;
+	border-radius: 20px;
+
+	@include max-screen($md){
+		margin-bottom: 23px;
+	}  
+	@include max-screen(375px){
+		padding-bottom: 0;
+		height: 204px;
+	}  
+}
+.page-action__descr {}
+.page-action__bar {
+	padding: 32px 30px 28px 30px;
+	@include col();	
+	@include size-md(12);
+	width: calc(410px - 30px);
+	background-color: $gray;
+	border-radius: 20px;
+
+	@include max-screen($md){
+		padding-left: 0;
+		padding-right: 0;
+		padding-bottom: 0;
+		background-color: transparent;
+	}  
+}
+.page-action__bar-title {
+	margin-bottom: 11px;
+	font-size: 24px;
+line-height: 29px;
+font-family: $bold;
+	@include max-screen($md){
+		margin-bottom: 23px;
+	}  
+}
+.actions-other {
+}
+.action-other {
+	display: flex;
+	align-items: flex-start;
+	padding-top: 18px;
+	padding-bottom: 20px;
+
+	border-bottom: 1px solid #D4DBE0;
+
+	&:first-of-type{
+		@include max-screen($md){
+			
+			border-top: 1px solid #D4DBE0;
+		}  
+	}
+}
+.action-other__img {
+	padding-bottom: 0;
+	flex-shrink: 0;
+	width: 102px;
+	height: 68px;
+	margin-right: 17px;
+	overflow: hidden;
+	border-radius: 7px;
+}
+.action-other__content {}
+.action-other__date {
+	margin-bottom: 10px;
+	font-size: 13px;
+line-height: 16px;
+color: #848484;
+}
+.action-other__name {
+	color: $text;
+	font-size: 16px;
+line-height: 19px;
+}
+.actions-hits{
+	padding-top: 55px;
+	padding-bottom: 21px;
+	background-color: $gray;
+
+	@include max-screen($md){
+		padding-top: 44px;
+		padding-bottom: 0;
+		background-color: transparent;
+	}  
+}
+/*--------------------END action-page----------------------*/ 

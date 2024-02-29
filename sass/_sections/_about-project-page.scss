@@ -1,0 +1,86 @@
+/*--------------------about-project-page----------------------*/
+.page {}
+.page-content {
+}
+.page-about-project {
+	padding-bottom: 40px;
+	@include max-screen($sm){
+		padding-bottom: 15px;
+	}
+	h2{
+		font-size: 20px;
+		line-height: 141.3%;
+
+		@include max-screen($sm){
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	p{
+		@include max-screen($sm){
+			margin-top: 18px;
+			margin-bottom: 18px;
+		}
+	}
+}
+.wrapper {}
+.for-players {}
+.wrapper-smart {}
+.wrapper-flex {}
+.for-players__items {
+	&--payment{
+		.item-for-players {
+			@include size(4);
+			@include size-md(6);
+			@include size-sm(12);
+
+			&:first-child{
+				@include min-screen($lg){
+					
+				padding-right: 31px;
+				}
+			}
+
+			&:nth-child(2){
+				@include min-screen($lg){
+					
+				padding-right: 31px;
+				}
+			}
+
+		}
+	}
+}
+.for-players__item {
+}
+.item-for-players {
+	@include col();
+	@include size(3);
+	@include size-lg(4);
+	@include size-md(6);
+	@include size-sm(12);
+
+	margin-bottom: 21px;
+	display: flex;
+	align-items: center;
+	padding: 26px 10px 26px 16px;
+	background: #F2F6F9;
+	border-radius: 20px;
+}
+.item-for-players__icon {
+	width: 50px;
+	height: 53px;
+	flex-shrink: 0;
+	position: relative;
+	margin-right: 13px;
+
+	img{
+		@include absolute-center;
+	}
+}
+.item-for-players__mame {
+	font-size: 16px;
+line-height: 19px;
+font-family: $bold;
+}
+/*--------------------END about-project-page----------------------*/ 

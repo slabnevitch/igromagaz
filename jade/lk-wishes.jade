@@ -1,0 +1,225 @@
+extends _misc/main
+
+block title
+	| Личный кабинет | Список желаемого
+
+block content
+	- var current = 7;
+	.wrapper
+		ul.breadcrumbs
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Главная
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Личный кабинет
+			li.breadcrumbs__item 
+				span.breadcrumbs__link Список желаемого
+
+	.page.page-lk.page-lk-wishes
+		.wrapper-smart
+			.wrapper-flex.page-lk__wrap
+				include _blocks/lk-sidebar
+				
+				.page-lk__content
+					.lk-min-header(data-da="page-lk__wrap,991,first")
+						h1 Список желаемого
+
+					.product-cards.wrapper-flex
+						- for (var i=0; i < 6; i++)
+							if !i%2 > 0
+								div(class="product-card liked")
+									.product-card__header
+										.product-like
+											+icon('heart-full')
+										.sale-label -15%
+
+									a(href="#").product-img
+										img(src="img/prod-card-img.jpg" alt="alt")
+								
+									.product-card__content
+										.product-availability В наличии
+										
+										a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+										
+										.product-card__bottom
+											.product-price
+												.product-price__old
+													.product-price__fail 2749 руб.
+												.product-price__standart.product-price__standart--sale 2549 руб.
+
+											a(href="#").product-card__buy.btn.btn-bg-green Купить
+							
+
+							else if i==2	
+								div(class="product-card liked")
+									.product-card__header
+										.product-like
+											+icon('heart-full')
+										.sale-label -15%
+
+									a(href="#").product-img
+										img(src="img/prod-card-img.jpg" alt="alt")
+								
+									.product-card__content
+										.product-availability В наличии
+										
+										a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+										
+										.product-card__bottom
+											.product-price
+												.product-price__old
+													.product-price__fail 2749 руб.
+												.product-price__standart.product-price__standart--sale 2549 руб.
+
+											a(href="#").product-card__buy.btn.btn-bg-green Купить
+							else 	
+								.product-card.liked
+									.product-card__header
+										.product-like
+											+icon('heart-full')
+
+									a(href="#").product-img
+										img(src="img/prod-card-img.jpg" alt="alt")
+								
+									.product-card__content
+										.product-availability В наличии
+										
+										a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+										
+										.product-card__bottom
+											.product-price
+												.product-price__standart 2549 руб.
+
+											a(href="#").product-card__buy.btn.btn-bg-green Купить
+
+					.pagination
+						a(href="#").pagination__prev
+							+icon('pagination-prev')
+						ul.pagination-list
+							li.pagination-list__item
+								a(href="#").pagination-list__link 1
+							li.pagination-list__item
+								a(href="#").pagination-list__link 2
+							li.pagination-list__item.active
+								a(href="#").pagination-list__link 3
+							li.pagination-list__item
+								a(href="#").pagination-list__link 4
+							li.pagination-list__item
+								a(href="#").pagination-list__link ...
+							li.pagination-list__item
+								a(href="#").pagination-list__link 7
+						
+						a(href="#").pagination__next
+							+icon('pagination-next')
+
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+	
+	// script(src="js/libs/datepicker/air-datepicker.js")
+	//- script(src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

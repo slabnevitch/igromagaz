@@ -1,0 +1,28 @@
+@mixin tabs-acc($checkpoint){ // $checkpoint должен сответствовать checkPoint в tabs-accordion.js
+	.tabs__buttons{
+		@media screen and (min-width: $checkpoint){
+			display: flex;
+		}
+		li{
+			list-style-type: none;
+		}
+	}
+	.tab{
+		&.active{
+			background-color: pink;
+		}
+	}
+	.tab-content{
+		@media screen and (max-width: $checkpoint){
+			display: none;
+		}
+	}
+	.accordion__content{
+		@media screen and (min-width: $checkpoint){
+			display: none;
+		}
+	}
+}
+.combine{
+	@include tabs-acc($sm);
+}

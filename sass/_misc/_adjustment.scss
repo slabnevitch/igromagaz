@@ -1,0 +1,290 @@
+/*--------------------adjustment----------------------*/
+*{
+	box-sizing: border-box;
+}
+html{
+	&.catalog-visible{
+		overflow: hidden;
+		.header__catalog{
+			opacity: 1;
+			visibility: visible;
+		}
+		.catalog-toggler__arrow{
+			transform: rotate(180deg);
+		}
+	}
+	&.main-menu-visible{
+		overflow-y: hidden;
+		body{
+			overflow-y: hidden;
+
+		}
+		.header__menu-wrapper{
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+	}
+	&.filters-opened{
+		.page-catalog__toggle{
+			color: $accent;
+			background-color: #fff;
+			border: 2px solid $accent;
+
+			&:first-of-type{
+				margin-bottom: 18px;
+			}
+			&:last-of-type{
+				display: block;
+			}
+		}
+	}
+}
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+body{
+	font-family: $reg;
+	font-weight: normal;
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	// line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+	color: $text;
+}
+.main-container{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	.header{
+		flex: 0 0 auto;
+	}
+	main.main-content{
+		flex: 1 1 auto;
+	}
+	.footer{
+		flex: 0 0 auto;
+		// margin-top: auto;
+	}
+}
+h1, h2, .sect-title{
+	margin: 0;
+	font-size: 32px;
+	line-height: 39px;
+	font-weight: normal;
+	font-family: $bold;
+
+	@include max-screen($sm){
+		font-size: 28px;
+		line-height: 34px;
+	}  
+}
+h1{
+	@include max-screen($xs){
+		font-size: 24px;
+		line-height: 29px;
+	}  
+
+}
+h2{
+	@include max-screen($sm){
+		font-size: 24px;
+		line-height: 29px;
+	}
+}
+ul, li{
+	margin: 0;
+	padding: 0;
+}
+input
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+	font-size: 16px;
+	appearance: none;
+}
+.input,
+input{
+	outline: none;
+	display: block;
+	width: 100%;
+}
+textarea.input{
+	resize: none;
+	padding: 0 0;
+}
+//END input
+.wrapper{
+	margin: 0 auto;
+	padding-left: $containerPaddings / 2 + px;
+	padding-right: $containerPaddings / 2 + px;
+	max-width: $maxContainerWidth + px;
+
+	@include max-screen($sm){
+		padding-right: 20px;
+		padding-left: 20px;
+	}  
+}
+// classes for smartgrid(c) structure
+.wrapper-smart{
+	@include wrapper();
+
+	@include max-screen($sm){
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+}
+.wrapper-flex{
+	@include row-flex();
+}
+.column{
+	@include col();
+	@include size(1);	
+	height: 50px;
+	background-color: orange;
+}
+
+.hidden{
+	display: none;
+}
+
+.ibg{
+background-position: center; 
+background-size: cover; 
+background-repeat: no-repeat; 
+position: relative;
+padding-bottom: 52.25%;
+}
+
+.ibg img{
+	width: 100%; 
+	height: 100%; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	opacity: 0; 
+	// visibility: hidden;
+}
+._prod-img {
+	position: relative;
+	padding-bottom: 80%;
+	img{
+		@include absolute-center;
+	}
+}
+._fit{
+	padding-bottom: 80%;
+	position: relative;
+}
+._fit ._fit-img{//_fit - class for object-fit
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	object-fit: cover; 
+	object-position: center center;
+}
+
+.bd-filter-fallback{// определение поддержки блюра без джаваскрипт
+	@supports (backdrop-filter: blur(10px)) or (--webkit-backdrop-filter: blur(10px)){// определение поддержки блюра без джаваскрипт
+			background-color: rgba(255, 255, 255, .72);
+			backdrop-filter: blur(31px);
+		}
+}
+// tabs-pure base styles
+// .tabs__buttons{
+// 	display: flex;
+// }
+// .tabs__container{
+// }
+// .tab-content,
+// .tabs__buttons li{
+// 	list-style-type: none;
+// }
+// .tab{
+// 	text-decoration: none;
+// 	display: block;
+// 	&.active{
+// 		background-color: pink;
+// 	}
+// }
+
+// показ спойлеров на определенном разрешении
+// .accordion__content.hidden{
+// 	@include min-screen($sm){
+// 		display: block;
+// 	}
+// }
+
+// service ui elements styles
+// @import "_misc/_tabs-accordion";
+// @import "_misc/_rating";
+// @import "_misc/_noUiSlider-base";
+// @import "_misc/_counter";
+// @import "_misc/multilevel-dropdown.scss";
+
+.toggle-mnu{
+  display: block;
+  width: 30px;
+  height: 24px;
+  margin-top: -15px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  user-select: none;
+
+  @include min-screen($md){
+  	display: none;
+  }
+  span:after, span:before{
+
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+  } 
+
+  span:after{
+
+    top: 22px;
+  }
+
+  span{
+
+    position: relative;
+    display: block;
+  } 
+
+  span, span:after, span:before{
+
+    width: 100%;
+    height: 2px;
+    background-color: $text;
+    transition: all 0.3s;
+    backface-visibility: hidden;
+    border-radius: 2px;
+  }
+
+
+  &.on span{
+
+    background-color: transparent;
+  } 
+
+  &.on span:before{
+
+    transform: rotate(45deg) translate(-1px, 0px);
+  } 
+
+  &.on span:after{
+
+    transform: rotate(-45deg) translate(6px, -7px);
+  } 
+} 
+/*--------------------END adjustment----------------------*/ 

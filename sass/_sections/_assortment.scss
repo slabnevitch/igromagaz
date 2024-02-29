@@ -1,0 +1,127 @@
+/*--------------------assortment----------------------*/
+.assortment {
+	padding-bottom: 35px;
+}
+.wrapper-smart {}
+.wrapper-flex {}
+.assortment__item {
+	@include col();
+	@include size(3);
+	@include size-lg(6);
+	@include size-sm(12);
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+	height: 153px;
+	padding: 10px 24px;
+	text-decoration: none;
+	color: #fff;
+	border-radius: 20px;
+
+	&:first-child{
+		background: linear-gradient(92.15deg, #5CC8F5 1.37%, #4AB8E6 98.2%);
+
+		.assortment__img {
+			img{
+				top: 30px;
+				left: auto;
+				right: -40px;
+
+				@include max-screen($sm){
+					max-height: 130%;
+					top: 20px;
+					right: -20px;
+				}
+			}
+		}
+		.assortment__name {
+			@include min-screen(1100px){
+				    max-width: 115px;
+			}
+		}
+	}
+	&:nth-child(2){
+		background: linear-gradient(92.15deg, #94DCB3 1.37%, #4BD787 98.2%);
+		.assortment__name {
+			@include min-screen(1100px){
+				    max-width: 90px;
+			}
+		}
+	}
+	&:nth-child(3){
+		background: linear-gradient(92.15deg, #9FB2F9 1.37%, #829AF6 98.2%);
+
+		.assortment__name {
+			@include min-screen(1100px){
+				    max-width: 90px;
+			}
+		}
+	}
+	&:nth-child(4){
+		background: linear-gradient(92.15deg, #66ECE4 1.37%, #57DAD2 98.2%);
+		.assortment__img {
+			img{
+				top: 30px;
+				right: -66px;
+				max-width: 135%;
+
+				@include max-screen($sm){
+					max-height: 150%;
+					max-width: none;
+					top: 20px;
+					right: -30px;
+				}
+			}
+		}
+	}
+	&:not(:last-child){
+		@include max-screen($lg){
+			margin-bottom: 15px;	
+		}
+		
+	}
+
+	@include max-screen($sm){
+		height: 120px;
+	}
+}
+.assortment__name {
+	flex-shrink: 0;
+	font-family: $bold;
+	font-size: 20px;
+	line-height: 24px;
+
+	div{
+		@include max-screen($sm){
+			display: inline-block;
+			
+		}
+	}
+}
+.assortment__img {
+	position: absolute;
+	right: 20px;
+	top: 0;
+	height: 100%;
+	// width: 161px;
+	width: prc(161,278);
+	// position: relative;
+	// overflow: hidden;
+	img{
+		@include absolute-center-old;
+		right: 0;
+		left: auto;
+		// transform: translate(0, -50%);
+		max-width: 150%;
+		// max-height: none;
+
+		@include max-screen($sm){
+			max-height: 70%;
+			right: 10px;
+		}
+	}
+}
+/*--------------------END assortment----------------------*/ 

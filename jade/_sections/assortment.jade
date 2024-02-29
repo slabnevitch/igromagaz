@@ -1,0 +1,14 @@
+.assortment
+	.wrapper-smart
+		.wrapper-flex
+			- var items = [{first: 'Карты', last: 'оплаты'}, {first: 'Игры', last: 'для ПК'}, {first: 'Игры', last: 'для Xbox'}, {first: 'Аксессуары', last: ''}]
+			
+			each item, ind in items 
+				a(href="#").assortment__item
+					if item.last !== ''
+						.assortment__name= item.first + ' ' + item.last
+					else
+						.assortment__name= item.first
+
+					.assortment__img
+						img(src="img/main-page/chapters/" + (ind + 1) + ".png" alt="alt")

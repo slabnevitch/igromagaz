@@ -1,0 +1,47 @@
+$maxWidth: 1440;//ширина макета в граф. редакторе
+$maxWidthContainer: 1200;//ширина ограничивающего контейнера без паддингов
+$containerPaddings: 30;//сумма левого и правого паддингов ограничивающего контейнера
+$maxContainerWidth: $maxWidthContainer + $containerPaddings;// итоговая ширина ограничивающего контейнера
+
+// colors
+$accent: #4AB8E6;
+$text: #132539;
+$green: #7ADBA3;
+$gray: #F2F6F9;
+$gray-line: #E2EBEE;
+$red: #ED1C1C;
+$btn-red: #F57272;
+
+// paths
+	// use: background-image: url($icos + 'arrow-right.svg');
+$img: '../img/';
+$icos: '../img/icons/';
+$svg: '../img/icons-svg/';
+
+
+// media
+$lg: 1199px;
+$md: 991px;
+$sm: 767.98px;
+$xs: 576px;
+$xss: 480px;
+$xsss: 375px;
+$min: 360px;
+$mins: 320px;
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1170px);
+
+$gutter: $grid-gutter-width;
+
+$reg: 'ProximaNova-Regular', sans-serif;
+$reg-it: 'ProximaNova-RegularIt', sans-serif;
+$semi: 'ProximaNova-Semibold', sans-serif;
+$bold: 'ProximaNova-Bold', sans-serif;
+$exbold: 'ProximaNova-Extrabld', sans-serif;
+$light: 'ProximaNova-Light', sans-serif;
+
+

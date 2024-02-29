@@ -1,0 +1,139 @@
+header.header
+	//- include ../_misc/multilevel-dropdown
+	.header__top
+		.wrapper
+			.header__wrapper
+				.header__menu
+					+menu('menu-header', ['Бонусная программа','Техподдержка','Блог','Отзывы'])
+				.header__account.account-header(data-da="header__menu-wrapper,991,first")
+					a(href="#").account-header__item
+						.account-header__icon
+							+icon('account')
+						.account-header__label Войти
+
+					a(href="#").account-header__item
+						.account-header__icon
+							+icon('key')
+						.account-header__label Регистрация
+
+					.account-header__close#main-menu-closer
+						+icon('close')
+	
+	.header__middle
+		.wrapper
+			a(href="#").header__logo
+				img.header__logo-img(src="img/logo.svg" alt="alt")
+			
+			form(action=":").header__search.search-header
+				.search-header__select
+					select(data-searchdisable="true" class="fstdropdown-select")
+						option(value="all") Все разделы
+						option(value="01") Игры ПК: ключи активации
+						option(value="02") Карты пополнения счета
+						option(value="03") Антивирусы
+						option(value="04") Коллекционные издания
+						option(value="05") Игры для Xbox 360
+						option(value="06") Игры для PlayStation 3
+						option(value="07") Игровые приставки
+						option(value="08") Игровые аксессуары
+
+				.search-header__field
+					input(autocomplete="off" id="header-search-input" type="text" name="name" class="search-header__input" placeholder="Поиск среди 2526 товаров в наличии")
+				
+				button.btn.search-header__submit
+					span Найти
+					+icon('search')
+
+				.header__search-results
+					- for (var i=0; i < 3; i++)
+						.product-line
+							a(href="#").product-img
+								img(src="img/prod-card-img.jpg" alt="alt")
+							.product-line__info
+								a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+								.product-availability В наличии
+								.product-delive Доставка цифрового ключа на e-mail
+
+							.product-line__price
+								.product-price
+									.sale-label -15%
+									.product-price__old
+										.product-price__fail 2749 руб.
+									.product-price__standart 2549 руб.
+							
+
+			a(href="#").header__cart.cart-header.full(data-da="header__wrapper,991,1")
+				.cart-header__icon
+					+icon('cart')
+				.cart-header__value 4 000 руб.
+				.cart-header__empty нет 
+					br
+					| товаров
+
+			a(href="#").header__vishes.vishes-header.full(data-da="header__wrapper,991,2")
+				.vishes-header__icon
+					+icon('heart-empty')
+				.vishes-header__value 12
+
+			button.toggle-mnu#main-menu-opener
+				span
+
+	.header__bottom
+		.wrapper
+			.catalog-toggler#catalog-toggle
+				+icon('dots-burger')
+				.catalog-toggler__label Каталог товаров
+				.catalog-toggler__arrow
+					+icon('arrow-down')
+			
+			.header__menu-wrapper
+				+menu('main-menu', ['Оплата','Регистрация','Доставка','Гарантии','Техподдержка','О нас','Контакты'])
+
+		.header__catalog.catalog-header
+			.wrapper-smart
+				.wrapper-flex
+					.catalog-header__column
+						ul.catalog-header__list
+							li.catalog-header__item
+								a(href="#").catalog-header__link Игры на ПК: ключи активации
+								ul.catalog-header__sublist
+									- var sublist1 = ['Steam','Uplay','Battle.net','Rockstar','Origin','GOG.com','Другое'];
+										each item in sublist1
+											li.catalog-header__subitem
+												a(href="#").catalog-header__sublink= item
+					.catalog-header__column
+						ul.catalog-header__list
+							li.catalog-header__item
+								a(href="#").catalog-header__link Карты пополнения счета
+								ul.catalog-header__sublist
+									- var sublist2 = ['Xbox Live', 'PlayStation Network', 'iTunes Store', 'EA Play (EA Access)', 'Steam Wallet'];
+										each item in sublist2
+											li.catalog-header__subitem
+												a(href="#").catalog-header__sublink= item
+							
+						ul.catalog-header__list
+							li.catalog-header__item
+								a(href="#").catalog-header__link Игры для PlayStation 4
+					
+					.catalog-header__column
+						ul.catalog-header__list
+							li.catalog-header__item
+								a(href="#").catalog-header__link Коллекционные издания
+
+						ul.catalog-header__list
+							li.catalog-header__item
+								a(href="#").catalog-header__link Игровые аксессуары
+								ul.catalog-header__sublist
+									- var sublist3 = ['Stem-аксессуары','PC аксессуары','Другие аксессуары'];
+										each item in sublist3
+											li.catalog-header__subitem
+												a(href="#").catalog-header__sublink= item
+
+						ul.catalog-header__list
+							li.catalog-header__item
+								a(href="#").catalog-header__link Консоли Xbox One
+					
+					.catalog-header__column
+						.catalog-header__img
+							img(src="img/catalog-x-box.png" alt="alt")
+	

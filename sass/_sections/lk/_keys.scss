@@ -1,0 +1,141 @@
+/*--------------------lk-keys----------------------*/
+.page-lk-keys{
+
+}
+.lk-table {}
+.lk-table__header {
+	font-size: 14px;
+line-height: 17px;
+
+color: #99A2AC;
+	
+	@include max-screen($sm){
+		display: none;
+	}
+
+	.lk-table__row {
+		padding-bottom: 11px;
+	}
+	.lk-table__col {
+		padding: 0 18px;
+
+	}
+}
+.lk-table__row {
+	display: flex;
+	align-items: center;
+
+	@include max-screen($sm){
+		flex-wrap: wrap;
+	}
+}
+.lk-table__col {
+
+}
+.lk-table__col--order {
+
+	flex: 0 0 167px;
+}
+.lk-history-table__body {
+	.lk-table__row {
+		padding-top: 18px;
+		padding-bottom: 15px;
+		border: 1px solid #E2EBEE;
+		border-radius: 7px;
+
+		@include max-screen($sm){
+			padding-left: 18px;
+			padding-right: 18px;
+		}  
+
+		&:not(:last-child){
+			margin-bottom: 16px;
+		}
+
+		@include max-screen($sm){
+			padding-top: 25px;
+			padding-bottom: 23px;
+		}
+	}
+	.lk-table__col {
+		padding: 0 18px;
+
+		@include max-screen($sm){
+			padding: 0;
+		}  
+	}
+
+	.lk-table__col--bonus{
+		font-family: $bold;
+
+		.lk-table__bonus-mobile{
+			margin-left: 5px;
+		}
+	}
+
+}
+.lk-table__col--order {
+	font-size: 14px;
+	line-height: 17px;
+	color: #99A2AC;
+
+	@include max-screen($sm){
+		flex-basis: 100%;
+		margin-bottom: 9px;
+		margin-right: 0;
+	}
+}
+.lk-table__col--name {
+	padding-left: 0;
+	flex: 1 1 297px;
+	margin-right: 103px/892px * 100%;
+
+	@include max-screen($lg){
+		margin-right: 5%;
+	}  
+
+	@include max-screen($md){
+		margin-right: 30px;
+		flex-shrink: 0;
+	}
+	@include max-screen($sm){
+		flex-basis: 100%;
+		margin-bottom: 18px;
+		margin-right: 0;
+		font-size: 15px;
+		line-height: 131.8%;
+	}
+
+	a{
+		color: $text;
+		line-height: 21px;
+	}
+}
+.lk-table__col--preview {
+	flex: 1 1 325px;
+	p{
+		margin-top: 0;
+		margin-bottom: 9px;
+	}
+	.btn-sm {
+		width: 100%;
+		max-width: 205px;
+		font-size: 14px;
+		line-height: 17px;
+	}
+}
+.lk-table__col--type,.lk-table__col--bonus{
+	flex: 0 0 140px;
+	text-align: center;
+
+	@include max-screen($lg){
+		flex-basis: 120px;
+	}  
+
+	@include max-screen($sm){
+		flex-basis: auto;
+
+	}  
+
+}
+/*--------------------END lk-keys----------------------*/ 

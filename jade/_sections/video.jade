@@ -1,0 +1,23 @@
+.video
+	.wrapper
+		.block-header
+			.block-header__text
+				.sect-title Видео
+				a(href="#").link-blue Смотреть все
+			
+			.block-header__nav
+				.slider-prev
+					+icon('arrow-prev')
+				.slider-next
+					+icon('arrow-next')
+	
+	.wrapper
+		.video__slider
+			- for (var i=0; i < 8; i++)
+				.video__card.card-video
+					.card-video__preview.video-wrapper
+						iframe(class="lazyload" data-src='https://www.youtube.com/embed/LdsTydS4eww' title='YouTube video player' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen='')
+						a(href="#").card-video_link.popup-video._fit
+							img._fit-img(src="img/main-page/video-cover.jpg" alt="alt")
+
+					a(href="#").card-video__title.popup-video Мини-обзор от IgroMagaz: GOD EATER 2 Rage Burst

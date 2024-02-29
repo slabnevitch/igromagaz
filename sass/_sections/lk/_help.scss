@@ -1,0 +1,76 @@
+/*--------------------help----------------------*/
+.page-lk-help{
+	// padding-bottom: 40px;
+}
+.lk-help-links {
+	padding-bottom: 26px;
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 687px;
+
+	@include max-screen($md){
+		padding-bottom: 20px;
+	}  
+}
+.lk-help-links__item {
+	list-style-type: none;
+	margin-right: 16px;
+	margin-bottom: 12px;
+
+}
+.lk-help-links__link {
+	display: block;
+	padding: 14px 22px 13px 22px;
+	font-size: 16px;
+	line-height: 19px;
+	color: $text;
+	text-decoration: none;
+	background-color: $gray;
+	border: 2px solid transparent;
+	border-radius: 90px;
+	transition: all 0.3s;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				background-color: transparent;
+				border-color: #4AB8E6;
+			}
+		}
+}
+.lk-help-content {
+	line-height: 27px;
+
+	@include max-screen($md){
+		line-height: 170.8%;
+	}  
+
+	p{
+		span{
+			font-family: $bold;
+		}
+	}
+}
+.lk-help-content__title {
+	font-size: 24px;
+	font-family: $bold;
+}
+.lk-help-content__subtitle {
+	font-size: 20px;
+	font-family: $bold;
+}
+.lk-help-content__img {
+	margin: 30px 0;
+	border: 1px solid #E2EBEE;
+	border-radius: 20px;
+	text-align: center;
+	overflow: hidden;
+
+	@include max-screen($md){
+		margin: 20px 0;
+	}  
+	img{
+		max-width: 100%;
+	}
+}
+.link-blue {}
+/*--------------------END help----------------------*/ 
