@@ -403,6 +403,15 @@ jQuery(function() {
 		}
 		// END product-info tabs slider
 
+		// product-review expand/collapse
+		if($('.product-review').length > 0){
+			$('[data-answers-expand]').click(function(e) {
+				$(this).closest('.product-review').find('.product-review__answers').slideToggle();
+				$(this).contents().get(0).nodeValue = $(this).contents().get(0).nodeValue === 'Развернуть ' ? 'Свернуть ' : 'Развернуть '; 
+			});
+		}
+		//END product-review expand/collapse
+
 		// tabs
 		$('.tabs__item').on('click', function(e) {
 			e.preventDefault();

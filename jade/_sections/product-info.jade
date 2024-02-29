@@ -130,7 +130,7 @@
 
 									.product-review__bottom
 										button(type="button").product-review__button Ответить       
-										button(type="button").product-review__button Свернуть (3)
+										button(type="button" data-answers-expand).product-review__button Свернуть #[span (3)]
 
 									.product-review__answers
 										- for (var i=0; i <2 ; i++)
@@ -231,7 +231,7 @@
 
 									.product-review__bottom
 										button(type="button").product-review__button Ответить       
-										button(type="button").product-review__button Свернуть (1)
+										button(type="button" data-answers-expand).product-review__button Свернуть #[span (1)]
 
 									.product-review__answers
 										.product-review
