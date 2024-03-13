@@ -402,7 +402,7 @@ jQuery(function() {
 			});
 		}
 		// END product-info tabs slider
-
+		
 		// product-review expand/collapse
 		if($('.product-review').length > 0){
 			$('[data-answers-expand]').click(function(e) {
@@ -411,7 +411,7 @@ jQuery(function() {
 			});
 		}
 		//END product-review expand/collapse
-
+		
 		// tabs
 		$('.tabs__item').on('click', function(e) {
 			e.preventDefault();
