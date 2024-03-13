@@ -27,6 +27,18 @@ block content
 					.lk-personal-form
 						form.form(action="#")
 							.lk-personal-form__row
+								.lk-personal-form__av
+									.lk-personal-form__userpic
+										img(src="img/lk-page/userpic.jpg" alt="alt")
+									label.lk-personal-form__file
+										span.lk-personal-form__filename Название файла.jpeg
+										input(type="file" name="userpic")
+										span.lk-personal-form__file-false.btn.btn-sm.btn-bg-accent Загрузить аватар
+										span.lk-personal-form__notification jpeg/png/gif объемом до 4Мб - на фото должны быть изображены только вы
+
+
+								
+							.lk-personal-form__row
 								.lk-personal-form__col
 									label.form__label
 										span.form__field-name E-mail:

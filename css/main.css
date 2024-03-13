@@ -6566,6 +6566,22 @@ blockquote {
 }
 
 /*=====================product-reviews=========================*/
+.product-reviews__header {
+  margin-bottom: 39px;
+}
+.product-reviews__header .btn, .product-reviews__footer .btn {
+  width: 100%;
+  max-width: 239px;
+}
+.product-reviews__footer {
+  margin-bottom: 32px;
+}
+.product-reviews__form .btn-bg-green {
+  width: 134px;
+}
+.product-reviews__form .form__area {
+  background-color: #F2F6F9;
+}
 .product-reviews .pagination {
   margin-top: 0;
   margin-bottom: 49px;
@@ -9867,6 +9883,83 @@ blockquote {
   text-transform: capitalize;
 }
 
+/*--------------------lk-avatar loadin blocl----------------------*/
+.lk-personal-form__av {
+  width: 100%;
+  margin-bottom: 28px;
+}
+@media only screen and (max-width: 767.98px) {
+  .lk-personal-form__av {
+    padding: 0 13px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .lk-personal-form__av {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.lk-personal-form__userpic {
+  -ms-flex: 0 0 113px;
+  flex: 0 0 113px;
+  width: 113px;
+  height: 113px;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  margin-right: 24px;
+}
+@media only screen and (max-width: 480px) {
+  .lk-personal-form__userpic {
+    margin-bottom: 15px;
+  }
+}
+.lk-personal-form__userpic img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.lk-personal-form__file {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 13px;
+}
+.lk-personal-form__file input[type=file] {
+  position: absolute;
+  box-sizing: border-box;
+  width: 1px;
+  height: 1px;
+  display: block;
+  left: 50%;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.lk-personal-form__file-false {
+  width: 143px;
+  font-size: 14px;
+}
+
+.lk-personal-form__notification {
+  font-size: 14px;
+  color: #99A2AC;
+}
+
+/*--------------------END lk-avatar loadin blocl----------------------*/
 /*--------------------END personal----------------------*/
 /*--------------------bonus----------------------*/
 .lk-bonus {
@@ -11817,4 +11910,8 @@ blockquote {
 }
 
 /*--------------------END footer----------------------*/
+
+.webp .payment-methods__option:after{ background-image: url(../img/contacts-pages/tail.webp); }
+
+.webp .lk-overall{ background-image: url(../img/lk-page/lk-overal_bg.webp); }
 /*# sourceMappingURL=maps/main.css.map */

@@ -1,0 +1,109 @@
+.product-info
+	.wrapper
+		.tabs
+			.product-info__tabs-header
+				ul.tabs__list.product-info__tabs-list
+					- var tabs = ['Информация о товаре', 'Характеристики', 'Инструкции', 'Отзывы'];
+						each item, i in tabs
+							li(class= i==0 ? "tabs__item product-info__tabs-item tabs__item--active" : "tabs__item product-info__tabs-item")
+								h2= item
+
+			ul.tabs__content.product-info__tabs-content
+				li.tabs__item
+					.warning-message
+							.warning-message__icon
+								+icon('attention')
+							.warning-message__content
+								.warning-message__title Внимание!
+								.warning-message__text Не приобретайте этот товар, если у вас уже есть комплект, включающий стартовый набор «Преступная организация».
+					
+					.product-info__block
+						.product-info__title Состав издания
+						ul
+							li игра Grand Theft Auto V
+							li стартовый набор «Преступная организация» для Grand Theft Auto: Online
+
+
+						p Купите этот комплект, чтобы получить Grand Theft Auto V и стартовый набор «Преступная организация».
+						p Стартовый набор «Преступная организация» – самый быстрый способ для новых игроков построить собственную криминальную империю в Grand Theft Auto Online. 
+						p Вы получите доступ к самым интересным и популярным материалам GTA Online, в том числе к объектам недвижимости, предприятиям, оружию, транспортным средствам и другим товарам общей стоимостью более чем на 10 000 000 GTA $.
+						p Запускайте бизнес-проекты из своего офиса в западном здании Maze Bank, создавайте мощное оружие в подземном бункере в Палето или гоняйте по улицам на самой разной технике, в том числе суперкарах, мотоциклах, Dune FAV с оружием и т. д.
+						p Кроме того, вы получите 1 000 000 долларов GTA и мощное оружие. Все это поможет вам стать самым главным в Лос-Сантосе и округе Блэйн.
+						p Стартовый набор «Преступная организация» с доступом к Grand Theft Auto Online дает вам имущество стоимостью более 10 000 000 GTA $:
+						
+						.product-info__title 1 000 000 GTA $ наличными 
+						.product-info__title Недвижимость:
+
+						- var opts1 = ['Западный офис в башне Maze Bank','Бункер в лесу Палето для торговли оружием','Печатная мастерская по производству фальшивых банкнот в пустыне Сенора','Клабхаус в Грейт-Чапаррал','Квартира по адресу Сан-Витас-стрит, д. 1561','Гараж на 10 машин по адресу Эксепшионалист-вэй, 1337'];
+
+						ul
+							each item in opts1
+								li= item
+						
+						.product-info__title Техника:
+						- var opts2 = ['Dune FAV','Maibatsu Frogger','Enus Windsor','Obey Omnis','Coquette ClassicT','Pegassi VortexH','Вертолет Western ZombieB'];
+							ul
+								each item in opts2
+									li= item
+
+						.product-info__title Оружие, одежда и татуировки:
+						- var opts3 = ['Укороченный гранатометВ', 'Укороченная винтовка', 'Костюмы: каскадерские и «Импорт/экспорт», байкерские татуировки']; 
+
+							ul
+								each item in opts3
+									li= item
+
+				li.tabs__item.hidden
+					.product-info__block
+						.product-info__title Технические характеристики
+						.product-opts
+							- var chars1 = [{key: 'Дата релиза', val: '14.12.2017'}, {key: 'Активация', val: 'Rockstar'}, {key: 'Издатель', val: 'Rockstar Games'}, {key: 'Язык', val: 'Русские субтитры'} /*{key: 'Жанр', val: 'Экшены, Приключения'}, {key: 'OC', val: 'Windows'}*/];
+								each opt in chars1
+									.product-opt
+										.product-opt__key= opt.key
+										.product-opt__val= opt.val
+
+								.product-opt
+									.product-opt__key Жанр
+									.product-opt__val
+										a(href="#").product-opt__link Экшены
+										| , 
+										a(href="#").product-opt__link Приключения
+
+								- var chars2 = [{key: 'остижения в steam ', val: 'Да'}, {key: 'Контроллер', val: 'Да'}, {key: 'Для одного игрока', val: 'Да'}, {key: 'Для нескольких игроков', val: 'Нет'}, {key: 'Совместное прохождение', val: 'Нет'}, {key: 'Коллекционные карточки в steam', val: 'Нет'}, {key: 'OC', val: 'Windows'}, {key: 'Возрастной рейтинг', val: '18+'}];
+									each opt in chars2
+										.product-opt
+											.product-opt__key= opt.key
+											.product-opt__val= opt.val
+					.product-info__block
+						.product-info__title Минимальные (Win)
+						- var min = ['ОС: Windows 10 64 Bit, Windows 8.1 64 Bit, Windows 8 64 Bit, Windows 7 64 Bit Service Pack 1, Windows Vista 64 Bit Service Pack 2* (*NVIDIA video card recommended if running Vista OS)','Процессор: Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 CPUs) / AMD Phenom 9850 Quad-Core Processor (4 CPUs) @ 2.5GHz','Оперативная память: 4 GB ОЗУ','Видеокарта: NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10, 10.1, 11)','DirectX: Версии 10','Сеть: Широкополосное подключение к интернету','Место на диске: 72 GB','Звуковая карта: 100% DirectX 10 compatible'];
+						ul
+							each item in min
+								li= item
+
+					.product-info__block
+						.product-info__title Рекомендуемые  (Win)
+						ul
+							each item in min
+								li= item
+
+				li.tabs__item.hidden
+					.product-info__block
+						.product-info__title Чтобы начать играть нужно:
+
+						-var olo = ['Купить лицензионный ключ Grand Theft Auto V (ГТА 5) + Premium GTA + Online (ключ для ПК)','После оплаты, вы моментально* получите ключ (cd key) Grand Theft Auto V (ГТА 5) + Premium GTA + Online (ключ для ПК) на е-mail, указанный в заказе и в личный кабинет в магазине','Скачайте и установите Rockstar Games Launcher (если еще не установлен).','Войдите в свой Rockstar Games аккаунт или создайте новый, если у вас его еще нет.В','В открывшееся поле введите ключ, полученный после оплаты.','После активации игра появится в списке "ИГРЫ" и вы сможете скачать её в Rockstar Games Launcher.'];
+							ol
+								each item in olo
+									li= item
+
+						.product-info__note * — Ключи по предзаказам будут доставлены за день или в день выхода игры
+
+				li.tabs__item.hidden
+					.product-info__block
+						.product-reviews
+							form(action="#" class="form product-reviews__form")
+								label.form__label
+									textarea(autocomplete="off" name="name" class="form__area" placeholder="Оставить коментарий")
+
+								button.btn.btn-bg-green(type="submit") Отправить

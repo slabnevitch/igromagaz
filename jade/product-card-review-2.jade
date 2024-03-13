@@ -1,0 +1,407 @@
+extends _misc/main
+
+block title
+	| Карта товара
+
+block content
+	.wrapper
+		ul.breadcrumbs
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Главная
+			li.breadcrumbs__item 
+				a(href="#").breadcrumbs__link Игры ПК - ключи активации
+
+
+	.page.page-card
+		.wrapper
+			.page-card__title
+				h1 Grand Theft Auto V (ГТА 5) + Premium GTA + Online (ключ для ПК)
+				.page-card__title-caption (ключ активации)
+			
+		.page-card__top
+			.wrapper-smart
+				.wrapper-flex
+					.page-card__details
+						.wrapper-flex
+							.page-card__view
+								.card-slider-label
+									.sale-label 15%
+									.sale-label.sale-hit хит продаж
+								
+								.page-card__screen
+									//- .page-card__slider-arrows
+									.slider-prev
+										+icon('arrow-prev')
+									.slider-next
+										+icon('arrow-next')
+
+									.page-card__slider
+										- for (var i=0; i < 5; i++)
+											.page-card__slide._fit
+												if i==0
+													img._fit-img(src="img/product-card-page/slider-big.jpg" alt="alt")
+												else
+													img._fit-img(src="img/product-card-page/slider-navs/" + (i+1) + ".jpg" alt="alt")
+										// .page-card__slide._fit
+										// 	a(class="owl-video" href="http://www.youtube.com/watch?v=vlVSJ0AvZe0" style="display: none;")
+
+									.page-card__slider-nav
+										- for (var i=0; i < 5; i++)
+											.page-card__slide-nav._fit
+												img._fit-img(src="img/product-card-page/slider-navs/" + (i+1) + ".jpg" alt="alt")
+						
+							.page-card__params.params-page-card
+								- var icons = ['battle_net', 'gog', 'key', 'origin', 'ps', 'rockstar', 'steam', 'steam_wallet', 'uplay', 'x_box'];
+								.params-page-card__picts
+									.params-page-card__pict.params-page-card__pict--age
+										span 18+
+									each icon in icons
+										.params-page-card__pict
+											img(src="img/product-card-icons-sprite/symbol/svg-sprite.svg#" + icon class="svg-x"+icon-"dims" alt=icon)
+										
+								.product-opts
+									- var opts = [{key: 'Дата релиза', val: '14.12.2017'}, {key: 'Активация', val: 'Rockstar'}, {key: 'Издатель', val: 'Rockstar Games'}, {key: 'Язык', val: 'Русские субтитры'}, {key: 'Жанр', val: 'Экшены, Приключения'}, {key: 'OC', val: 'Windows'}];
+										each opt in opts
+											.product-opt
+												.product-opt__key= opt.key
+												.product-opt__val= opt.val
+								
+								.params-page-card__delivery
+									.params-page-card__delivery-title Доставка:
+									ul.params-page-card__delivery-list
+										li.params-page-card__delivery-item Цифровой товар
+										li.params-page-card__delivery-item Моментальная доставка на e-mail
+					
+					.page-card__order.order-page-card(data-da="page-card__params,767.98,1")
+						.order-page-card__content
+							.product-price
+								.product-price__old
+									.product-price__fail 2749 руб.
+
+								.product-price__standart 2549 руб.
+
+							.order-page-card__economy Вы экономите 609 руб. (35%)
+
+							button.btn.btn-bg-green Купить
+
+							.product-availability В наличии
+
+							.product-bonus
+								+icon('bonus')
+								span 53 бонуса за покупку
+
+						button.order-page-card__to-fav
+							+icon('heart-full')
+							span Добавить в избранное
+		
+		.page-card__versions.versions-page-card
+			.wrapper.tabs
+				.versions-page-card__header
+					h2 Другие версии
+					.versions-page-card__tabs
+						ul.tabs__list.versions-page-card__list
+							li.tabs__item.versions-page-card__item.tabs__item--active
+								.tabs__link.versions-page-card__link PC
+							li.tabs__item.versions-page-card__item
+								.tabs__link.versions-page-card__link Xbox
+							li.tabs__item.versions-page-card__item
+								.tabs__link.versions-page-card__link PlayStation
+					
+				ul.tabs__content.versions-page-card__content
+					li.tabs__item
+						.versions-table
+							- for (var i=0; i < 5; i++)
+								.versions-table__row
+									.versions-table__name
+										a(href="#").versions-table__link Grand Theft Auto V (ГТА 5) + Online (ключ для ПК)
+									
+									.versions-table__price
+										.sale-label 15%
+										.product-price__standart 1399 руб.
+										.product-price__old
+											.product-price__fail 2749 руб.
+									
+									.versions-table__to-cart
+										a(href="#").btn.btn-bg-green.btn-sm В корзину
+
+					li.tabs__item.hidden
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quasi nostrum modi debitis, neque, fugit dignissimos magni perferendis fugiat fuga, rerum, mollitia quia harum ducimus! Dolores, quidem natus voluptatem quos.
+					li.tabs__item.hidden
+						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem delectus expedita laudantium aut error accusamus eveniet nostrum repudiandae, similique facilis, adipisci accusantium nesciunt, modi perferendis labore veniam dolor, assumenda cupiditate.
+		
+		.page-card__info.info-page-card
+			include _sections/product-info2
+
+		.hits.similar.carouseled
+			.wrapper
+				.block-header
+					.block-header__text
+						.sect-title Похожие товары
+						//- a(href="#").link-blue Смотреть все
+					
+					.block-header__nav
+						.slider-prev
+							+icon('arrow-prev')
+						.slider-next
+							+icon('arrow-next')
+
+
+			.wrapper
+				.product-cards-slider.hits-slider
+					- for (var i=0; i < 5; i++)
+						if !i%2 > 0
+							div(class="product-card")
+								.product-card__header
+									.product-like
+										+icon('heart-full')
+									.sale-label -15%
+
+								a(href="#").product-img
+									img(src="img/prod-card-img.jpg" alt="alt")
+							
+								.product-availability В наличии
+								
+								a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+								
+								.product-card__bottom
+									.product-price
+										.product-price__old
+											.product-price__fail 2749 руб.
+										.product-price__standart.product-price__standart--sale 2549 руб.
+
+									a(href="#").product-card__buy.btn.btn-bg-green Купить
+						
+
+						else if i==2	
+							div(class="product-card liked")
+								.product-card__header
+									.product-like
+										+icon('heart-full')
+									.sale-label -15%
+
+								a(href="#").product-img
+									img(src="img/prod-card-img.jpg" alt="alt")
+							
+								.product-availability В наличии
+								
+								a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+								
+								.product-card__bottom
+									.product-price
+										.product-price__old
+											.product-price__fail 2749 руб.
+										.product-price__standart.product-price__standart--sale 2549 руб.
+
+									a(href="#").product-card__buy.btn.btn-bg-green Купить
+						else 	
+							.product-card
+								.product-card__header
+									.product-like
+										+icon('heart-full')
+
+								a(href="#").product-img
+									img(src="img/prod-card-img.jpg" alt="alt")
+							
+								.product-availability В наличии
+								
+								a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+								
+								.product-card__bottom
+									.product-price
+										.product-price__standart 2549 руб.
+
+									a(href="#").product-card__buy.btn.btn-bg-green Купить
+
+		.hits.viewed.carouseled
+			.wrapper
+				.block-header
+					.block-header__text
+						.sect-title Вы уже смотрели
+						// a(href="#").link-blue Смотреть все
+					
+					.block-header__nav
+						.slider-prev
+							+icon('arrow-prev')
+						.slider-next
+							+icon('arrow-next')
+
+
+			.wrapper
+				.product-cards-slider.hits-slider
+					- for (var i=0; i < 5; i++)
+						if !i%2 > 0
+							div(class="product-card")
+								.product-card__header
+									.product-like
+										+icon('heart-full')
+									.sale-label -15%
+
+								a(href="#").product-img
+									img(src="img/prod-card-img.jpg" alt="alt")
+							
+								.product-availability В наличии
+								
+								a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+								
+								.product-card__bottom
+									.product-price
+										.product-price__old
+											.product-price__fail 2749 руб.
+										.product-price__standart.product-price__standart--sale 2549 руб.
+
+									a(href="#").product-card__buy.btn.btn-bg-green Купить
+						
+
+						else if i==2	
+							div(class="product-card liked")
+								.product-card__header
+									.product-like
+										+icon('heart-full')
+									.sale-label -15%
+
+								a(href="#").product-img
+									img(src="img/prod-card-img.jpg" alt="alt")
+							
+								.product-availability В наличии
+								
+								a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+								
+								.product-card__bottom
+									.product-price
+										.product-price__old
+											.product-price__fail 2749 руб.
+										.product-price__standart.product-price__standart--sale 2549 руб.
+
+									a(href="#").product-card__buy.btn.btn-bg-green Купить
+						else 	
+							.product-card
+								.product-card__header
+									.product-like
+										+icon('heart-full')
+
+								a(href="#").product-img
+									img(src="img/prod-card-img.jpg" alt="alt")
+							
+								.product-availability В наличии
+								
+								a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+								
+								.product-card__bottom
+									.product-price
+										.product-price__standart 2549 руб.
+
+									a(href="#").product-card__buy.btn.btn-bg-green Купить
+
+	.popup.popup-add-cart#popup-add-cart.mfp-hide
+		.popup-add-cart__icon
+			+icon('сheck-mark')
+		.popup-add-cart__title Товар добавлен в корзину
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/owlCarousel/dist/owl.carousel.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	script(src="js/libs/slick-master/slick.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

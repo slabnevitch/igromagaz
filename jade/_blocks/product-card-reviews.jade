@@ -1,0 +1,188 @@
+//- h1 huy
+mixin productReviews1()
+	.product-reviews
+		.product-review
+			.product-review__img
+				img(src="img/product-card-page/userpic.jpg" alt="alt")
+			.product-review__content
+				.product-review__header
+					.product-review__info
+						.product-review__top
+							.product-review__date 22.Feb.2024 в 12:55
+
+						.product-review__name Валерий Иванов
+					
+					.product-review__likes.likes-product-review
+						button(type="button").likes-product-review__action
+							.likes-product-review__count 0
+							.likes-product-review__icon
+								+icon('like')
+
+						button(type="button").likes-product-review__action.likes-product-review__action--dis
+							.likes-product-review__count 0
+							.likes-product-review__icon
+								+icon('dislike')
+
+				.product-review__body
+					p.product-review__text
+						| Демоверсия выглядела очень интересно. Атмосферно, красиво...разъезжаешь в машинке собираешь ресурсы, ломаешь машинку, чинишь машинку... Надо будет потом заценить.
+
+				.product-review__bottom
+					button(type="button").product-review__button Ответить       
+					button(type="button").product-review__button Свернуть (3)
+
+				.product-review__answers
+					- for (var i=0; i <2 ; i++)
+						.product-review
+							.product-review
+								.product-review__img
+									img(src="img/product-card-page/userpic.jpg" alt="alt")
+								.product-review__content
+									.product-review__header
+										.product-review__info
+											.product-review__top
+												.product-review__date 22.Feb.2024 в 12:55
+												.product-review__to
+													+icon('review-arrow')
+													.product-review__destination Валерий Иванов
+
+											.product-review__name Валерий Иванов
+										
+										.product-review__likes.product-review__likes--active.likes-product-review
+											button(type="button").likes-product-review__action
+												.likes-product-review__count 0
+												.likes-product-review__icon
+													+icon('like')
+
+											button(type="button").likes-product-review__action.likes-product-review__action--dis
+												.likes-product-review__count 0
+												.likes-product-review__icon
+													+icon('dislike')
+
+									.product-review__body
+										p.product-review__text
+											| Демоверсия выглядела очень интересно. Атмосферно, красиво...разъезжаешь в машинке собираешь ресурсы, ломаешь машинку, чинишь машинку... Надо будет потом заценить.
+
+									.product-review__bottom
+										button(type="button").product-review__button Ответить
+
+					.product-review
+						.product-review
+							.product-review__img
+								img(src="img/product-card-page/userpic.jpg" alt="alt")
+							.product-review__content
+								.product-review__header
+									.product-review__info
+										.product-review__top
+											.product-review__date 22.Feb.2024 в 12:55
+											.product-review__to
+												+icon('review-arrow')
+												.product-review__destination Валерий Иванов
+
+										.product-review__name Валерий Иванов
+									
+									.product-review__likes.product-review__likes--active.likes-product-review
+										button(type="button").likes-product-review__action
+											.likes-product-review__count 0
+											.likes-product-review__icon
+												+icon('like')
+
+										button(type="button").likes-product-review__action.likes-product-review__action--dis
+											.likes-product-review__count 0
+											.likes-product-review__icon
+												+icon('dislike')
+
+								.product-review__body
+									p.product-review__text
+										| Демоверсия выглядела очень интересно. Атмосферно, красиво...разъезжаешь в машинке собираешь ресурсы, ломаешь машинку, чинишь машинку... Надо будет потом заценить.
+
+								.product-review__bottom
+									form(action="#" class="form product-review__form")
+										.form__row
+											input.form__input.form__input--bg(autocomplete='off', type='text', name='name', placeholder='Ваше сообщение')
+											button(type="button").btn.btn-bg-green Отправить
+
+			.product-review
+				.product-review__img
+					img(src="img/product-card-page/userpic.jpg" alt="alt")
+				.product-review__content
+					.product-review__header
+						.product-review__info
+							.product-review__top
+								.product-review__date 22.Feb.2024 в 12:55
+
+							.product-review__name Валерий Иванов
+						
+						.product-review__likes.likes-product-review
+							button(type="button").likes-product-review__action
+								.likes-product-review__count 0
+								.likes-product-review__icon
+									+icon('like')
+
+							button(type="button").likes-product-review__action.likes-product-review__action--dis
+								.likes-product-review__count 0
+								.likes-product-review__icon
+									+icon('dislike')
+
+					.product-review__body
+						p.product-review__text
+							| Демоверсия выглядела очень интересно. Атмосферно, красиво...разъезжаешь в машинке собираешь ресурсы, ломаешь машинку, чинишь машинку... Надо будет потом заценить.
+
+					.product-review__bottom
+						button(type="button").product-review__button Ответить       
+						button(type="button").product-review__button Свернуть (1)
+
+					.product-review__answers
+						.product-review
+							.product-review
+								.product-review__img
+									img(src="img/product-card-page/userpic.jpg" alt="alt")
+								.product-review__content
+									.product-review__header
+										.product-review__info
+											.product-review__top
+												.product-review__date 22.Feb.2024 в 12:55
+												.product-review__to
+													+icon('review-arrow')
+													.product-review__destination Валерий Иванов
+
+											.product-review__name Валерий Иванов
+										
+										.product-review__likes.product-review__likes--active.likes-product-review
+											button(type="button").likes-product-review__action
+												.likes-product-review__count 0
+												.likes-product-review__icon
+													+icon('like')
+
+											button(type="button").likes-product-review__action.likes-product-review__action--dis
+												.likes-product-review__count 0
+												.likes-product-review__icon
+													+icon('dislike')
+
+									.product-review__body
+										p.product-review__text
+											| Демоверсия выглядела очень интересно. Атмосферно, красиво...разъезжаешь в машинке собираешь ресурсы, ломаешь машинку, чинишь машинку... Надо будет потом заценить.
+
+									.product-review__bottom
+										button(type="button").product-review__button Ответить
+
+
+			.pagination
+				a(href="#").pagination__prev
+					+icon('pagination-prev')
+				ul.pagination-list
+					li.pagination-list__item
+						a(href="#").pagination-list__link 1
+					li.pagination-list__item
+						a(href="#").pagination-list__link 2
+					li.pagination-list__item.active
+						a(href="#").pagination-list__link 3
+					li.pagination-list__item
+						a(href="#").pagination-list__link 4
+					li.pagination-list__item
+						a(href="#").pagination-list__link ...
+					li.pagination-list__item
+						a(href="#").pagination-list__link 7
+
+				a(href="#").pagination__next
+					+icon('pagination-next')

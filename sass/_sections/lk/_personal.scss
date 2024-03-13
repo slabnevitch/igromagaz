@@ -150,5 +150,58 @@
 .btn {}
 .btn-bg-green {}
 .link {}
+/*--------------------lk-avatar loadin blocl----------------------*/
+.lk-personal-form__av {
+	width: 100%;
+	margin-bottom: 28px;
 
+	@include max-screen($sm){
+		
+		padding: 0 13px;
+	}
+
+	@include min-screen($xss){
+		display: flex;
+		
+	}
+}
+.lk-personal-form__userpic {
+	flex: 0 0 113px;
+	width: 113px;
+	height: 113px;
+	border-radius: 50%;
+	position: relative;
+	overflow: hidden;
+	margin-right: 24px;
+
+	@include max-screen($xss){
+		margin-bottom: 15px;
+	}
+
+	img{
+		@include absolute-center();
+	}
+
+}
+.lk-personal-form__file {
+	flex: 1 1 auto;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 13px;
+	
+	input[type="file"]{
+		@include checkbox;
+
+	}
+}
+.lk-personal-form__file-false {
+	width: 143px;
+	font-size: 14px;
+}
+.lk-personal-form__notification {
+	font-size: 14px;
+	color: #99A2AC;
+}
+/*--------------------END lk-avatar loadin blocl----------------------*/ 
 /*--------------------END personal----------------------*/ 

@@ -104,7 +104,6 @@
 						.product-reviews
 							header.product-reviews__header
 								button.btn.btn-bg-green(type="button") Написать коментарий
-							
 							.product-review
 								.product-review__img
 									img(src="img/product-card-page/userpic.jpg" alt="alt")
@@ -135,10 +134,10 @@
 										button(type="button").product-review__button Ответить       
 										button(type="button" data-answers-expand).product-review__button
 											| Свернуть 
-											span (3)
+											span (2)
 
 									.product-review__answers
-										- for (var i=0; i <2 ; i++)
+										- for (var i=0; i <1 ; i++)
 											.product-review
 												.product-review
 													.product-review__img
@@ -273,10 +272,6 @@
 
 													.product-review__bottom
 														button(type="button").product-review__button Ответить
-
-							footer.product-reviews__footer
-								button.btn.btn-bg-green(type="button") Написать коментарий
-
 							.pagination
 								a(href="#").pagination__prev
 									+icon('pagination-prev')

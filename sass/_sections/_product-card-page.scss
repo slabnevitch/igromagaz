@@ -860,6 +860,29 @@ color: $green;
 
 /*=====================product-reviews=========================*/
 .product-reviews {
+	&__header{
+		margin-bottom: 39px;
+
+	}
+	&__header,
+	&__footer{
+		.btn{
+			width: 100%;
+			max-width: 239px;
+		}
+
+	}
+	&__footer{
+		margin-bottom: 32px;
+	}
+	&__form{
+		.btn-bg-green{
+			width: 134px;
+		}
+		.form__area{
+			background-color: $gray;
+		}
+	}
 	.pagination {
 		margin-top: 0;
 		margin-bottom: 49px;
