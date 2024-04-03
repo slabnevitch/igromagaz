@@ -884,6 +884,10 @@ color: $green;
 	&__footer{
 		margin-bottom: 40px;
   		text-align: center;
+		
+		@include max-screen($sm){
+			padding-top: 30px;
+		}
 	}
 	&__form{
 		.btn-bg-green{
@@ -928,15 +932,19 @@ color: $green;
 	& > .product-review {
 		&:not(:last-of-type){
 			@include max-screen($sm){
-				// border-bottom: 1px solid $gray-line;
+				border-bottom: 1px solid $gray-line;
 				
 			}
 				
 		}
 		&:last-of-type{
-			@include max-screen($sm){
-				border-bottom: none;
-				
+			.product-review{
+				@include max-screen($sm){
+					border-bottom: 1px solid $gray-line;
+					// border-bottom: none;
+					
+				}
+
 			}
 				
 		}
@@ -1116,7 +1124,7 @@ color: $green;
 	margin-bottom: 12px;
 	.product-review__likes{
 		margin-top: 8px;
-		margin-bottom: 13px;
+		margin-bottom: 15px;
 		@include min-screen($sm){
 				display: none;
 			}	

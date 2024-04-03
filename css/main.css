@@ -6590,6 +6590,11 @@ blockquote {
   margin-bottom: 40px;
   text-align: center;
 }
+@media only screen and (max-width: 767.98px) {
+  .product-reviews__footer {
+    padding-top: 30px;
+  }
+}
 .product-reviews__form .btn-bg-green {
   width: 134px;
 }
@@ -6633,8 +6638,13 @@ blockquote {
   display: none;
 }
 @media only screen and (max-width: 767.98px) {
-  .product-reviews > .product-review:last-of-type {
-    border-bottom: none;
+  .product-reviews > .product-review:not(:last-of-type) {
+    border-bottom: 1px solid #E2EBEE;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .product-reviews > .product-review:last-of-type .product-review {
+    border-bottom: 1px solid #E2EBEE;
   }
 }
 @media only screen and (max-width: 767.98px) {
@@ -6829,7 +6839,7 @@ blockquote {
 }
 .product-review__body .product-review__likes {
   margin-top: 8px;
-  margin-bottom: 13px;
+  margin-bottom: 15px;
 }
 @media only screen and (min-width: 767.98px) {
   .product-review__body .product-review__likes {
