@@ -860,6 +860,8 @@ color: $green;
 
 /*=====================product-reviews=========================*/
 .product-reviews {
+  	margin-top: 39px;
+
 	&__header{
 		margin-bottom: 39px;
 
@@ -872,8 +874,16 @@ color: $green;
 		}
 
 	}
+	&__title{
+	  font-family: "ProximaNova-Bold";
+	  font-size: 32px;
+	  @include max-screen($sm){
+	  	font-size: 24px;
+	  }
+	}
 	&__footer{
-		margin-bottom: 32px;
+		margin-bottom: 40px;
+  		text-align: center;
 	}
 	&__form{
 		.btn-bg-green{
@@ -885,7 +895,7 @@ color: $green;
 	}
 	.pagination {
 		margin-top: 0;
-		margin-bottom: 49px;
+		margin-bottom: 23px;
 
 		@include max-screen($xs){
 			margin-bottom: 56px;
@@ -915,19 +925,41 @@ color: $green;
 			display: none;
 		}
 	}
+	& > .product-review {
+		&:not(:last-of-type){
+			@include max-screen($sm){
+				// border-bottom: 1px solid $gray-line;
+				
+			}
+				
+		}
+		&:last-of-type{
+			@include max-screen($sm){
+				border-bottom: none;
+				
+			}
+				
+		}
+		&:not(:first-of-type){
+			@include max-screen($sm){
+				padding-top: 30px;
+				border-top: 1px solid $gray-line;
+			}
+				
+		}
+
+	}
 }
 .product-review {
 	column-gap: 18px;
 
-	@include max-screen($sm){
-		column-gap: 9px;
-		
-	}
-	@include min-screen($sm){
+	@include min-screen($min){
 		display: flex;
 		align-items: flex-start;
 		
 	}
+
+
 
 }
 .product-review__img {
@@ -940,14 +972,12 @@ color: $green;
 	border-radius: 50%;
 	overflow: hidden;
 
-	@include max-screen($sm){
-		height: 32px;
-		width: 32px;
-		margin-bottom: 15px;
-	}
 	@include max-screen($xs){
 		height: 64px;
 		width: 64px;
+	}
+	@include max-screen($min){
+		margin-bottom: 15px;
 	}
 
 	img{
@@ -968,6 +998,11 @@ color: $green;
 		column-gap: 30px;
 		
 	}
+	.product-review__likes{
+		@include max-screen($sm){
+			display: none;
+		}
+	}
 }
 .product-review__info {
 	@include max-screen($xs){
@@ -976,15 +1011,19 @@ color: $green;
 	}
 }
 .product-review__top {
-	display: flex;
-	align-items: center;
-	column-gap: 16px;
 	margin-bottom: 5px;
+	@include min-screen($sm){
+		
+		display: flex;
+		align-items: center;
+		column-gap: 16px;
+	}
 }
 .product-review__to {
 	display: flex;
 	align-items: center;
 	color: #4AB8E6;
+
 
 	.icon{
 		font-size: 7.75px;
@@ -1075,7 +1114,13 @@ color: $green;
 .icon-dislike {}
 .product-review__body {
 	margin-bottom: 12px;
-
+	.product-review__likes{
+		margin-top: 8px;
+		margin-bottom: 13px;
+		@include min-screen($sm){
+				display: none;
+			}	
+	}
 }
 .product-review__text {
 	margin: 0;
@@ -1085,9 +1130,13 @@ color: $green;
 .product-review__bottom {
 	display: flex;
 	column-gap: 27px;
-	padding-bottom: 20px;
 	margin-bottom: 30px;
-	border-bottom: 1px solid $gray-line;
+
+	@include min-screen($sm){
+		padding-bottom: 20px;
+		border-bottom: 1px solid $gray-line;
+		
+	}
 }
 .product-review__button {
 	font-family: $bold;
@@ -1113,11 +1162,23 @@ color: $green;
 }
 .product-review__answers{
 	@include max-screen($sm){
-		padding-left: 30px;
+		 margin-left: -82px;
+		padding-left: 23px;
 	}
-	@include max-screen($xss){
-		padding-left: 15px;
+	@include max-screen($min){
+		
+		 margin-left: 0;
 	}
+	.product-review{
+		@include max-screen($sm){
+			padding-top: 20px;
+			border-top: 1px solid $gray-line;
+		}
+
+	}
+	// @include max-screen($xss){
+	// 	padding-left: 15px;
+	// }
 }
 .form__input--bg{
 	background-color: $gray;

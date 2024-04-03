@@ -2088,6 +2088,7 @@ textarea.input {
   transform: rotate(-45deg) translate(6px, -7px);
 }
 
+/*------------------------------------------*/
 /*--------------------END adjustment----------------------*/
 /*--------------------ui----------------------*/
 .page {
@@ -6566,6 +6567,9 @@ blockquote {
 }
 
 /*=====================product-reviews=========================*/
+.product-reviews {
+  margin-top: 39px;
+}
 .product-reviews__header {
   margin-bottom: 39px;
 }
@@ -6573,8 +6577,18 @@ blockquote {
   width: 100%;
   max-width: 239px;
 }
+.product-reviews__title {
+  font-family: "ProximaNova-Bold";
+  font-size: 32px;
+}
+@media only screen and (max-width: 767.98px) {
+  .product-reviews__title {
+    font-size: 24px;
+  }
+}
 .product-reviews__footer {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 .product-reviews__form .btn-bg-green {
   width: 134px;
@@ -6584,7 +6598,7 @@ blockquote {
 }
 .product-reviews .pagination {
   margin-top: 0;
-  margin-bottom: 49px;
+  margin-bottom: 23px;
 }
 @media only screen and (max-width: 576px) {
   .product-reviews .pagination {
@@ -6618,16 +6632,22 @@ blockquote {
 .product-reviews .pagination-list__item:before, .product-reviews .pagination-list__item:after {
   display: none;
 }
+@media only screen and (max-width: 767.98px) {
+  .product-reviews > .product-review:last-of-type {
+    border-bottom: none;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .product-reviews > .product-review:not(:first-of-type) {
+    padding-top: 30px;
+    border-top: 1px solid #E2EBEE;
+  }
+}
 
 .product-review {
   column-gap: 18px;
 }
-@media only screen and (max-width: 767.98px) {
-  .product-review {
-    column-gap: 9px;
-  }
-}
-@media only screen and (min-width: 767.98px) {
+@media only screen and (min-width: 360px) {
   .product-review {
     display: -ms-flexbox;
     display: flex;
@@ -6650,17 +6670,15 @@ blockquote {
   border-radius: 50%;
   overflow: hidden;
 }
-@media only screen and (max-width: 767.98px) {
-  .product-review__img {
-    height: 32px;
-    width: 32px;
-    margin-bottom: 15px;
-  }
-}
 @media only screen and (max-width: 576px) {
   .product-review__img {
     height: 64px;
     width: 64px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .product-review__img {
+    margin-bottom: 15px;
   }
 }
 .product-review__img img {
@@ -6687,6 +6705,11 @@ blockquote {
     column-gap: 30px;
   }
 }
+@media only screen and (max-width: 767.98px) {
+  .product-review__header .product-review__likes {
+    display: none;
+  }
+}
 
 @media only screen and (max-width: 576px) {
   .product-review__info {
@@ -6695,12 +6718,16 @@ blockquote {
 }
 
 .product-review__top {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  column-gap: 16px;
   margin-bottom: 5px;
+}
+@media only screen and (min-width: 767.98px) {
+  .product-review__top {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    column-gap: 16px;
+  }
 }
 
 .product-review__to {
@@ -6800,6 +6827,15 @@ blockquote {
 .product-review__body {
   margin-bottom: 12px;
 }
+.product-review__body .product-review__likes {
+  margin-top: 8px;
+  margin-bottom: 13px;
+}
+@media only screen and (min-width: 767.98px) {
+  .product-review__body .product-review__likes {
+    display: none;
+  }
+}
 
 .product-review__text {
   margin: 0;
@@ -6811,9 +6847,13 @@ blockquote {
   display: -ms-flexbox;
   display: flex;
   column-gap: 27px;
-  padding-bottom: 20px;
   margin-bottom: 30px;
-  border-bottom: 1px solid #E2EBEE;
+}
+@media only screen and (min-width: 767.98px) {
+  .product-review__bottom {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #E2EBEE;
+  }
 }
 
 .product-review__button {
@@ -6849,12 +6889,19 @@ blockquote {
 
 @media only screen and (max-width: 767.98px) {
   .product-review__answers {
-    padding-left: 30px;
+    margin-left: -82px;
+    padding-left: 23px;
   }
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 360px) {
   .product-review__answers {
-    padding-left: 15px;
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .product-review__answers .product-review {
+    padding-top: 20px;
+    border-top: 1px solid #E2EBEE;
   }
 }
 
