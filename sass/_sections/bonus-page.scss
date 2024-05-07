@@ -1,0 +1,74 @@
+/*--------------------bonus-page----------------------*/
+.bonus {}
+.wrapper {}
+.bonus__progr {}
+.progr-bonus {
+	@include adaptive-value('padding-top', 100, 17, 1);
+}
+.bonus__title {
+	@include adaptive-value('padding-bottom', 10, 7, 1);
+	@include adaptive-value('font-size', 58.17, 21, 1);
+	@include adaptive-value('margin-bottom', 40, 16, 1);
+	font-family: $bold;
+	text-transform: uppercase;
+	border-bottom: 9px solid $accent;
+
+	@include max-screen($sm){
+		border-bottom-width: 2.16px;
+	}
+}
+.progr-bonus__content {}
+.bonus__text {
+	margin-top: 0;
+
+	@include adaptive-value('margin-bottom', 48.78, 14.83, 1);
+	@include adaptive-value('font-size', 35, 10.8, 1);
+
+	span{
+		font-family: $bold;
+	}
+}
+.bonus__subtitle {
+	@include adaptive-value('margin-bottom', 24.02, 5.84, 1);
+	@include adaptive-value('font-size', 38.45, 10.08, 1);
+	font-family: $bold;
+}
+.bonus__honey {
+	display: inline-block;
+	@include adaptive-value('padding-left', 30, 8, 1);
+	@include adaptive-value('padding-right', 30, 8, 1);
+	@include adaptive-value('padding-top', 19, 5, 1);
+	@include adaptive-value('padding-bottom', 19, 5, 1);
+
+	@include adaptive-value('font-size', 50.68, 13.29, 1);
+	text-align: center;
+	background-color: #5BB7E6;
+	border-radius: 22.84px;
+	color: #fff;
+}
+.bonus__honey--light {}
+.progr-bonus__img {}
+.progr-bonus__more {}
+.bonus__table {}
+.table-bonus {}
+.table-bonus__img {}
+.table-bonus__value {}
+.bonus__wathshoney {}
+.wathshoney-bonus {}
+.wathshoney-bonus__left {}
+.bonus__button {}
+.button-bonus {}
+.button-bonus__inner {}
+.icon {}
+.icon-honey {}
+.button-bonus__val {}
+.wathshoney-bonus__right {}
+.wathshoney-bonus__img {}
+.wathshoney-bonus__honeys {}
+.bonus__birthday {}
+.birthday-bonus {}
+.birthday-bonus__content {}
+.icon-cake {}
+.bonus__footnote {}
+.birthday-bonus__img {}
+/*--------------------END bonus-page----------------------*/ 

@@ -1597,6 +1597,11 @@ img.mfp-img {
   width: 0.9166666667em;
 }
 
+.icon-cake {
+  font-size: 4.7rem;
+  width: 0.8936170213em;
+}
+
 .icon-cart {
   font-size: 3.6rem;
   width: 1em;
@@ -3061,7 +3066,7 @@ blockquote {
 }
 @media (max-width: 1200px) {
   .menu-header__item:not(:last-child) {
-    margin-right: calc(0px + 32 * ((100vw - 320px) / 880));
+    margin-right: calc(0px + 32 * ((100vw - 375px) / 880));
   }
 }
 
@@ -3081,7 +3086,7 @@ blockquote {
 }
 @media (max-width: 1200px) {
   .header__account {
-    margin-left: calc(0px + 69 * ((100vw - 320px) / 880));
+    margin-left: calc(0px + 69 * ((100vw - 375px) / 880));
   }
 }
 @media only screen and (max-width: 991px) {
@@ -3832,12 +3837,12 @@ blockquote {
 }
 @media (max-width: 1200px) {
   .header__catalog {
-    padding-top: calc(0px + 39 * ((100vw - 320px) / 880));
+    padding-top: calc(0px + 39 * ((100vw - 375px) / 880));
   }
 }
 @media (max-width: 1200px) {
   .header__catalog {
-    padding-bottom: calc(0px + 43 * ((100vw - 320px) / 880));
+    padding-bottom: calc(0px + 43 * ((100vw - 375px) / 880));
   }
 }
 @media only screen and (max-width: 991px) {
@@ -7241,7 +7246,7 @@ blockquote {
 }
 @media (max-width: 1200px) {
   .table-popup-order__item--product {
-    padding-right: calc(0px + 50 * ((100vw - 320px) / 880));
+    padding-right: calc(0px + 50 * ((100vw - 375px) / 880));
   }
 }
 @media only screen and (max-width: 480px) {
@@ -11700,6 +11705,119 @@ blockquote {
 }
 
 /*--------------------END refill----------------------*/
+/*--------------------bonus-page----------------------*/
+.progr-bonus {
+  padding-top: 100px;
+}
+@media (max-width: 1200px) {
+  .progr-bonus {
+    padding-top: calc(17px + 83 * ((100vw - 375px) / 880));
+  }
+}
+
+.bonus__title {
+  padding-bottom: 10px;
+  font-size: 58.17px;
+  margin-bottom: 40px;
+  font-family: "ProximaNova-Bold", sans-serif;
+  text-transform: uppercase;
+  border-bottom: 9px solid #4AB8E6;
+}
+@media (max-width: 1200px) {
+  .bonus__title {
+    padding-bottom: calc(7px + 3 * ((100vw - 375px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .bonus__title {
+    font-size: calc(21px + 37.17 * ((100vw - 375px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .bonus__title {
+    margin-bottom: calc(16px + 24 * ((100vw - 375px) / 880));
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .bonus__title {
+    border-bottom-width: 2.16px;
+  }
+}
+
+.bonus__text {
+  margin-top: 0;
+  margin-bottom: 48.78px;
+  font-size: 35px;
+}
+@media (max-width: 1200px) {
+  .bonus__text {
+    margin-bottom: calc(14.83px + 33.95 * ((100vw - 375px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .bonus__text {
+    font-size: calc(10.8px + 24.2 * ((100vw - 375px) / 880));
+  }
+}
+.bonus__text span {
+  font-family: "ProximaNova-Bold", sans-serif;
+}
+
+.bonus__subtitle {
+  margin-bottom: 24.02px;
+  font-size: 38.45px;
+  font-family: "ProximaNova-Bold", sans-serif;
+}
+@media (max-width: 1200px) {
+  .bonus__subtitle {
+    margin-bottom: calc(5.84px + 18.18 * ((100vw - 375px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .bonus__subtitle {
+    font-size: calc(10.08px + 28.37 * ((100vw - 375px) / 880));
+  }
+}
+
+.bonus__honey {
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  font-size: 50.68px;
+  text-align: center;
+  background-color: #5BB7E6;
+  border-radius: 22.84px;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+  .bonus__honey {
+    padding-left: calc(8px + 22 * ((100vw - 375px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .bonus__honey {
+    padding-right: calc(8px + 22 * ((100vw - 375px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .bonus__honey {
+    padding-top: calc(5px + 14 * ((100vw - 375px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .bonus__honey {
+    padding-bottom: calc(5px + 14 * ((100vw - 375px) / 880));
+  }
+}
+@media (max-width: 1200px) {
+  .bonus__honey {
+    font-size: calc(13.29px + 37.39 * ((100vw - 375px) / 880));
+  }
+}
+
+/*--------------------END bonus-page----------------------*/
 /*--------------------footer----------------------*/
 .footer__subscribe {
   position: relative;
