@@ -1,0 +1,196 @@
+extends _misc/main
+
+block title
+	| Бонусная программа
+
+block content
+	.bonus
+		.wrapper
+			.bonus__progr.progr-bonus
+				.bonus__title Бонусная программа
+				.progr-bonus__content
+					p.bonus__text При совершении любой покупки Вы получаете #[span мед] в зависимости от категории товара, который Вы приобрели.
+
+					.bonus__subtitle Цифровой ключ к игре
+					.bonus__honey 1000 рублей = 30 грамм меда
+
+					.bonus__subtitle Подарочная карта
+					.bonus__honey.bonus__honey--light 1000 рублей = 10 грамм меда
+				.progr-bonus__img
+					img(src="img/bonus-page/honey-bank.jpg" alt="alt")
+				
+				.progr-bonus__more
+					.bonus__subtitle Как получить больше меда?
+					p.bonus__text По мере накопления суммы ваших покупок Вы получаете новый статус.
+					
+					table.bonus__table.table-bonus
+						thead
+							tr
+								-var ths = ['Статус', 'Сумма покупок', 'Меда за 1000 ₽'];
+								each item in ths
+									th= item
+						- var body = [['Уважаемый покупатель', 'Все пользователи', '30 грамм'], ['Постоянный покупатель', 'от 5 000 до 19 999 рублей', '33 грамма'], ['Любимый покупатель' , 'от 20 000 до 49 000 рублей', '39 грамм'], ['Друг магазина', 'свыше 50 000 рублей', '45 грамм']];
+						tbody
+							each row, i in body
+								tr
+									each value, m in row
+										if m == 0
+											td
+												.table-bonus__img
+													img(src="img/bonus-page/status-icons/"+(m+1)+".png" alt="alt")
+												.table-bonus__value= value
+										else
+											td
+												.table-bonus__value= value
+			
+			.bonus__wathshoney.wathshoney-bonus
+				.wathshoney-bonus
+					.wathshoney-bonus__left
+						.bonus__title Что делать с медом?
+						p.bonus__text Вы можете продать Мед за #[span «живые» рубли] на вашем счету в «ИгроМагаз».
+						p.bonus__text Чем большее Меда за один раз вы меняете на деньги, тем выгоднее выходит ;)
+
+						.bonus__subtitle Обменять бонусы вы можете здесь:
+						a(href="#").bonus__button.button-bonus
+							span.button-bonus__inner
+								+icon('honey')
+								span.button-bonus__val Продать мед
+					
+					.wathshoney-bonus__right
+						.wathshoney-bonus__img
+							img(src="img/bonus-page/spoon.png" alt="alt")
+						
+						.wathshoney-bonus__honeys
+							- var honeys = ['100 меда = 30 рублей', '300 меда = 120 рублей', '500 меда = 250 рублей'];
+							each item in honeys
+								.bonus__honey.bonus__honey--light= item
+						
+			.bonus__birthday.birthday-bonus
+				.birthday-bonus__content
+					.bonus__title Что делать с медом?
+					p.bonus__text День рождения бывает только раз в году. Но у нас в течение #[span 3 дней до и после] Дня рождения, весь Мед, заработанный в этот период будет удвоен.
+
+					p.bonus__text Чтобы получать бонус 
+						br
+						| #[span укажите дату рождения:] 
+
+					a(href="#").bonus__button.button-bonus
+							span.button-bonus__inner
+								+icon('cake')
+								span.button-bonus__val Продать мед
+
+					.bonus__footnote *устанавливать дату дня рождения разрешается только один раз в три месяца, а период удваивания бонусов действует только один раз в год.
+
+				.birthday-bonus__img
+					img(src="img/bonus-page/gift-bear.png" alt="alt")
+//- img(src=img + "demo.jpg")
+//- img(src=ico + "amex.svg")
+
+block page-scripts
+	//- SERVIVE FUNCTIONS==================
+
+	//- remove-class--------------------------
+	//- script(src="js/libs/service-functions/remove-class.js")
+
+	//- siblings--------------------------
+	//- script(src="js/libs/service-functions/siblings.js")
+
+	//- webp-detection--------------------------
+	//- script(src="js/libs/service-functions/webp-detection.js")
+
+	//- dropdown-toggle on touch devices--------------------------
+	//- script(src="js/libs/service-functions/dropdown-toggle.js")
+
+	//- isMobile--------------------------
+	//- script(src="js/libs/service-functions/mobileDetect.js")
+
+	//- All in one file--------------------------
+	//- script(src="js/libs/service-functions/all-functions.js")
+
+
+	//- WITH JQUERY===================================
+	//- jquery--------------------------
+	//- script(src="js/libs/jquery/jquery-3.1.1.min.js")
+
+	//- jquery-UI--------------------------
+	//- script(src="js/libs/jquery-ui/jquery-ui.min.js")
+		
+	//- magnific-popup--------------------------
+	//- script(src="js/libs/magnific-popup/dist/jquery.magnific-popup.min.js")
+		
+	//- slick--------------------------
+	//- script(src="js/libs/slick/slick.min.js")
+		
+	//- slick-master (без лишних контейнеров)--------------------------
+	//- script(src="js/libs/slick-master/slick.js")
+
+	//- script(src="js/libs/lazyloadXT/jquery.lazyloadxt.extra.min.js")
+
+	//- script(src='https://api-maps.yandex.ru/2.1/?apikey=1be0e242-a0f9-4c70-8d5c-f2f3df5c3e40&load=&lang=ru_RU' type='text/javascript')
+
+	//- superfish--------------------------
+	//- script(src="js/libs/superfish/dist/js/hoverIntent.js")
+	//- script(src="js/libs/superfish/dist/js/superfish.min.js")
+
+	//- end WITH JQUERY===================================
+
+
+	//- VANILLA JS===================================
+	//- dynamic-adaptive--------------------------
+	//- script(src="js/libs/dynamic-adaptive/da.min.js")
+		
+	//- slideout--------------------------
+	//- script(src="js/libs/slideout/slideout.js")
+
+	//- multilevel-panel--------------------------
+	//- script(src="js/libs/multilevel-panel/multilevel-panel.js")
+
+	//- multilevel-dropdown-menu--------------------------
+	//- script(src="js/libs/multilevel-dropdown/multidropdown.js")
+			
+	//- lazysizes--------------------------
+	//- script(src="js/libs/lazysizes/lazysizes.min.js")
+		
+	//- accordion--------------------------
+	//- script(src="js/libs/accordion/vanilla-accordion.js")
+		
+	//- tabs--------------------------
+	//- script(src="js/libs/tabs/tabs-pure.js")
+		
+	//- micromodal--------------------------
+	//- script(src="js/libs/micromodal/micromodal.js")	
+		
+	//- swiper--------------------------
+	//- script(src="js/libs/swiper/swiper.min.js")
+
+	//- noUiSlider--------------------------
+	//- script(src="js/libs/noUiSlider/nouislider.min.js")
+
+	//- iMask--------------------------
+	//- script(src="js/libs/imask/imask.js")
+
+	//- FormHandler--------------------------
+	//- script(src="js/libs/formhandler.js-1.1.2/dist/js/FormHandler.min.js")
+
+	//- ratings--------------------------
+	//- script(src="js/libs/rating/ratings.js")
+
+	//- sticky-sidebar--------------------------
+	//- https://abouolia.github.io/sticky-sidebar/#usage
+	//- script(src="js/libs/sticky-sidebar/dist/resizeSensor.js")
+	//- script(src="js/libs/sticky-sidebar/dist/sticky-sidebar.min.js")
+
+	//- simplebar--------------------------
+	//- USE:	new SimpleBar(document.querySelector('mySelector'), { autoHide: false });
+	//- script(src="js/libs/simplebar/simplebar.min.js")
+		
+	//- fstdropdown (кастомный селект), исп-е.: <select data-searchdisable="true" class="fstdropdown-select">
+	//- script(src="js/libs/fstdropdown/fstdropdown.min.js")
+
+	//- baguetteBox-------------------------- use: https://github.com/feimosi/baguetteBox.js#usage
+	//- script(src="js/libs/baguetteBox/dist/baguetteBox.min.js")
+
+	//- svg4everybody--------------------------
+	//- script(type="text/javascript" src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();")
+		
+	//- end VANILLA JS===================================

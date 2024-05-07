@@ -1677,6 +1677,11 @@ img.mfp-img {
   width: 1em;
 }
 
+.icon-honey {
+  font-size: 4.9rem;
+  width: 0.8571428571em;
+}
+
 .icon-information {
   font-size: 2.4rem;
   width: 1em;
@@ -11967,8 +11972,4 @@ blockquote {
 }
 
 /*--------------------END footer----------------------*/
-
-.webp .payment-methods__option:after{ background-image: url(../img/contacts-pages/tail.webp); }
-
-.webp .lk-overall{ background-image: url(../img/lk-page/lk-overal_bg.webp); }
 /*# sourceMappingURL=maps/main.css.map */
