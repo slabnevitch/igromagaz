@@ -219,17 +219,19 @@
       <div class="wrapper">
         <div class="bonus__progr progr-bonus">
           <div class="bonus__title">Бонусная программа</div>
-          <div class="progr-bonus__content">
-            <p class="bonus__text">При совершении любой покупки Вы получаете <span>мед</span> в зависимости от категории товара, который Вы приобрели.</p>
-            <div class="bonus__subtitle">Цифровой ключ к игре</div>
-            <div class="bonus__honey">1000 рублей = 30 грамм меда</div>
-            <div class="bonus__subtitle">Подарочная карта</div>
-            <div class="bonus__honey bonus__honey--light">1000 рублей = 10 грамм меда</div>
+          <p class="bonus__text progr-bonus__slogan">При совершении любой покупки Вы получаете <span>мед</span> <br>в зависимости от категории товара, который Вы приобрели.</p>
+          <div class="progr-bonus__flex">
+            <div class="progr-bonus__content _flex-col">
+              <div class="bonus__subtitle">Цифровой ключ к игре</div>
+              <div class="bonus__honey">1000 рублей = 30 грамм меда</div>
+              <div class="bonus__subtitle">Подарочная карта</div>
+              <div class="bonus__honey bonus__honey--light">1000 рублей = 10 грамм меда</div>
+            </div>
+            <div class="progr-bonus__img _flex-col"><img src="img/bonus-page/honey-bank.jpg" alt="alt"></div>
           </div>
-          <div class="progr-bonus__img"><img src="img/bonus-page/honey-bank.jpg" alt="alt"></div>
           <div class="progr-bonus__more">
             <div class="bonus__subtitle">Как получить больше меда?</div>
-            <p class="bonus__text">По мере накопления суммы ваших покупок Вы получаете новый статус.</p>
+            <p class="bonus__text">По мере накопления суммы ваших покупок <br>Вы получаете новый статус.</p>
             <table class="bonus__table table-bonus">
               <thead>
                 <tr>
@@ -253,7 +255,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <div class="table-bonus__img"><img src="img/bonus-page/status-icons/1.png" alt="alt"></div>
+                    <div class="table-bonus__img"><img src="img/bonus-page/status-icons/2.png" alt="alt"></div>
                     <div class="table-bonus__value">Постоянный покупатель</div>
                   </td>
                   <td>
@@ -265,7 +267,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <div class="table-bonus__img"><img src="img/bonus-page/status-icons/1.png" alt="alt"></div>
+                    <div class="table-bonus__img"><img src="img/bonus-page/status-icons/3.png" alt="alt"></div>
                     <div class="table-bonus__value">Любимый покупатель</div>
                   </td>
                   <td>
@@ -277,7 +279,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <div class="table-bonus__img"><img src="img/bonus-page/status-icons/1.png" alt="alt"></div>
+                    <div class="table-bonus__img"><img src="img/bonus-page/status-icons/4.png" alt="alt"></div>
                     <div class="table-bonus__value">Друг магазина</div>
                   </td>
                   <td>
@@ -291,38 +293,51 @@
             </table>
           </div>
         </div>
-        <div class="bonus__wathshoney wathshoney-bonus">
-          <div class="wathshoney-bonus">
-            <div class="wathshoney-bonus__left">
-              <div class="bonus__title">Что делать с медом?</div>
-              <p class="bonus__text">Вы можете продать Мед за <span>«живые» рубли</span> на вашем счету в «ИгроМагаз».</p>
-              <p class="bonus__text">Чем большее Меда за один раз вы меняете на деньги, тем выгоднее выходит ;)</p>
-              <div class="bonus__subtitle">Обменять бонусы вы можете здесь:</div><a href="#" class="bonus__button button-bonus"><span class="button-bonus__inner">
-                      <svg class="icon icon-honey ">
-                        <use xlink:href="img/icons-svg/symbol/sprite.svg#honey"></use>
-                      </svg><span class="button-bonus__val">Продать мед</span></span></a>
-            </div>
-            <div class="wathshoney-bonus__right">
-              <div class="wathshoney-bonus__img"><img src="img/bonus-page/spoon.png" alt="alt"></div>
-              <div class="wathshoney-bonus__honeys">
-                <div class="bonus__honey bonus__honey--light">100 меда = 30 рублей</div>
-                <div class="bonus__honey bonus__honey--light">300 меда = 120 рублей</div>
-                <div class="bonus__honey bonus__honey--light">500 меда = 250 рублей</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bonus__birthday birthday-bonus">
-          <div class="birthday-bonus__content">
-            <div class="bonus__title">Что делать с медом?</div>
-            <p class="bonus__text">День рождения бывает только раз в году. Но у нас в течение <span>3 дней до и после</span> Дня рождения, весь Мед, заработанный в этот период будет удвоен.</p>
-            <p class="bonus__text">Чтобы получать бонус <br><span>укажите дату рождения:</span> </p><a href="#" class="bonus__button button-bonus"><span class="button-bonus__inner">
-                    <svg class="icon icon-cake ">
-                      <use xlink:href="img/icons-svg/symbol/sprite.svg#cake"></use>
-                    </svg><span class="button-bonus__val">Продать мед</span></span></a>
-            <div class="bonus__footnote">*устанавливать дату дня рождения разрешается только один раз в три месяца, а период удваивания бонусов действует только один раз в год.</div>
-          </div>
-          <div class="birthday-bonus__img"><img src="img/bonus-page/gift-bear.png" alt="alt"></div>
+        <!-- .bonus__wathshoney.wathshoney-bonus
+        .wathshoney-bonus
+        	.wathshoney-bonus__left
+        		.bonus__title Что делать с медом?
+        		p.bonus__text Вы можете продать Мед за <span>«живые» рубли</span> на вашем счету в «ИгроМагаз».
+        		p.bonus__text Чем большее Меда за один раз вы меняете на деньги, тем выгоднее выходит ;)
+        
+        		.bonus__subtitle Обменять бонусы вы можете здесь:
+        		a(href="#").bonus__button.button-bonus
+        			span.button-bonus__inner
+        				+icon('honey')
+        				span.button-bonus__val Продать мед
+        	
+        	.wathshoney-bonus__right
+        		.wathshoney-bonus__img
+        			img(src="img/bonus-page/spoon.png" alt="alt")
+        		
+        		.wathshoney-bonus__honeys
+        			- var honeys = ['100 меда = 30 рублей', '300 меда = 120 рублей', '500 меда = 250 рублей'];
+        			each item in honeys
+        				.bonus__honey.bonus__honey--light= item
+        		
+        -->
+        <!-- .bonus__birthday.birthday-bonus
+        .birthday-bonus__content
+        	.bonus__title Что делать с медом?
+        	p.bonus__text День рождения бывает только раз в году. Но у нас в течение <span>3 дней до и после</span> Дня рождения, весь Мед, заработанный в этот период будет удвоен.
+        
+        	p.bonus__text Чтобы получать бонус 
+        		br
+        		| <span>укажите дату рождения:</span> 
+        
+        	a(href="#").bonus__button.button-bonus
+        			span.button-bonus__inner
+        				+icon('cake')
+        				span.button-bonus__val Продать мед
+        
+        	.bonus__footnote *устанавливать дату дня рождения разрешается только один раз в три месяца, а период удваивания бонусов действует только один раз в год.
+        
+        .birthday-bonus__img
+        	img(src="img/bonus-page/gift-bear.png" alt="alt")
+        
+        -->
+        <div class="bonus__footer">
+          <p>Рубли с Вашего баланса в ИгроМагаз Вы можете потратить для совершения любой покупки, но оплатить с него можно не более половины стоимости корзины.</p>
         </div>
       </div>
     </div>

@@ -8,20 +8,26 @@ block content
 		.wrapper
 			.bonus__progr.progr-bonus
 				.bonus__title Бонусная программа
-				.progr-bonus__content
-					p.bonus__text При совершении любой покупки Вы получаете #[span мед] в зависимости от категории товара, который Вы приобрели.
+				p.bonus__text.progr-bonus__slogan При совершении любой покупки Вы получаете #[span мед] 
+					br
+					| в зависимости от категории товара, который Вы приобрели.
+				
 
-					.bonus__subtitle Цифровой ключ к игре
-					.bonus__honey 1000 рублей = 30 грамм меда
+				.progr-bonus__flex
+					.progr-bonus__content._flex-col
+						.bonus__subtitle Цифровой ключ к игре
+						.bonus__honey 1000 рублей = 30 грамм меда
 
-					.bonus__subtitle Подарочная карта
-					.bonus__honey.bonus__honey--light 1000 рублей = 10 грамм меда
-				.progr-bonus__img
-					img(src="img/bonus-page/honey-bank.jpg" alt="alt")
+						.bonus__subtitle Подарочная карта
+						.bonus__honey.bonus__honey--light 1000 рублей = 10 грамм меда
+					.progr-bonus__img._flex-col
+						img(src="img/bonus-page/honey-bank.jpg" alt="alt")
 				
 				.progr-bonus__more
 					.bonus__subtitle Как получить больше меда?
-					p.bonus__text По мере накопления суммы ваших покупок Вы получаете новый статус.
+					p.bonus__text По мере накопления суммы ваших покупок 
+						br
+						| Вы получаете новый статус.
 					
 					table.bonus__table.table-bonus
 						thead
@@ -37,13 +43,13 @@ block content
 										if m == 0
 											td
 												.table-bonus__img
-													img(src="img/bonus-page/status-icons/"+(m+1)+".png" alt="alt")
+													img(src="img/bonus-page/status-icons/"+(i+1)+".png" alt="alt")
 												.table-bonus__value= value
 										else
 											td
 												.table-bonus__value= value
 			
-			.bonus__wathshoney.wathshoney-bonus
+			// .bonus__wathshoney.wathshoney-bonus
 				.wathshoney-bonus
 					.wathshoney-bonus__left
 						.bonus__title Что делать с медом?
@@ -65,7 +71,7 @@ block content
 							each item in honeys
 								.bonus__honey.bonus__honey--light= item
 						
-			.bonus__birthday.birthday-bonus
+			// .bonus__birthday.birthday-bonus
 				.birthday-bonus__content
 					.bonus__title Что делать с медом?
 					p.bonus__text День рождения бывает только раз в году. Но у нас в течение #[span 3 дней до и после] Дня рождения, весь Мед, заработанный в этот период будет удвоен.

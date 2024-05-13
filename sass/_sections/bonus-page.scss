@@ -1,55 +1,263 @@
 /*--------------------bonus-page----------------------*/
-.bonus {}
-.wrapper {}
-.bonus__progr {}
-.progr-bonus {
-	@include adaptive-value('padding-top', 100, 17, 1);
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-ExtraLightItalic.woff2?v=3.12") format("woff2"),
+       url("../fonts/inter/Inter-ExtraLightItalic.woff?v=3.12") format("woff");
 }
-.bonus__title {
-	@include adaptive-value('padding-bottom', 10, 7, 1);
-	@include adaptive-value('font-size', 58.17, 21, 1);
-	@include adaptive-value('margin-bottom', 40, 16, 1);
-	font-family: $bold;
-	text-transform: uppercase;
-	border-bottom: 9px solid $accent;
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-Regular.woff2?v=3.12") format("woff2"),
+       url("../fonts/inter/Inter-Regular.woff?v=3.12") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-Medium.woff2?v=3.12") format("woff2"),
+       url("../fonts/inter/Inter-Medium.woff?v=3.12") format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-MediumItalic.woff2?v=3.12") format("woff2"),
+       url("../fonts/inter/Inter-MediumItalic.woff?v=3.12") format("woff");
+}
 
-	@include max-screen($sm){
-		border-bottom-width: 2.16px;
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-Bold.woff2?v=3.12") format("woff2"),
+       url("../fonts/inter/Inter-Bold.woff?v=3.12") format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/inter/Inter-ExtraBold.woff2?v=3.12") format("woff2"),
+       url("../fonts/inter/Inter-ExtraBold.woff?v=3.12") format("woff");
+}
+.bonus {
+	font-family: 'Inter', sans-serif;
+}
+.wrapper {}
+.bonus__progr {
+	.bonus__honey {
+		@include adaptive-value('margin-bottom', 35, 10.71, 1);
 	}
 }
-.progr-bonus__content {}
+.progr-bonus {
+	@include adaptive-value('padding-top', 112, 37, 1);
+}
+.bonus__title {
+	@include adaptive-value('padding-bottom', 7, 9, 1);
+	@include adaptive-value('font-size', 41.79, 17.67, 1);
+	@include adaptive-value('margin-bottom', 29, 8.49, 1);
+	font-weight: 700;
+	text-transform: uppercase;
+	border-bottom: 7px solid $accent;
+	@include adaptive-value('border-width', 7, 1.81, 1);
+
+}
+.progr-bonus__slogan{
+	.bonus__text {
+		max-width: 756px;
+	}
+
+}
+.progr-bonus__flex{
+	@include flex-cols(11, 0, 2, (), '', 0);
+
+	@include max-screen($lg){
+		// margin-left: 0;
+		// margin-right: 0;
+	}
+}
+.progr-bonus__content {
+	// flex: 0 0 50%;
+	&._flex-col{
+		@include max-screen($lg){
+			width: prc(194,320);
+			// width: auto;
+			// margin-left: 0;
+			// margin-right: 0;
+		}
+
+	}
+}
 .bonus__text {
 	margin-top: 0;
 
-	@include adaptive-value('margin-bottom', 48.78, 14.83, 1);
-	@include adaptive-value('font-size', 35, 10.8, 1);
+	@include adaptive-value('margin-bottom', 33, 12.6, 1);
+	@include adaptive-value('font-size', 25.22, 8.48, 1);
 
 	span{
-		font-family: $bold;
+		font-weight: 700;
 	}
 }
 .bonus__subtitle {
-	@include adaptive-value('margin-bottom', 24.02, 5.84, 1);
-	@include adaptive-value('font-size', 38.45, 10.08, 1);
+	@include adaptive-value('margin-bottom', 16, 5, 1);
+	@include adaptive-value('font-size', 27.63, 8.48, 1);
 	font-family: $bold;
 }
 .bonus__honey {
-	display: inline-block;
-	@include adaptive-value('padding-left', 30, 8, 1);
-	@include adaptive-value('padding-right', 30, 8, 1);
-	@include adaptive-value('padding-top', 19, 5, 1);
-	@include adaptive-value('padding-bottom', 19, 5, 1);
+	// display: inline-block;
+	@include adaptive-value('padding-left', 23, 6, 1);
+	@include adaptive-value('padding-right', 23, 6, 1);
+	@include adaptive-value('padding-top', 13, 4, 1);
+	@include adaptive-value('padding-bottom', 16, 5, 1);
 
-	@include adaptive-value('font-size', 50.68, 13.29, 1);
+	@include adaptive-value('font-size', 36.42, 9.5, 1);
 	text-align: center;
+	font-weight: 500;
 	background-color: #5BB7E6;
-	border-radius: 22.84px;
+	@include adaptive-value('border-radius', 16.41, 5.04, 1);
+	// border-radius: 5.04px;
 	color: #fff;
 }
-.bonus__honey--light {}
-.progr-bonus__img {}
-.progr-bonus__more {}
-.bonus__table {}
+.bonus__honey--light {
+	background-color: #92D7FB;
+}
+.progr-bonus__img {
+	@include adaptive-value('padding-right', 15, 0, 1);
+	text-align: right;
+
+	&._flex-col{
+		@include max-screen($lg){
+			width: prc(133,326);
+			// width: auto;
+			// margin-left: 0;
+			// margin-right: 0;
+		}
+
+	}
+	img{
+		position: relative;
+
+		z-index: -1;
+		@include adaptive-value('margin-top', -49, 0, 1);
+		width: 100%;
+		max-width: 482px;
+	}
+}
+.progr-bonus__more {
+	@include adaptive-value('margin-top', -90, -10, 1);
+	.bonus__subtitle{
+		@include adaptive-value('font-size', 33.86, 10.4, 1);
+	}
+}
+.bonus__table {
+	table-layout: fixed; /* Настройка размеров колонок */
+  width: 100%; /* Использование всей доступной ширины */
+  border-collapse: collapse;
+  background-color: #DAE8FE;
+  th, td {
+	  // width: calc(100% / 3); /* Равное пространство для каждой колонки */
+	  
+	  &:first-child{
+	  		width: prc(373,1200);
+	  		@include max-screen($xs){
+	  			width: prc(110.63,326);
+	  			
+	  		}
+	  }
+
+	  &:nth-child(2){
+	  	
+	  		width: prc(417,1200);
+	  		@include max-screen($xs){
+	  			width: prc(111,326);
+	  			
+	  		}
+	  }
+	  &:nth-child(3){
+	  	
+	  		width: prc(410,1200);
+	  		@include max-screen($xs){
+	  			width: prc(104,326);
+	  			
+	  		}
+	  }
+
+	}
+	thead{
+		background-color: #DAE8FE;
+	}
+	thead th{
+		@include adaptive-value('padding-top', 21, 6.47, 1);
+		@include adaptive-value('padding-bottom', 22, 6.47, 1);
+		@include adaptive-value('font-size', 36.42, 9.5, 1);
+		color: #fff;
+		font-weight: 600;
+		vertical-align: middle;
+
+		&:first-child{
+			border-radius: 16.41px 0 0 16.41px;
+			background-color: #92D7FB;
+
+			@include max-screen($xs){
+				
+				border-radius: 5.04px 0 0 5.04px;
+			}
+		}
+
+		&:nth-child(2){
+			background-color: #5BB7E5;
+		}
+		&:nth-child(3){
+			border-radius: 0 16.41px 16.41px 0;
+			background-color: #47A4D2;
+
+			@include max-screen($xs){
+				
+				border-radius: 0 5.04px 5.04px 0;
+			}
+		}
+
+	}
+	tbody{
+		background-color: #DAE8FE;
+		border-radius: 0 0 16.41px 16.41px;
+		@include adaptive-value('font-size', 27.63, 8.48, 1);
+
+		@include max-screen($xs){
+			
+			border-radius: 0 0 5.04px 5.04px;
+		}
+		tr{
+			@include adaptive-value('padding-top', 19, 6, 1);
+			@include adaptive-value('padding-bottom', 39, 12, 1);
+		}
+
+		td{
+			@include adaptive-value('padding-left', 34, 10.3, 1);
+			// text-align: center;
+			&:first-child{
+				display: flex;
+				align-items: center;
+				@include adaptive-value('column-gap', 22, 6.75, 1);
+				font-weight: 700;
+				@include adaptive-value('font-size', 25.61, 7.86, 1);
+			}
+			&:not(:first-child){
+				text-align: center;
+			}
+
+		}
+	}
+}
 .table-bonus {}
 .table-bonus__img {}
 .table-bonus__value {}
