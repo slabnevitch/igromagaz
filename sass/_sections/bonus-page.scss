@@ -62,7 +62,7 @@
 	@include adaptive-value('padding-top', 112, 37, 1);
 }
 .bonus__title {
-	@include adaptive-value('padding-bottom', 7, 9, 1);
+	@include adaptive-value('padding-bottom', 20, 4, 1);
 	@include adaptive-value('font-size', 41.79, 17.67, 1);
 	@include adaptive-value('margin-bottom', 29, 8.49, 1);
 	font-weight: 700;
@@ -154,6 +154,7 @@
 }
 .progr-bonus__more {
 	@include adaptive-value('margin-top', -90, -10, 1);
+	@include adaptive-value('margin-bottom', 59, 21.18, 1);
 	.bonus__subtitle{
 		@include adaptive-value('font-size', 33.86, 10.4, 1);
 	}
@@ -163,6 +164,12 @@
   width: 100%; /* Использование всей доступной ширины */
   border-collapse: collapse;
   background-color: #DAE8FE;
+	border-radius: 16.41px;
+
+	@include max-screen($xs){
+		border-radius: 5.04px;
+	}
+  
   th, td {
 	  // width: calc(100% / 3); /* Равное пространство для каждой колонки */
 	  
@@ -228,7 +235,7 @@
 
 	}
 	tbody{
-		background-color: #DAE8FE;
+		// background-color: #DAE8FE;
 		border-radius: 0 0 16.41px 16.41px;
 		@include adaptive-value('font-size', 27.63, 8.48, 1);
 
@@ -237,11 +244,11 @@
 			border-radius: 0 0 5.04px 5.04px;
 		}
 		tr{
-			@include adaptive-value('padding-top', 19, 6, 1);
-			@include adaptive-value('padding-bottom', 39, 12, 1);
 		}
 
 		td{
+			@include adaptive-value('padding-top', 19, 6, 1);
+			@include adaptive-value('padding-bottom', 39, 12, 1);
 			@include adaptive-value('padding-left', 34, 10.3, 1);
 			// text-align: center;
 			&:first-child{
@@ -259,20 +266,119 @@
 	}
 }
 .table-bonus {}
-.table-bonus__img {}
+.table-bonus__img {
+	flex-shrink: 0;
+	@include adaptive-value('width', 97, 29.73, 1);
+	@include adaptive-value('height', 97, 29.73, 1);
+	border-radius: 50%;
+	overflow: hidden;
+
+	img{
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
 .table-bonus__value {}
-.bonus__wathshoney {}
+.bonus__wathshoney {
+
+}
 .wathshoney-bonus {}
-.wathshoney-bonus__left {}
-.bonus__button {}
+.wathshoney-bonus__flex{
+	@include flex-cols(0, 0, 2, (), '', 0);
+}
+.wathshoney-bonus__left {
+	&._flex-col{
+		@include max-screen($min){
+			width: prc(173,326);
+			
+		}
+	}
+}
+.bonus__button {
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+
+
+	&:after{
+		content: '';
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: prc(11.32, 72.89);
+		@include adaptive-value('border-radius', 16.23, 4.51, 1);
+		background-color: #92D7FB;
+	}
+
+}
 .button-bonus {}
-.button-bonus__inner {}
-.icon {}
-.icon-honey {}
-.button-bonus__val {}
-.wathshoney-bonus__right {}
-.wathshoney-bonus__img {}
-.wathshoney-bonus__honeys {}
+.button-bonus__inner {
+	position: relative;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	@include adaptive-value('height', 72.89, 20.29, 1);
+	@include adaptive-value('padding-left', 25.5, 4.74, 1);
+	@include adaptive-value('padding-right', 24, 6.85, 1);
+	@include adaptive-value('border-radius', 16.23, 4.51, 1);
+	@include adaptive-value('column-gap', 15.15, 4.22, 1);
+	background-color: #5BB7E5;
+	color: #fff;
+	transition: background-color 0.2s;
+
+
+	&:hover{
+		background-color:  darken(#5BB7E5, 5%);
+	}
+	
+	
+	.icon {
+		color: #fff;
+	}
+	.icon-honey {
+		@include adaptive-value('font-size', 45.44, 12.65, 1);
+		flex-shrink: 0;
+	}
+}
+.button-bonus__val {
+	@include adaptive-value('font-size', 39, 10, 1);
+	font-weight: 800;
+}
+.wathshoney-bonus__right {
+	// padding-left: prc(102,1200);
+	@include adaptive-value('padding-left', 102, 8, 1);
+
+	&._flex-col{
+		@include max-screen($min){
+			width: prc(152,326);
+			
+		}
+	}
+}
+.wathshoney-bonus__img {
+	position: relative;
+	z-index: 2;
+	@include adaptive-value('padding-right', 53, 0, 1);
+	text-align: right;
+
+
+	img{
+		// width: 100%;
+		width: prc(353, 444);
+		// max-width: 334px;
+		@include max-screen($sm){
+			
+			width: prc(130, 143);
+		}
+	}
+}
+.wathshoney-bonus__honeys {
+	@include adaptive-value('margin-top', -23, -8, 1);
+	display: flex;
+	flex-direction: column;
+	@include adaptive-value('row-gap', 23, 6.31, 1);
+}
 .bonus__birthday {}
 .birthday-bonus {}
 .birthday-bonus__content {}

@@ -293,29 +293,27 @@
             </table>
           </div>
         </div>
-        <!-- .bonus__wathshoney.wathshoney-bonus
-        .wathshoney-bonus
-        	.wathshoney-bonus__left
-        		.bonus__title Что делать с медом?
-        		p.bonus__text Вы можете продать Мед за <span>«живые» рубли</span> на вашем счету в «ИгроМагаз».
-        		p.bonus__text Чем большее Меда за один раз вы меняете на деньги, тем выгоднее выходит ;)
-        
-        		.bonus__subtitle Обменять бонусы вы можете здесь:
-        		a(href="#").bonus__button.button-bonus
-        			span.button-bonus__inner
-        				+icon('honey')
-        				span.button-bonus__val Продать мед
-        	
-        	.wathshoney-bonus__right
-        		.wathshoney-bonus__img
-        			img(src="img/bonus-page/spoon.png" alt="alt")
-        		
-        		.wathshoney-bonus__honeys
-        			- var honeys = ['100 меда = 30 рублей', '300 меда = 120 рублей', '500 меда = 250 рублей'];
-        			each item in honeys
-        				.bonus__honey.bonus__honey--light= item
-        		
-        -->
+        <div class="bonus__wathshoney wathshoney-bonus">
+          <div class="bonus__title">Что делать с медом?</div>
+          <div class="wathshoney-bonus__flex">
+            <div class="wathshoney-bonus__left _flex-col">
+              <p class="bonus__text">Вы можете продать Мед за <span>«живые» рубли</span> на вашем счету в «ИгроМагаз».</p>
+              <p class="bonus__text">Чем большее Меда за один раз вы меняете на деньги, тем выгоднее выходит ;)</p>
+              <div class="bonus__subtitle">Обменять бонусы вы можете здесь:</div><a href="#" class="bonus__button button-bonus"><span class="button-bonus__inner">
+                      <svg class="icon icon-honey ">
+                        <use xlink:href="img/icons-svg/symbol/sprite.svg#honey"></use>
+                      </svg><span class="button-bonus__val">Продать мед</span></span></a>
+            </div>
+            <div class="wathshoney-bonus__right _flex-col">
+              <div class="wathshoney-bonus__img"><img src="img/bonus-page/spoon.png" alt="alt"></div>
+              <div class="wathshoney-bonus__honeys">
+                <div class="bonus__honey bonus__honey--light">100 меда = 30 рублей</div>
+                <div class="bonus__honey bonus__honey--light">300 меда = 120 рублей</div>
+                <div class="bonus__honey bonus__honey--light">500 меда = 250 рублей</div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- .bonus__birthday.birthday-bonus
         .birthday-bonus__content
         	.bonus__title Что делать с медом?
