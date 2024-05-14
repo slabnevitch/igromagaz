@@ -54,7 +54,11 @@ block content
 				.wathshoney-bonus__flex
 					.wathshoney-bonus__left._flex-col
 						p.bonus__text Вы можете продать Мед за #[span «живые» рубли] на вашем счету в «ИгроМагаз».
-						p.bonus__text Чем большее Меда за один раз вы меняете на деньги, тем выгоднее выходит ;)
+						p.bonus__text Чем большее Меда за один раз вы 
+							br
+							| меняете на деньги, тем выгоднее выходит 
+							br
+							| ;)
 
 						.bonus__subtitle Обменять бонусы вы можете здесь:
 						a(href="#").bonus__button.button-bonus
@@ -71,24 +75,25 @@ block content
 							each item in honeys
 								.bonus__honey.bonus__honey--light= item
 						
-			// .bonus__birthday.birthday-bonus
-				.birthday-bonus__content
-					.bonus__title Что делать с медом?
-					p.bonus__text День рождения бывает только раз в году. Но у нас в течение #[span 3 дней до и после] Дня рождения, весь Мед, заработанный в этот период будет удвоен.
+			.bonus__birthday.birthday-bonus
+				.bonus__title День рождения
+				.birthday-bonus__flex
+					.birthday-bonus__content
+						p.bonus__text День рождения бывает только раз в году. Но у нас в течение #[span 3 дней до и после] Дня рождения, весь Мед, заработанный в этот период будет удвоен.
 
-					p.bonus__text Чтобы получать бонус 
-						br
-						| #[span укажите дату рождения:] 
+						p.bonus__text Чтобы получать бонус 
+							br
+							| #[span укажите дату рождения:] 
 
-					a(href="#").bonus__button.button-bonus
-							span.button-bonus__inner
-								+icon('cake')
-								span.button-bonus__val Продать мед
+						a(href="#").bonus__button.button-bonus
+								span.button-bonus__inner
+									+icon('cake')
+									span.button-bonus__val День рождения
 
-					.bonus__footnote *устанавливать дату дня рождения разрешается только один раз в три месяца, а период удваивания бонусов действует только один раз в год.
+						.bonus__footnote *устанавливать дату дня рождения разрешается только один раз в три месяца, а период удваивания бонусов действует только один раз в год.
 
-				.birthday-bonus__img
-					img(src="img/bonus-page/gift-bear.png" alt="alt")
+					.birthday-bonus__img
+						img(src="img/bonus-page/gift-bear.png" alt="alt")
 
 			.bonus__footer
 				p Рубли с Вашего баланса в ИгроМагаз Вы можете потратить для совершения любой покупки, но оплатить с него можно не более половины стоимости корзины.
