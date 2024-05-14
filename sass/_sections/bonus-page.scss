@@ -267,6 +267,9 @@
 }
 .table-bonus {}
 .table-bonus__img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	flex-shrink: 0;
 	@include adaptive-value('width', 97, 29.73, 1);
 	@include adaptive-value('height', 97, 29.73, 1);
@@ -442,6 +445,7 @@
 	color: #132539;
 }
 .birthday-bonus__img {
+	
 	align-self: end;
 	position: relative;
 	flex: 1 1 prc(456,1200);

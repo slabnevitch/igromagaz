@@ -12094,6 +12094,12 @@ blockquote {
 }
 
 .table-bonus__img {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 97px;
