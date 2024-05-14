@@ -1593,6 +1593,11 @@ img.mfp-img {
 }
 
 .icon-bonus {
+  font-size: 4.9rem;
+  width: 0.8571428571em;
+}
+
+.icon-bonus-box {
   font-size: 2.4rem;
   width: 0.9166666667em;
 }
@@ -1680,11 +1685,6 @@ img.mfp-img {
 .icon-history {
   font-size: 2.6rem;
   width: 1em;
-}
-
-.icon-honey {
-  font-size: 4.9rem;
-  width: 0.8571428571em;
 }
 
 .icon-information {
@@ -12240,11 +12240,11 @@ blockquote {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
-.button-bonus__inner .icon-honey {
+.button-bonus__inner .icon-bonus {
   font-size: 42.44px;
 }
 @media (max-width: 1200px) {
-  .button-bonus__inner .icon-honey {
+  .button-bonus__inner .icon-bonus {
     font-size: calc(12.65px + 29.79 * ((100vw - 320px) / 880));
   }
 }
@@ -12736,4 +12736,8 @@ blockquote {
 }
 
 /*--------------------END footer----------------------*/
+
+.webp .payment-methods__option:after{ background-image: url(../img/contacts-pages/tail.webp); }
+
+.webp .lk-overall{ background-image: url(../img/lk-page/lk-overal_bg.webp); }
 /*# sourceMappingURL=maps/main.css.map */
